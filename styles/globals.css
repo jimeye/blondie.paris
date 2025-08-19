@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.adobe.com/fonts/adobe-garamond-pro');
+@import url('https://fonts.adobe.com/fonts/din-condensed-web');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #cd291e;
+  --secondary-color: #fdb912;
+  --light-color: #fff9ee;
+  --dark-color: #231f20;
+  --accent-color: #316131;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white;
+    font-family: 'adobe-garamond-pro', serif;
+    color: #b0b0b0;
+  }
+  
+  * {
+    font-family: 'adobe-garamond-pro', serif;
+    color: #b0b0b0;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+  
+  .btn {
+    @apply px-6 py-3 font-bold transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .btn-primary {
+    @apply text-white bg-accent-red hover:bg-opacity-90;
+  }
+  
+  .btn-secondary {
+    @apply text-white bg-accent-yellow hover:bg-opacity-90;
+  }
+  
+  .menu-font {
+    font-family: 'din-condensed-web', sans-serif;
+  }
+} 

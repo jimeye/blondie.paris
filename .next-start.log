@@ -1,0 +1,27 @@
+
+> blondie@0.1.0 start
+> next start -p 3002
+
+- ready started server on 0.0.0.0:3002, url: http://localhost:3002
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at loadManifest [90m(/Users/jimmyfellous/Documents/BLONDIE 2/[39mnode_modules/[4mnext[24m/dist/server/load-manifest.js:30:27[90m)[39m
+    at loadManifestWithRetries [90m(/Users/jimmyfellous/Documents/BLONDIE 2/[39mnode_modules/[4mnext[24m/dist/server/load-components.js:55:51[90m)[39m
+[90m    at runNextTicks (node:internal/process/task_queues:60:5)[39m
+[90m    at listOnTimeout (node:internal/timers:538:9)[39m
+[90m    at process.processTimers (node:internal/timers:512:7)[39m
+    at async Promise.all (index 0)
+    at async loadComponentsImpl [90m(/Users/jimmyfellous/Documents/BLONDIE 2/[39mnode_modules/[4mnext[24m/dist/server/load-components.js:83:100[90m)[39m
+    at async NextNodeServer.findPageComponentsImpl [90m(/Users/jimmyfellous/Documents/BLONDIE 2/[39mnode_modules/[4mnext[24m/dist/server/next-server.js:772:36[90m)[39m
+    at async NextNodeServer.renderPageComponent [90m(/Users/jimmyfellous/Documents/BLONDIE 2/[39mnode_modules/[4mnext[24m/dist/server/base-server.js:1357:24[90m)[39m
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at loadManifest [90m(/Users/jimmyfellous/Documents/BLONDIE 2/[39mnode_modules/[4mnext[24m/dist/server/load-manifest.js:30:27[90m)[39m
+    at loadManifestWithRetries [90m(/Users/jimmyfellous/Documents/BLONDIE 2/[39mnode_modules/[4mnext[24m/dist/server/load-components.js:55:51[90m)[39m
+[90m    at runNextTicks (node:internal/process/task_queues:60:5)[39m
+[90m    at listOnTimeout (node:internal/timers:538:9)[39m
+[90m    at process.processTimers (node:internal/timers:512:7)[39m
+    at async Promise.all (index 0)
+    at async loadComponentsImpl [90m(/Users/jimmyfellous/Documents/BLONDIE 2/[39mnode_modules/[4mnext[24m/dist/server/load-components.js:83:100[90m)[39m
+    at async NextNodeServer.findPageComponentsImpl [90m(/Users/jimmyfellous/Documents/BLONDIE 2/[39mnode_modules/[4mnext[24m/dist/server/next-server.js:772:36[90m)[39m
+    at async NextNodeServer.renderErrorToResponseImpl [90m(/Users/jimmyfellous/Documents/BLONDIE 2/[39mnode_modules/[4mnext[24m/dist/server/base-server.js:1570:26[90m)[39m
