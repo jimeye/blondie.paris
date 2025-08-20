@@ -37,18 +37,18 @@ export default function ActualitesSlider() {
   }
 
   return (
-    <section className="relative bg-white py-8 md:py-20">
+    <section className="relative bg-white py-6 md:py-12">
       <div className="container mx-auto px-4">
         {/* Titre de la section */}
         <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-black mb-4">
-            Nos <span className="text-black">actualités</span>
+          <h2 className="text-4xl font-bold text-black mb-2 uppercase">
+            Actualités
           </h2>
           <div className="w-20 h-1 bg-[#FFB6C1] mx-auto" />
         </div>
 
         {/* Slider */}
-        <div className="relative h-[calc(100vh-8rem)] md:h-[calc(100vh-12rem)] overflow-hidden rounded-lg">
+        <div className="relative h-[60vh] sm:h-[70vh] md:h-[75vh] lg:h-[calc(100vh-12rem)] overflow-hidden rounded-lg">
           {slides.map((slide, index) => (
             <div
               key={index}
@@ -67,7 +67,8 @@ export default function ActualitesSlider() {
           {/* Navigation buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 text-[#FFB6C1] transition-colors z-10"
+            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 text-[#FFB6C1] transition-colors z-10 bg-white/20 hover:bg-white/30 rounded-full p-2 md:p-3 backdrop-blur-sm"
+            aria-label="Slide précédente"
           >
             <svg className="w-6 h-6 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -75,7 +76,8 @@ export default function ActualitesSlider() {
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 text-[#FFB6C1] transition-colors z-10"
+            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 text-[#FFB6C1] transition-colors z-10 bg-white/20 hover:bg-white/30 rounded-full p-2 md:p-3 backdrop-blur-sm"
+            aria-label="Slide suivante"
           >
             <svg className="w-6 h-6 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

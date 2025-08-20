@@ -27,6 +27,11 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+    "/actualites": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/actualites.js"
+    ],
     "/qui-suis-je": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",

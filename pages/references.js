@@ -80,7 +80,7 @@ export default function References() {
           <div className="container mx-auto px-4">
             {/* Titre avec animation */}
             <div className="hidden">
-              <h1 className="text-5xl font-bold text-gray-800 mb-4 animate-fade-in">
+              <h1 className="text-5xl font-bold text-gray-800 mb-4 animate-fade-in uppercase">
                 Nos <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-600">Références</span>
               </h1>
               <div className="w-24 h-1 bg-gradient-to-r from-pink-400 to-purple-600 mx-auto rounded-full animate-pulse"></div>
@@ -94,7 +94,7 @@ export default function References() {
                 .map((logo, index) => (
                 <div 
                   key={index}
-                  className="group relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-2 hover:scale-105 perspective-1000"
+                  className="group relative overflow-hidden rounded-none bg-white shadow-lg hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-2 hover:scale-105 perspective-1000"
                   onMouseEnter={() => setHoveredLogo(index)}
                   onMouseLeave={() => setHoveredLogo(null)}
                 >

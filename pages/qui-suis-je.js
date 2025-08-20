@@ -30,7 +30,7 @@ export default function QuiSuisJe() {
           <div className="container mx-auto px-4">
             {/* Titre - visible sur mobile, caché sur desktop */}
             <div className="md:hidden text-center mb-4 mt-8">
-              <h1 className="text-4xl font-bold text-black mb-4">
+              <h1 className="text-4xl font-bold text-black mb-4 uppercase">
                 Rendez-vous chez <span className="text-black">Blondie Paris-Arles</span>
               </h1>
               <div className="w-20 h-1 bg-[#FFB6C1] mx-auto" />
@@ -52,7 +52,7 @@ export default function QuiSuisJe() {
                 <div className="space-y-6 mt-8">
                   {/* Titre - caché sur mobile, visible sur desktop */}
                   <div className="hidden md:block">
-                    <h1 className="text-4xl font-bold text-black mb-4">
+                    <h1 className="text-4xl font-bold text-black mb-4 uppercase">
                       Rendez-vous chez <span className="text-black">Blondie Paris-Arles</span>
                     </h1>
                     <div className="w-20 h-1 bg-[#FFB6C1]" />

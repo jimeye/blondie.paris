@@ -61,9 +61,9 @@ export default function Actualites() {
 
       <main>
         {/* Hero Slider */}
-        <section className="relative bg-white py-8 md:py-20">
+        <section className="relative bg-white pt-20 md:pt-24 pb-8 md:pb-20">
           <Navigation />
-          <div className="relative h-[calc(100vh-8rem)] md:h-[calc(100vh-4rem)] overflow-hidden">
+          <div className="relative h-[65vh] sm:h-[75vh] md:h-[calc(100vh-6rem)] overflow-hidden">
             {slides.map((slide, index) => (
               <div
                 key={index}
@@ -82,7 +82,8 @@ export default function Actualites() {
             {/* Navigation buttons */}
             <button
               onClick={prevSlide}
-              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 text-[#FFB6C1] transition-colors z-10"
+              aria-label="Slide précédente"
+              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 text-[#FFB6C1] transition-colors z-10 bg-white/20 hover:bg-white/30 rounded-full p-2 md:p-3 backdrop-blur-sm"
             >
               <svg className="w-6 h-6 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -90,7 +91,8 @@ export default function Actualites() {
             </button>
             <button
               onClick={nextSlide}
-              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 text-[#FFB6C1] transition-colors z-10"
+              aria-label="Slide suivante"
+              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 text-[#FFB6C1] transition-colors z-10 bg-white/20 hover:bg-white/30 rounded-full p-2 md:p-3 backdrop-blur-sm"
             >
               <svg className="w-6 h-6 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
