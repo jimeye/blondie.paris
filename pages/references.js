@@ -122,22 +122,6 @@ export default function References() {
                 </div>
               ))}
             </div>
-
-            {/* Section de statistiques avec animation */}
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-600 mb-2">{logos.length}+</div>
-                <div className="text-gray-600">Partenaires</div>
-              </div>
-              <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-600 mb-2">15+</div>
-                <div className="text-gray-600">Années d'expérience</div>
-              </div>
-              <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600 mb-2">100%</div>
-                <div className="text-gray-600">Satisfaction client</div>
-              </div>
-            </div>
           </div>
           <div className="mt-8">
             <Footer />
