@@ -19,24 +19,29 @@ export default function Home() {
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
+  const breadcrumbsLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://blondie-paris.vercel.app/' }
+    ]
+  }
+
   return (
     <div>
       <Head>
-        <title>BLONDIE - Bureau de Relations Presse et Communication</title>
-        <meta name="description" content="Blondie Paris, bureau de relations presse, relations publiques et production d'événements. Expertise en communication sur mesure pour agences, médias et marques." />
-        <meta name="keywords" content="relations presse, communication, événements, agences publicité, médias, marques, Nathalie Roland, Blondie Paris" />
-        <meta name="author" content="Nathalie Roland" />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="BLONDIE - Bureau de Relations Presse et Communication" />
-        <meta property="og:description" content="Blondie Paris, bureau de relations presse, relations publiques et production d'événements. Expertise en communication sur mesure." />
+        <title>BLONDIE Paris — Relations Presse, Communication & Événements</title>
+        <meta name="description" content="BLONDIE Paris accompagne agences, médias et marques: relations presse, relations publiques, production d’événements. Expertise sur‑mesure, réseau, confidentialité." />
+        <meta name="keywords" content="relations presse, communication, événements, agence, médias, marques, Paris, Arles, Nathalie Roland" />
+        <meta name="author" content="BLONDIE Paris" />
+        <meta property="og:title" content="BLONDIE Paris — Relations Presse & Communication" />
+        <meta property="og:description" content="Relations presse & RP, production d’événements. Expertise sur‑mesure pour agences, médias et marques." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://blondie-paris.com" />
+        <meta property="og:url" content="https://blondie-paris.vercel.app" />
         <meta property="og:image" content="/logo.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="BLONDIE - Bureau de Relations Presse" />
-        <meta name="twitter:description" content="Expertise en relations presse et communication sur mesure" />
-        <link rel="canonical" href="https://blondie-paris.com" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://blondie-paris.vercel.app" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsLd) }} />
       </Head>
 
       <main>
@@ -78,13 +83,10 @@ export default function Home() {
                     Fondé par Nathalie Roland, Blondie Paris est un bureau de relations presse, relations publiques et production d'événements qui accompagne à l'année ou en one shot les agences de publicité, les sociétés de production, les médias et les marques.
                   </p>
                   <p className="text-lg text-[#b0b0b0]/80 italic">
-                    « Dans un monde ultra connecté, il est primordial d'avoir un.e expert.e à ses côtés pour accompagner et conseiller les marques dans leur communication. Nous faisons du sur-mesure pour nos partenaires, dont l'objectif principal est de développer leur image et les mettre en lumière » déclare Nathalie Roland.
+                    « Dans un monde ultra connecté, il est primordial d'avoir un.e expert.e à ses côtés pour accompagner et conseiller les marques dans leur communication. Nous faisons du sur-mesure pour nos partenaires, dont l'objectif principal est de développer leur image et les mettre en lumière ».
                   </p>
                   <p className="text-lg text-[#b0b0b0]/80">
-                    Ecoute, rigueur, curiosité et observation sont le secret d'une collaboration pérenne et la marque de fabrique de Blondie Paris. Avec une expertise unique, un savoir-faire reconnu, basé à Arles et Paris, le bureau élabore une stratégie de communication sur mesure dans le respect de la plus grande confidentialité, développe et entretient les relations avec la presse française et internationale, et les influenceurs clefs avec pour objectif d'augmenter la visibilité de chaque client. Il s'entoure, depuis sa création, d'un pôle de free-lance très expérimenté, agile et réactif à vos côtés. Blondie Paris c'est avant tout une équipe qui décrypte l'actualité et les tendances d'aujourd'hui.
-                  </p>
-                  <p className="text-lg text-[#b0b0b0]/80">
-                    Doté d'une parfaite connaissance et expertise de l'écosystème de la communication, le bureau dispose d'un solide réseau de professionnels et d'une organisation flexible pour accompagner les clients dans tous leurs projets et dispositifs.
+                    Écoute, rigueur, curiosité et observation sont le secret d'une collaboration pérenne et la marque de fabrique de Blondie Paris.
                   </p>
                 </div>
               </div>

@@ -23,7 +23,7 @@ export default function ActualitesSlider() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 5000) // Change de slide toutes les 5 secondes
+    }, 5000)
 
     return () => clearInterval(timer)
   }, [])
@@ -48,7 +48,7 @@ export default function ActualitesSlider() {
         </div>
 
         {/* Slider */}
-        <div className="relative h-[60vh] sm:h-[70vh] md:h-[75vh] lg:h-[calc(100vh-12rem)] overflow-hidden rounded-lg">
+        <div className="relative h-[55vh] sm:h-[65vh] md:h-[75vh] lg:h-[calc(100vh-12rem)] overflow-hidden rounded-lg bg-white">
           {slides.map((slide, index) => (
             <div
               key={index}
@@ -59,7 +59,7 @@ export default function ActualitesSlider() {
               <img
                 src={slide.image}
                 alt={`Actualité ${index + 1}`}
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-contain md:object-cover object-center bg-white"
               />
             </div>
           ))}

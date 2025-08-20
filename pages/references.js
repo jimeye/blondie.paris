@@ -54,24 +54,22 @@ export default function References() {
     { src: "/logos/Marcel+copie.jpg", alt: "Marcel", name: "Marcel" }
   ]
 
+  const breadcrumbsLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://blondie-paris.vercel.app/' },
+      { '@type': 'ListItem', position: 2, name: 'Références', item: 'https://blondie-paris.vercel.app/references' }
+    ]
+  }
+
   return (
     <div>
       <Head>
         <title>Références - BLONDIE Paris</title>
-        <meta name="description" content="Découvrez nos partenaires et références. Blondie Paris accompagne agences, médias et marques dans leurs projets de communication." />
-        <meta name="keywords" content="références Blondie Paris, partenaires, agences publicité, médias, marques, communication, relations presse" />
-        <meta name="author" content="Nathalie Roland" />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Références - BLONDIE Paris" />
-        <meta property="og:description" content="Découvrez nos partenaires et références. Expertise en relations presse et communication." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://blondie-paris.com/references" />
-        <meta property="og:image" content="/logos/Logo+SYNEIDO.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Références - BLONDIE Paris" />
-        <meta name="twitter:description" content="Partenaires et références" />
-        <link rel="canonical" href="https://blondie-paris.com/references" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Partenaires et références BLONDIE Paris: agences, médias, marques. Expertise en relations presse et communication." />
+        <link rel="canonical" href="https://blondie-paris.vercel.app/references" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsLd) }} />
       </Head>
 
       <main>
