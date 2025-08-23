@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Logo from './Logo'
 
-export default function Navigation({ hideLogo = false, centerMenu = false, transparent = false, hideHome = false }) {
+export default function Navigation({ hideLogo = false, centerMenu = false, transparent = false, hideHome = false, closeModal = null }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isPresseOpen, setIsPresseOpen] = useState(false)
   const router = useRouter()
@@ -57,7 +57,7 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
             <Link href="/references" className="disco-link text-[#878787] uppercase">
               RÉFÉRENCES
             </Link>
-            <Link href="/events" className="disco-link text-[#878787] uppercase">
+            <Link href="/events" className="disco-link text-[#878787] uppercase" onClick={closeModal}>
               EVENTS
             </Link>
             
@@ -165,7 +165,10 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
               <Link 
                 href="/events" 
                 className="disco-link text-[#878787] uppercase"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  setIsMenuOpen(false)
+                  if (closeModal) closeModal()
+                }}
               >
                 EVENTS
               </Link>
