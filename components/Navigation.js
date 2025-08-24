@@ -5,6 +5,7 @@ import Logo from './Logo'
 
 export default function Navigation({ hideLogo = false, centerMenu = false, transparent = false, hideHome = false, closeModal = null }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isPresseOpen, setIsPresseOpen] = useState(false)
   const router = useRouter()
 
   const [isLogoVisible, setIsLogoVisible] = useState(true)
@@ -95,10 +96,10 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
 
           {/* Bouton menu mobile */}
           <button 
-            className="sm:hidden text-[#FFB6C1] menu-font"
+            className="sm:hidden text-[#FFB6C1] menu-font hover:text-[#FFB6C1]/80 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <svg className="w-6 h-6" fill="none" stroke="#FFB6C1" viewBox="0 0 24 24">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
@@ -171,12 +172,12 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
                 EVENTS
               </Link>
               
-              {/* Sous-menu Presse mobile avec comportement survol */}
+              {/* Sous-menu Presse mobile simple */}
               <div className="relative group">
                 <div className="disco-link text-[#394140] hover:text-[#FFB6C1] transition-colors w-full text-right uppercase cursor-pointer">
                   REVUE DE PRESSE
                 </div>
-                <div className="pr-4 mt-2 space-y-2 text-right opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="pr-4 mt-2 space-y-2 text-right opacity-100 visible transition-all duration-200">
                   <Link 
                     href="/presse-btob" 
                     className="disco-link block text-[#394140] hover:text-[#FFB6C1] transition-colors"

@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import {sanityClient} from '../lib/sanity/client'
 import {homepageQuery, referencesQuery} from '../lib/sanity/queries'
 import Navigation from '../components/Navigation'
@@ -138,18 +139,18 @@ export default function Home({cms, refs}) {
           <Navigation transparent={true} hideHome={true} />
           <HeroSlider />
           
-          {/* Section À propos */}
-          <section className="bg-white pt-0 md:pt-2 pb-12 md:pb-16">
+          {/* Section À propos complète */}
+          <section className="bg-white py-8">
             <div className="container mx-auto px-4">
               {/* Titre - visible sur mobile, caché sur desktop */}
-              <div className="md:hidden text-center mb-6 mt-6">
-                <h1 className="text-4xl font-bold text-black mb-4 uppercase">{cms?.aboutTitle || 'À '}<span className="text-black">propos</span></h1>
+              <div className="md:hidden text-center mb-4 mt-4">
+                <h1 className="text-4xl font-bold text-black mb-4 uppercase">À <span className="text-black">propos</span></h1>
                 <div className="w-20 h-1 bg-[#FFB6C1] mx-auto" />
               </div>
 
-              <div className="grid md:grid-cols-2 gap-12 items-start">
+              <div className="grid md:grid-cols-2 gap-8 items-start">
                 {/* Image à gauche */}
-                <div className="w-full mt-8">
+                <div className="w-full mt-4">
                   <img
                     src="/nathalie-roland-blondie-paris-a-propos.webp"
                     alt="À propos"
@@ -158,7 +159,7 @@ export default function Home({cms, refs}) {
                 </div>
 
                 {/* Contenu texte à droite */}
-                <div className="space-y-6 mt-8">
+                <div className="space-y-4 mt-4">
                   {/* Titre - caché sur mobile, visible sur desktop */}
                   <div className="hidden md:block">
                     <h1 className="text-4xl font-bold text-black mb-4 uppercase">
@@ -166,38 +167,37 @@ export default function Home({cms, refs}) {
                     </h1>
                     <div className="w-20 h-1 bg-[#FFB6C1]" />
                   </div>
-                  {cms?.aboutText ? (
-                    cms.aboutText.map((blk, i) => (
-                      <p key={i} className="text-lg text-[#b0b0b0]/80">{/* rendu simplifié */}{blk.children?.map(c=>c.text).join(' ')}</p>
-                    ))
-                  ) : (
-                    <p className="text-lg text-[#b0b0b0]/80">Fondé par Nathalie Roland, Blondie Paris est un bureau de relations presse…</p>
-                  )}
+                  <p className="text-lg text-[#b0b0b0]/80">
+                    Fondé par Nathalie Roland, Blondie Paris est un bureau de relations presse, relations publiques et production d'événements qui accompagne à l'année ou en one shot les agences de publicité, les sociétés de production, les médias et les marques.
+                  </p>
                   <p className="text-lg text-[#b0b0b0]/80 italic">
-                    « Dans un monde ultra connecté, il est primordial d'avoir un.e expert.e à ses côtés pour accompagner et conseiller les marques dans leur communication. Nous faisons du sur-mesure pour nos partenaires, dont l'objectif principal est de développer leur image et les mettre en lumière ».
+                    « Dans un monde ultra connecté, il est primordial d'avoir un.e expert.e à ses côtés pour accompagner et conseiller les marques dans leur communication. Nous faisons du sur-mesure pour nos partenaires, dont l'objectif principal est de développer leur image et les mettre en lumière » déclare Nathalie Roland.
                   </p>
                   <p className="text-lg text-[#b0b0b0]/80">
-                    Écoute, rigueur, curiosité et observation sont le secret d'une collaboration pérenne et la marque de fabrique de Blondie Paris.
+                    Ecoute, rigueur, curiosité et observation sont le secret d'une collaboration pérenne et la marque de fabrique de Blondie Paris. Avec une expertise unique, un savoir-faire reconnu, basé à Arles et Paris, le bureau élabore une stratégie de communication sur mesure dans le respect de la plus grande confidentialité, développe et entretient les relations avec la presse française et internationale, et les influenceurs clefs avec pour objectif d'augmenter la visibilité de chaque client. Il s'entoure, depuis sa création, d'un pôle de free-lance très expérimenté, agile et réactif à vos côtés. Blondie Paris c'est avant tout une équipe qui décrypte l'actualité et les tendances d'aujourd'hui.
+                  </p>
+                  <p className="text-lg text-[#b0b0b0]/80">
+                    Doté d'une parfaite connaissance et expertise de l'écosystème de la communication, le bureau dispose d'un solide réseau de professionnels et d'une organisation flexible pour accompagner les clients dans tous leurs projets et dispositifs.
                   </p>
                 </div>
               </div>
             </div>
           </section>
-
-          {/* Section Qui suis-je */}
-          <section className="bg-white pt-0 md:pt-2 pb-12 md:pb-16">
+          
+          {/* Section Qui suis-je complète */}
+          <section className="bg-white py-8">
             <div className="container mx-auto px-4">
               {/* Titre - visible sur mobile, caché sur desktop */}
-              <div className="md:hidden text-center mb-6 mt-6">
-                <h2 className="text-4xl font-bold text-black mb-4 uppercase">
+              <div className="md:hidden text-center mb-4 mt-4">
+                <h1 className="text-4xl font-bold text-black mb-4 uppercase">
                   Rendez-vous chez <span className="text-black">Blondie Paris-Arles</span>
-                </h2>
+                </h1>
                 <div className="w-20 h-1 bg-[#FFB6C1] mx-auto" />
               </div>
 
-              <div className="grid md:grid-cols-2 gap-12 items-start">
+              <div className="grid md:grid-cols-2 gap-8 items-start">
                 {/* Image à gauche */}
-                <div className="w-full mt-8">
+                <div className="w-full mt-4">
                   <img
                     src="/nathalie-roland-blondie-paris-qui-suis-je.webp"
                     alt="Qui suis-je"
@@ -206,12 +206,12 @@ export default function Home({cms, refs}) {
                 </div>
 
                 {/* Contenu texte à droite */}
-                <div className="space-y-6 mt-8">
+                <div className="space-y-4 mt-4">
                   {/* Titre - caché sur mobile, visible sur desktop */}
                   <div className="hidden md:block">
-                    <h2 className="text-4xl font-bold text-black mb-4 uppercase">
+                    <h1 className="text-4xl font-bold text-black mb-4 uppercase">
                       Rendez-vous chez <span className="text-black">Blondie Paris-Arles</span>
-                    </h2>
+                    </h1>
                     <div className="w-20 h-1 bg-[#FFB6C1]" />
                   </div>
                   <p className="text-lg text-[#b0b0b0]/80">
@@ -239,14 +239,96 @@ export default function Home({cms, refs}) {
               </div>
             </div>
           </section>
-
-          {/* Section Actualités */}
-          <ActualitesSlider />
-
-          {/* Section Références complète */}
-          <section className="bg-white py-16">
+          
+          {/* Section Events complète */}
+          <section className="bg-white py-8">
             <div className="container mx-auto px-4">
-              <div className="text-center mb-8">
+              <div className="text-center mb-6">
+                <h2 className="text-4xl font-bold text-black mb-4 uppercase">
+                  Events
+                </h2>
+                <div className="w-20 h-1 bg-[#FFB6C1] mx-auto" />
+              </div>
+              
+              {/* Grille des events: 2 colonnes mobile, 4 colonnes desktop + 5ème sur toute la largeur */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
+                <div className="group bg-white rounded-none border border-gray-200 overflow-hidden hover:shadow-md transition">
+                  <div className="relative w-full pt-[133%] bg-white">
+                    <img
+                      src="/events/1-pastille+CAN+PAPER-blondie-paris-blondie.paris-blondieparis.webp"
+                      alt="CAN Paper Gallery"
+                      className="absolute inset-0 w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-1 text-left">
+                    <p className="text-xs text-[#394140]">CAN Paper Gallery</p>
+                  </div>
+                </div>
+                
+                <div className="group bg-white rounded-none border border-gray-200 overflow-hidden hover:shadow-md transition">
+                  <div className="relative w-full pt-[133%] bg-white">
+                    <img
+                      src="/events/2-pastille+cda-blondie-paris-blondie.paris-blondieparis.webp"
+                      alt="Le Club des Directeurs Artistiques"
+                      className="absolute inset-0 w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-1 text-left">
+                    <p className="text-xs text-[#394140]">Le Club des Directeurs Artistiques</p>
+                  </div>
+                </div>
+                
+                <div className="group bg-white rounded-none border border-gray-200 overflow-hidden hover:shadow-md transition">
+                  <div className="relative w-full pt-[133%] bg-white">
+                    <img
+                      src="/events/3-pastille+fast+théo+gosselin-blondie-paris-blondie.paris-blondieparis.webp"
+                      alt="FAST – Théo Gosselin"
+                      className="absolute inset-0 w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-1 text-left">
+                    <p className="text-xs text-[#394140]">FAST – Théo Gosselin</p>
+                  </div>
+                </div>
+                
+                <div className="group bg-white rounded-none border border-gray-200 overflow-hidden hover:shadow-md transition">
+                  <div className="relative w-full pt-[133%] bg-white">
+                    <img
+                      src="/events/4-pastille+mélanie+elbaz -blondie-paris-blondie.paris-blondieparis..webp"
+                      alt="Mélanie Elbaz"
+                      className="absolute inset-0 w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-1 text-left">
+                    <p className="text-xs text-[#394140]">Mélanie Elbaz</p>
+                  </div>
+                </div>
+                
+                <div className="group bg-white rounded-none border border-gray-200 overflow-hidden hover:shadow-md transition col-span-2 md:col-span-4">
+                  <div className="relative w-full pt-[66.5%] bg-white">
+                    <img
+                      src="/events/5-pastille+d+coste+nord+pinus-blondie-paris-blondie.paris-blondieparis.webp"
+                      alt="D. Coste – Nord Pinus"
+                      className="absolute inset-0 w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-1 text-left">
+                    <p className="text-xs text-[#394140]">D. Coste – Nord Pinus</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Section Références */}
+          <section className="bg-white py-8">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-6">
                 <h2 className="text-4xl font-bold text-black mb-4 uppercase">
                   Références
                 </h2>
@@ -258,6 +340,152 @@ export default function Home({cms, refs}) {
                     <img src={logo.src} alt={logo.alt} className="w-full h-20 object-contain" />
                   </div>
                 ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Section Revue de Presse */}
+          <section className="bg-white py-8">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-6">
+                <h2 className="text-4xl font-bold text-black mb-4 uppercase">
+                  Revue de Presse
+                </h2>
+                <div className="w-20 h-1 bg-[#FFB6C1] mx-auto" />
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <Link href="/presse-btob" className="bg-white rounded-none border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
+                  <span className="text-xl font-semibold text-[#394140] uppercase text-center">Presse BtoB</span>
+                </Link>
+                <Link href="/presse-grand-public" className="bg-white rounded-none border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
+                  <span className="text-xl font-semibold text-[#394140] uppercase text-center">Presse Grand Public</span>
+                </Link>
+                <Link href="/tv" className="bg-white rounded-none border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
+                  <span className="text-xl font-semibold text-[#394140] uppercase text-center">TV</span>
+                </Link>
+                <Link href="/presse-internationale" className="bg-white rounded-none border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
+                  <span className="text-xl font-semibold text-[#394140] uppercase text-center">Presse Internationale</span>
+                </Link>
+              </div>
+            </div>
+          </section>
+
+          {/* Section Contact complète */}
+          <section className="bg-gradient-to-br from-white to-[#FFB6C1]/5 py-8">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-6">
+                <h2 className="text-4xl font-bold text-[#394140] mb-4 uppercase">
+                  Contact
+                </h2>
+                <div className="w-20 h-1 bg-[#FFB6C1] mx-auto mb-6" />
+                <p className="text-lg text-[#394140]/80 leading-relaxed uppercase max-w-3xl mx-auto">
+                  Prêt à collaborer ? Contactez-nous pour discuter de vos projets de relations presse, 
+                  communication et événements. Notre équipe est là pour vous accompagner.
+                </p>
+              </div>
+              
+              <div className="max-w-2xl mx-auto">
+                {/* Formulaire de contact */}
+                <div className="bg-white rounded-lg p-6">
+                  <h3 className="text-2xl font-bold text-[#394140] mb-4 uppercase">
+                    Envoyez-nous un message
+                  </h3>
+                  
+                  <form className="space-y-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <label htmlFor="nom" className="block text-sm font-medium text-[#394140] mb-2 uppercase">
+                          Nom *
+                        </label>
+                        <input
+                          type="text"
+                          id="nom"
+                          name="nom"
+                          required
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFB6C1] focus:border-transparent transition-all duration-200"
+                          placeholder="Votre nom"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="societe" className="block text-sm font-medium text-[#394140] mb-2 uppercase">
+                          Société
+                        </label>
+                        <input
+                          type="text"
+                          id="societe"
+                          name="societe"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFB6C1] focus:border-transparent transition-all duration-200"
+                          placeholder="Votre société (optionnel)"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="email" className="block text-sm font-medium text-[#394140] mb-2 uppercase">
+                          Email *
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          required
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFB6C1] focus:border-transparent transition-all duration-200"
+                          placeholder="votre@email.com"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="telephone" className="block text-sm font-medium text-[#394140] mb-2 uppercase">
+                          Téléphone
+                        </label>
+                        <input
+                          type="tel"
+                          id="telephone"
+                          name="telephone"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFB6C1] focus:border-transparent transition-all duration-200"
+                          placeholder="+33 6 12 34 56 78"
+                        />
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="sujet" className="block text-sm font-medium text-[#394140] mb-2 uppercase">
+                        Sujet *
+                      </label>
+                      <select
+                        id="sujet"
+                        name="sujet"
+                        required
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFB6C1] focus:border-transparent transition-all duration-200"
+                      >
+                        <option value="">Sélectionnez un sujet</option>
+                        <option value="relations-presse">Relations presse</option>
+                        <option value="evenements">Événements</option>
+                        <option value="communication">Communication</option>
+                        <option value="devis">Demande de devis</option>
+                        <option value="autre">Autre</option>
+                      </select>
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium text-[#394140] mb-2 uppercase">
+                        Message *
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        required
+                        rows="6"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFB6C1] focus:border-transparent transition-all duration-200 resize-none"
+                        placeholder="Décrivez votre projet..."
+                      ></textarea>
+                    </div>
+                    
+                    <button
+                      type="submit"
+                      className="w-full bg-[#FFB6C1] hover:bg-[#FFB6C1]/80 text-white font-semibold py-3 px-6 border border-[#394140] transition-all duration-200 uppercase"
+                    >
+                      Envoyer le message
+                    </button>
+                  </form>
+                </div>
               </div>
             </div>
           </section>

@@ -43,7 +43,7 @@ export default function Footer() {
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-2">
-              © 2025 BLONDIE-PARIS
+              © 2025 BLONDIE.PARIS
               <div className="w-20 h-0.5 bg-[#FFB6C1] mt-2"></div>
             </h3>
             <p className="text-sm">Website design by <a href="tel:+330608251223" className="hover:text-[#FFB6C1] transition-colors">JOSEPH-STUDIO.COM</a></p>
