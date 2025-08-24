@@ -1,0 +1,142 @@
+const tvImages = [
+  {
+    id: 1,
+    src: '/events/TV/001-tv-blondie-paris-blondie.paris-blondieparisGroupe-SYNEIDO-BSMARTwebp.webp',
+    title: '001 Tv Blondie Paris Blondie.Paris BlondieparisGroupe SYNEIDO BSMARTwebp'
+  },
+  {
+    id: 2,
+    src: '/events/TV/002-tv-blondie-paris-blondie.paris-blondieparis-STEVE-BSMART.webp',
+    title: 'STEVE BSMART'
+  },
+  {
+    id: 3,
+    src: '/events/TV/003-tv-blondie-paris-blondie.paris-blondieparis-STEVE-France-2,-Télématin.webp',
+    title: 'STEVE France 2, TéLéMatin'
+  },
+  {
+    id: 4,
+    src: '/events/TV/004-tv-blondie-paris-blondie.paris-blondieparis-B-Smart-Emergency-Bikes.webp',
+    title: 'B Smart Emergency Bikes'
+  },
+  {
+    id: 5,
+    src: '/events/TV/005-tv-blondie-paris-blondie.paris-blondieparis-BFM-Business-Romance.webp',
+    title: 'BFM Business Romance'
+  },
+  {
+    id: 6,
+    src: '/events/TV/006-tv-blondie-paris-blondie.paris-blondieparis-BFM-business-Intermarche-jpeg.webp',
+    title: 'BFM Business Intermarche Jpeg'
+  },
+  {
+    id: 7,
+    src: '/events/TV/007-tv-blondie-paris-blondie.paris-blondieparis-BFM-Business-A-vos-marques-MARCEL.webp',
+    title: 'BFM Business A Vos Marques MARCEL'
+  },
+  {
+    id: 8,
+    src: '/events/TV/008-tv-blondie-paris-blondie.paris-blondieparis-BFM-BUSINESS-Hebdo-Com-Romance.webp',
+    title: 'BFM BUSINESS Hebdo Com Romance'
+  },
+  {
+    id: 9,
+    src: '/events/TV/009-tv-blondie-paris-blondie.paris-blondieparis-BFM-Business-Hebdo-Com-Romance.webp',
+    title: 'BFM Business Hebdo Com Romance'
+  },
+  {
+    id: 10,
+    src: '/events/TV/010-tv-blondie-paris-blondie.paris-blondieparis-BFM-Business-Tech-co-Marcel.webp',
+    title: 'BFM Business Tech Co Marcel'
+  },
+  {
+    id: 11,
+    src: '/events/TV/011-tv-blondie-paris-blondie.paris-blondieparis-BFM-HEBDO-COM-ANIMALS.webp',
+    title: 'BFM HEBDO COM ANIMALS'
+  },
+  {
+    id: 12,
+    src: '/events/TV/012-tv-blondie-paris-blondie.paris-blondieparis-bfm-paris-Emergency-Bikes.webp',
+    title: 'Bfm Paris Emergency Bikes'
+  },
+  {
+    id: 13,
+    src: '/events/TV/013-tv-blondie-paris-blondie.paris-blondieparis-bfm-paris-suite-Emergency-Bikes-.webp',
+    title: 'Bfm Paris Suite Emergency Bikes '
+  },
+  {
+    id: 14,
+    src: '/events/TV/014-tv-blondie-paris-blondie.paris-blondieparis-BFM-TV-Intermarche-.webp',
+    title: 'BFM TV Intermarche '
+  },
+  {
+    id: 15,
+    src: '/events/TV/015-tv-blondie-paris-blondie.paris-blondieparis-C8-WILLIAM-A-MIDI-suite-Addiction-Agency.webp',
+    title: 'C8 WILLIAM A MIDI Suite Addiction Agency'
+  },
+  {
+    id: 16,
+    src: '/events/TV/016-tv-blondie-paris-blondie.paris-blondieparis-C8-WILLIAM-A-MIDI-Addiction-Agency.webp',
+    title: 'C8 WILLIAM A MIDI Addiction Agency'
+  },
+  {
+    id: 17,
+    src: '/events/TV/017-tv-blondie-paris-blondie.paris-blondieparis-CANAL-CATHERINE-ET-LILIANE-FAST.webp',
+    title: 'CANAL CATHERINE ET LILIANE FAST'
+  },
+  {
+    id: 18,
+    src: '/events/TV/018-tv-blondie-paris-blondie.paris-blondieparis-Culture-Pub-10-ans-Oasis-B.Tai-eb.webp',
+    title: 'Culture Pub 10 Ans Oasis B.Tai Eb'
+  },
+  {
+    id: 19,
+    src: '/events/TV/019-tv-blondie-paris-blondie.paris-blondieparis-CULTURE-PUB-Marcel-10-ans-Oasis-B.Tai-eb.2-sept-15.webp',
+    title: 'CULTURE PUB Marcel 10 Ans Oasis B.Tai Eb.2 Sept 15'
+  },
+  {
+    id: 20,
+    src: '/events/TV/020-tv-blondie-paris-blondie.paris-blondieparis-LCI-en-pleine-forme-Addiction-Agency.webp',
+    title: 'LCI En Pleine Forme Addiction Agency'
+  },
+  {
+    id: 21,
+    src: '/events/TV/021-tv-blondie-paris-blondie.paris-blondieparis-LCI-en-pleine-forme-suite-Addiction-Agency.webp',
+    title: 'LCI En Pleine Forme Suite Addiction Agency'
+  },
+  {
+    id: 22,
+    src: '/events/TV/022-tv-blondie-paris-blondie.paris-blondieparis-LES-ENFANTS-DE-LA-TELE-France-2-Intermarche-.webp',
+    title: 'LES ENFANTS DE LA TELE France 2 Intermarche '
+  },
+  {
+    id: 23,
+    src: '/events/TV/023-tv-blondie-paris-blondie.paris-blondieparis-TELEMATIN-France-2-les-Inrocks.webp',
+    title: 'TELEMATIN France 2 Les Inrocks'
+  },
+  {
+    id: 24,
+    src: '/events/TV/024-tv-blondie-paris-blondie.paris-blondieparis-TELEMATIN-France-2-suite-les-Inrocks.webp',
+    title: 'TELEMATIN France 2 Suite Les Inrocks'
+  },
+  {
+    id: 25,
+    src: '/events/TV/025-tv-blondie-paris-blondie.paris-blondieparis-bfmTV-Stilacci.webp',
+    title: 'BfmTV Stilacci'
+  },
+  {
+    id: 26,
+    src: '/events/TV/026-tv-blondie-paris-blondie.paris-blondieparis-oisx-Bfm.webp',
+    title: 'Oisx Bfm'
+  },
+  {
+    id: 27,
+    src: '/events/TV/027-tv-blondie-paris-blondie.paris-blondieparis-Intermarché-LCI.webp',
+    title: 'Intermarché LCI'
+  },
+  {
+    id: 28,
+    src: '/events/TV/028-tv-blondie-paris-blondie.paris-blondieparis-Romance-Europe-1-FRANCE-2-"Envoyé-Spécial".webp',
+    title: 'Romance Europe 1 FRANCE 2 "Envoyé SpéCial"'
+  },
+];

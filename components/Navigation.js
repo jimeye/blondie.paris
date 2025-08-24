@@ -39,65 +39,64 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
           )}
           
           {/* Menu desktop */}
-          <div className={`hidden md:flex menu-font text-sm ${centerMenu ? 'space-x-8' : 'space-x-8'}`}>
+          <div className={`hidden sm:flex menu-font text-xs sm:text-sm lg:text-base justify-center ${centerMenu ? 'space-x-1 sm:space-x-2 lg:space-x-4' : 'space-x-1 sm:space-x-2 lg:space-x-4'}`}>
             {!hideHome && router.pathname !== '/' && (
-              <Link href="/" className="disco-link text-[#878787] uppercase">
+                              <Link href="/" className="disco-link text-gray-800 uppercase">
                 HOME
               </Link>
             )}
-            <Link href="/a-propos" className="disco-link text-[#878787] uppercase">
+            <Link href="/a-propos" className="disco-link text-[#394140] uppercase">
               À PROPOS
             </Link>
-            <Link href="/qui-suis-je" className="disco-link text-[#878787] uppercase">
+            <Link href="/qui-suis-je" className="disco-link text-[#394140] uppercase">
               QUI SUIS-JE ?
             </Link>
-            <Link href="/actualites" className="disco-link text-[#878787] uppercase">
+            <Link href="/actualites" className="disco-link text-[#394140] uppercase">
               ACTUALITÉS
             </Link>
-            <Link href="/references" className="disco-link text-[#878787] uppercase">
+            <Link href="/references" className="disco-link text-[#394140] uppercase">
               RÉFÉRENCES
             </Link>
-            <Link href="/events" className="disco-link text-[#878787] uppercase" onClick={closeModal}>
+            <Link href="/events" className="disco-link text-[#394140] uppercase" onClick={closeModal}>
               EVENTS
             </Link>
             
             {/* Menu Presse avec sous-menu */}
             <div className="relative group">
-              <button 
-                className="disco-link text-[#878787] hover:text-[#FFB6C1] transition-colors uppercase flex items-center text-sm"
-                onClick={() => setIsPresseOpen(!isPresseOpen)}
-              >
-                REVUE DE PRESSE
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
+              <div className="disco-link text-[#394140] hover:text-[#FFB6C1] transition-colors uppercase text-xs sm:text-sm lg:text-base cursor-pointer">
+                <span className="inline-flex items-center">
+                  REVUE DE PRESSE
+                  <svg className="w-3 h-3 ml-1 transition-transform duration-200 group-hover:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </div>
               
               {/* Sous-menu Presse */}
-              <div className={`absolute left-0 mt-2 w-48 bg-white/95 backdrop-blur-sm rounded-lg shadow-lg py-2 ${isPresseOpen ? 'block' : 'hidden'} group-hover:block`}>
-                <Link href="/presse-btob" className="disco-link block px-4 py-2 text-[#878787]">
+              <div className="absolute left-0 mt-1 w-48 bg-[#FFB6C1]/10 backdrop-blur-sm shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <Link href="/presse-btob" className="disco-link block px-4 py-0.5 text-[#394140] hover:bg-[#FFB6C1]/10">
                   Presse BtoB
                 </Link>
-                <Link href="/presse-grand-public" className="disco-link block px-4 py-2 text-[#878787]">
+                <Link href="/presse-grand-public" className="disco-link block px-4 py-0.5 text-[#394140] hover:bg-[#FFB6C1]/10">
                   Presse Grand Public
                 </Link>
-                <Link href="/tv" className="disco-link block px-4 py-2 text-[#878787]">
+                <Link href="/tv" className="disco-link block px-4 py-0.5 text-[#394140] hover:bg-[#FFB6C1]/10">
                   TV
                 </Link>
-                <Link href="/presse-internationale" className="disco-link block px-4 py-2 text-[#878787]">
+                <Link href="/presse-internationale" className="disco-link block px-4 py-0.5 text-[#394140] hover:bg-[#FFB6C1]/10">
                   Presse Internationale
                 </Link>
               </div>
             </div>
 
-            <Link href="/#contact" className="disco-link text-[#878787] hover:text-[#FFB6C1] transition-colors uppercase">
+            <Link href="/contact" className="disco-link text-[#394140] hover:text-[#FFB6C1] transition-colors uppercase text-xs sm:text-sm lg:text-base">
               CONTACT
             </Link>
           </div>
 
           {/* Bouton menu mobile */}
           <button 
-            className="md:hidden text-[#FFB6C1] menu-font"
+            className="sm:hidden text-[#FFB6C1] menu-font"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <svg className="w-6 h-6" fill="none" stroke="#FFB6C1" viewBox="0 0 24 24">
@@ -112,11 +111,11 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
 
         {/* Menu mobile overlay */}
         {isMenuOpen && (
-          <div className="md:hidden fixed top-0 right-0 w-64 h-screen bg-white/70 backdrop-blur-sm shadow-lg z-50">
+          <div className="sm:hidden fixed top-0 right-0 w-64 h-screen bg-white/70 backdrop-blur-sm shadow-lg z-50">
             <div className="flex flex-col space-y-4 p-6 menu-font text-right text-sm">
               <div className="flex justify-end mb-6">
                 <button 
-                  className="text-[#878787] hover:text-[#FFB6C1] transition-colors"
+                  className="text-[#394140] hover:text-[#FFB6C1] transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -128,7 +127,7 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
               {!hideHome && router.pathname !== '/' && (
                 <Link 
                   href="/" 
-                  className="disco-link text-[#878787] uppercase"
+                  className="disco-link text-[#394140] uppercase"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   HOME
@@ -136,35 +135,35 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
               )}
               <Link 
                 href="/a-propos" 
-                className="disco-link text-[#878787] uppercase"
+                className="disco-link text-[#394140] uppercase"
                 onClick={() => setIsMenuOpen(false)}
               >
                 À PROPOS
               </Link>
               <Link 
                 href="/qui-suis-je" 
-                className="disco-link text-[#878787] uppercase"
+                className="disco-link text-[#394140] uppercase"
                 onClick={() => setIsMenuOpen(false)}
               >
                 QUI SUIS-JE ?
               </Link>
               <Link 
                 href="/actualites" 
-                className="disco-link text-[#878787] uppercase"
+                className="disco-link text-[#394140] uppercase"
                 onClick={() => setIsMenuOpen(false)}
               >
                 ACTUALITÉS
               </Link>
               <Link 
                 href="/references" 
-                className="disco-link text-[#878787] uppercase"
+                className="disco-link text-[#394140] uppercase"
                 onClick={() => setIsMenuOpen(false)}
               >
                 RÉFÉRENCES
               </Link>
               <Link 
                 href="/events" 
-                className="disco-link text-[#878787] uppercase"
+                className="disco-link text-[#394140] uppercase"
                 onClick={() => {
                   setIsMenuOpen(false)
                   if (closeModal) closeModal()
@@ -176,7 +175,7 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
               {/* Sous-menu Presse mobile */}
               <div>
                 <button 
-                  className="disco-link text-[#878787] hover:text-[#FFB6C1] transition-colors w-full text-right"
+                  className="disco-link text-[#394140] hover:text-[#FFB6C1] transition-colors w-full text-right"
                   onClick={() => setIsPresseOpen(!isPresseOpen)}
                 >
                   REVUE DE PRESSE
@@ -185,28 +184,28 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
                   <div className="pr-4 mt-2 space-y-2 text-right">
                     <Link 
                       href="/presse-btob" 
-                      className="disco-link block text-[#878787] hover:text-[#FFB6C1] transition-colors"
+                      className="disco-link block text-[#394140] hover:text-[#FFB6C1] transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Presse BtoB
                     </Link>
                     <Link 
                       href="/presse-grand-public" 
-                      className="disco-link block text-[#878787] hover:text-[#FFB6C1] transition-colors"
+                      className="disco-link block text-[#394140] hover:text-[#FFB6C1] transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Presse Grand Public
                     </Link>
                     <Link 
                       href="/tv" 
-                      className="disco-link block text-[#878787] hover:text-[#FFB6C1] transition-colors"
+                      className="disco-link block text-[#394140] hover:text-[#FFB6C1] transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       TV
                     </Link>
                     <Link 
                       href="/presse-internationale" 
-                      className="disco-link block text-[#878787] hover:text-[#FFB6C1] transition-colors"
+                      className="disco-link block text-[#394140] hover:text-[#FFB6C1] transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Presse Internationale
@@ -216,8 +215,8 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
               </div>
 
               <Link 
-                href="/#contact" 
-                className="disco-link text-[#878787] hover:text-[#FFB6C1] transition-colors"
+                href="/contact" 
+                className="disco-link text-[#394140] hover:text-[#FFB6C1] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 CONTACT

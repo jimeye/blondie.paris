@@ -33,17 +33,104 @@ export default function Home({cms, refs}) {
     <div>
       <Head>
         <title>{cms?.seo?.title || 'BLONDIE Paris — Relations Presse, Communication & Événements'}</title>
-        <meta name="description" content={cms?.seo?.description || "BLONDIE Paris accompagne agences, médias et marques: relations presse, relations publiques, production d’événements. Expertise sur‑mesure, réseau, confidentialité."} />
-        <meta name="keywords" content="relations presse, communication, événements, agence, médias, marques, Paris, Arles, Nathalie Roland" />
-        <meta name="author" content="BLONDIE Paris" />
-        <meta property="og:title" content="BLONDIE Paris — Relations Presse & Communication" />
-        <meta property="og:description" content="Relations presse & RP, production d’événements. Expertise sur‑mesure pour agences, médias et marques." />
+        <meta name="description" content={cms?.seo?.description || "BLONDIE Paris accompagne agences, médias et marques: relations presse, relations publiques, production d'événements. Expertise sur‑mesure, réseau, confidentialité."} />
+        <meta name="keywords" content="relations presse, communication, événements, agence, médias, marques, Paris, Arles, Nathalie Roland, bureau relations presse, conseil communication, production événements" />
+        <meta name="author" content="BLONDIE Paris - Nathalie Roland" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="language" content="fr" />
+        <meta name="geo.region" content="FR" />
+        <meta name="geo.placename" content="Arles, Paris" />
+        <meta name="geo.position" content="43.6769;4.6283" />
+        <meta name="ICBM" content="43.6769, 4.6283" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={cms?.seo?.title || 'BLONDIE Paris — Relations Presse, Communication & Événements'} />
+        <meta property="og:description" content={cms?.seo?.description || "BLONDIE Paris accompagne agences, médias et marques: relations presse, relations publiques, production d'événements. Expertise sur‑mesure, réseau, confidentialité."} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://blondie-paris.vercel.app" />
-        <meta property="og:image" content="/logo.png" />
+        <meta property="og:url" content="https://blondie-paris.com/" />
+        <meta property="og:site_name" content="BLONDIE Paris" />
+        <meta property="og:locale" content="fr_FR" />
+        <meta property="og:image" content="https://blondie-paris.com/logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="BLONDIE Paris - Bureau de relations presse" />
+        
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://blondie-paris.vercel.app" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsLd) }} />
+        <meta name="twitter:title" content={cms?.seo?.title || 'BLONDIE Paris — Relations Presse, Communication & Événements'} />
+        <meta name="twitter:description" content={cms?.seo?.description || "BLONDIE Paris accompagne agences, médias et marques: relations presse, relations publiques, production d'événements."} />
+        <meta name="twitter:image" content="https://blondie-paris.com/logo.png" />
+        <meta name="twitter:image:alt" content="BLONDIE Paris - Bureau de relations presse" />
+        
+        {/* Canonical */}
+        <link rel="canonical" href="https://blondie-paris.com/" />
+        
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        
+        {/* Preconnect */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "BLONDIE Paris",
+              "alternateName": "BLONDIE",
+              "description": "Bureau de relations presse et communication spécialisé dans les relations publiques, événements et conseil en communication",
+              "url": "https://blondie-paris.com",
+              "logo": "https://blondie-paris.com/logo.png",
+              "image": "https://blondie-paris.com/logo.png",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "11 RUE DU SAUVAGE",
+                "addressLocality": "Arles",
+                "postalCode": "13200",
+                "addressCountry": "FR"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+33-6-09-49-63-29",
+                "contactType": "customer service",
+                "email": "nathalie@blondie.paris",
+                "availableLanguage": "French"
+              },
+              "founder": {
+                "@type": "Person",
+                "name": "Nathalie Roland"
+              },
+              "serviceArea": {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                  "@type": "GeoCoordinates",
+                  "latitude": 43.6769,
+                  "longitude": 4.6283
+                },
+                "geoRadius": "50000"
+              },
+              "areaServed": ["FR", "Paris", "Arles"],
+              "serviceType": [
+                "Relations presse",
+                "Relations publiques", 
+                "Communication",
+                "Événements",
+                "Conseil en communication"
+              ],
+              "sameAs": [
+                "https://www.linkedin.com/company/blondie-paris",
+                "https://www.instagram.com/blondie.paris"
+              ]
+            })
+          }}
+        />
       </Head>
 
       <main>

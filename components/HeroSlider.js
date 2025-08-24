@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 
 const slides = [
   '/nathalie-roland-blondie-paris-hero-acceuil.webp',
-  '/slider/slideracceuil.jpg',
+  '/nathalie-roland-blondie-paris-hero-acceuil-2.webp',
 ]
 
 export default function HeroSlider() {
@@ -41,7 +41,7 @@ export default function HeroSlider() {
       </div>
 
       {/* Flèches navigation - fond transparent, flèches roses */}
-      {slides.length > 1 && (
+      {/* {slides.length > 1 && (
         <>
           <button
             onClick={prev}
@@ -62,7 +62,7 @@ export default function HeroSlider() {
             </svg>
           </button>
         </>
-      )}
+      )} */}
 
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center" style={{ marginTop: '-33vh' }}>
@@ -78,7 +78,7 @@ export default function HeroSlider() {
         href="https://www.deezer.com/fr/playlist/8889404982?utm_campaign=system-message&utm_content=playlist-8889404982&utm_medium=mobile&utm_source=user_sharing"
         target="_blank"
         rel="noopener noreferrer"
-        className="absolute left-4 bottom-4 md:left-6 md:bottom-6 bg-black/40 hover:bg-black/60 text-white px-1.5 py-1.5 md:px-2 md:py-1.5 rounded-md backdrop-blur-sm transition flex items-center"
+        className="absolute left-4 bottom-4 md:left-6 md:bottom-6 text-white px-1.5 py-1.5 md:px-2 md:py-1.5 rounded-md backdrop-blur-sm transition flex items-center"
         aria-label="Écouter la playlist Deezer Blondie Paris-Arles"
       >
         <img

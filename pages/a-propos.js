@@ -7,21 +7,110 @@ export default function APropos() {
   return (
     <div>
       <Head>
-        <title>À propos - BLONDIE Paris</title>
-        <meta name="description" content="Découvrez Blondie Paris, bureau de relations presse fondé par Nathalie Roland. Expertise en communication, événements et accompagnement sur mesure." />
-        <meta name="keywords" content="Blondie Paris, Nathalie Roland, relations presse, bureau communication, événements, agences publicité" />
-        <meta name="author" content="Nathalie Roland" />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="À propos - BLONDIE Paris" />
-        <meta property="og:description" content="Découvrez Blondie Paris, bureau de relations presse fondé par Nathalie Roland. Expertise en communication et événements." />
+        <title>À propos - BLONDIE Paris | Bureau de Relations Presse</title>
+        <meta name="description" content="Découvrez BLONDIE Paris, bureau de relations presse fondé par Nathalie Roland. Expertise en communication, événements et accompagnement sur mesure. Basé à Arles." />
+        <meta name="keywords" content="à propos, BLONDIE Paris, Nathalie Roland, relations presse, bureau communication, événements, agences publicité, Arles, conseil relations publiques" />
+        <meta name="author" content="BLONDIE Paris - Nathalie Roland" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="language" content="fr" />
+        <meta name="geo.region" content="FR" />
+        <meta name="geo.placename" content="Arles" />
+        <meta name="geo.position" content="43.6769;4.6283" />
+        <meta name="ICBM" content="43.6769, 4.6283" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="À propos - BLONDIE Paris | Bureau de Relations Presse" />
+        <meta property="og:description" content="Découvrez BLONDIE Paris, bureau de relations presse fondé par Nathalie Roland. Expertise en communication et événements." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://blondie-paris.com/a-propos" />
-        <meta property="og:image" content="/apropos.jpeg" />
+        <meta property="og:site_name" content="BLONDIE Paris" />
+        <meta property="og:locale" content="fr_FR" />
+        <meta property="og:image" content="https://blondie-paris.com/logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="À propos BLONDIE Paris - Bureau de relations presse" />
+        
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="À propos - BLONDIE Paris" />
-        <meta name="twitter:description" content="Bureau de relations presse et communication sur mesure" />
+        <meta name="twitter:title" content="À propos - BLONDIE Paris | Bureau de Relations Presse" />
+        <meta name="twitter:description" content="Découvrez BLONDIE Paris, bureau de relations presse fondé par Nathalie Roland." />
+        <meta name="twitter:image" content="https://blondie-paris.com/logo.png" />
+        <meta name="twitter:image:alt" content="À propos BLONDIE Paris - Bureau de relations presse" />
+        
+        {/* Canonical */}
         <link rel="canonical" href="https://blondie-paris.com/a-propos" />
+        
+        {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        
+        {/* Preconnect */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "AboutPage",
+              "name": "À propos - BLONDIE Paris",
+              "description": "Page à propos de BLONDIE Paris - Bureau de relations presse et communication",
+              "url": "https://blondie-paris.com/a-propos",
+              "mainEntity": {
+                "@type": "Organization",
+                "name": "BLONDIE Paris",
+                "description": "Bureau de relations presse et communication fondé par Nathalie Roland",
+                "url": "https://blondie-paris.com",
+                "founder": {
+                  "@type": "Person",
+                  "name": "Nathalie Roland",
+                  "jobTitle": "Fondatrice",
+                  "worksFor": {
+                    "@type": "Organization",
+                    "name": "BLONDIE Paris"
+                  }
+                },
+                "foundingDate": "2020",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "11 RUE DU SAUVAGE",
+                  "addressLocality": "Arles",
+                  "postalCode": "13200",
+                  "addressCountry": "FR"
+                },
+                "serviceType": [
+                  "Relations presse",
+                  "Relations publiques",
+                  "Communication",
+                  "Événements",
+                  "Conseil en communication"
+                ]
+              },
+              "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Accueil",
+                    "item": "https://blondie-paris.com/"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "À propos",
+                    "item": "https://blondie-paris.com/a-propos"
+                  }
+                ]
+              }
+            })
+          }}
+        />
       </Head>
 
       <main>

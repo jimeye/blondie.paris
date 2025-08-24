@@ -24,7 +24,8 @@ const allEvents = [
     ],
   },
   {
-    title: 'Le Club des Directeurs Artistiques - Galerie du Club, place Patrat',
+    title: 'Le Club des Directeurs Artistiques',
+    modalTitle: 'Le Club des Directeurs Artistiques Galerie du Club, place Patrat',
     cover: '/events/2-pastille+cda-blondie-paris-blondie.paris-blondieparis.webp',
     gallery: [
       '/events/Le-Club/1-Le-Club-des-Directeurs-Artistiques-Galerie-du-Club-place-Patrat-blondie-paris-blondie.paris-blondieparis.webp',
@@ -49,36 +50,58 @@ const allEvents = [
   },
   {
     title: 'FAST – Théo Gosselin',
-    cover: '/events/3-pastille+fast+théo+gosselin-blondie-paris-blondie.paris-blondieparis.webp',
+    modalTitle: 'Théo Gosselin Garage du Nord Pinus',
+    cover: '/events/3-pastille+fast+théo+gosselin-blondie-paris-blondie.paris-blondieparis.webp',
     gallery: [
-      '/events/3-pastille+fast+théo+gosselin-blondie-paris-blondie.paris-blondieparis.webp',
-      '/events/4-pastille+mélanie+elbaz -blondie-paris-blondie.paris-blondieparis..webp',
-      '/events/5-pastille+d+coste+nord+pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Théo-Gosselin-Garage-du-Nord-Pinus/1-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Théo-Gosselin-Garage-du-Nord-Pinus/2-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Théo-Gosselin-Garage-du-Nord-Pinus/4-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Théo-Gosselin-Garage-du-Nord-Pinus/5-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Théo-Gosselin-Garage-du-Nord-Pinus/6-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Théo-Gosselin-Garage-du-Nord-Pinus/7-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Théo-Gosselin-Garage-du-Nord-Pinus/3-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Théo-Gosselin-Garage-du-Nord-Pinus/8-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Théo-Gosselin-Garage-du-Nord-Pinus/9-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Théo-Gosselin-Garage-du-Nord-Pinus/10-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Théo-Gosselin-Garage-du-Nord-Pinus/11-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Théo-Gosselin-Garage-du-Nord-Pinus/12-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Théo-Gosselin-Garage-du-Nord-Pinus/13-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Théo-Gosselin-Garage-du-Nord-Pinus/14-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Théo-Gosselin-Garage-du-Nord-Pinus/15-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
     ],
   },
   {
     title: 'Mélanie Elbaz',
-    cover: '/events/4-pastille+mélanie+elbaz -blondie-paris-blondie.paris-blondieparis..webp',
+    modalTitle: 'Mélanie Elbaz Place Paul Doumer',
+    cover: '/events/4-pastille+mélanie+elbaz -blondie-paris-blondie.paris-blondieparis..webp',
     gallery: [
-      '/events/4-pastille+mélanie+elbaz -blondie-paris-blondie.paris-blondieparis..webp',
-      '/events/5-pastille+d+coste+nord+pinus-blondie-paris-blondie.paris-blondieparis.webp',
-      '/events/1-pastille+CAN+PAPER-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Mélanie-Elbaz-Place-Paul-Doumer/1-Mélanie-Elbaz-Place-Paul-Doumer-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Mélanie-Elbaz-Place-Paul-Doumer/2-Mélanie-Elbaz-Place-Paul-Doumer-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Mélanie-Elbaz-Place-Paul-Doumer/3-Mélanie-Elbaz-Place-Paul-Doumer-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Mélanie-Elbaz-Place-Paul-Doumer/4-Mélanie-Elbaz-Place-Paul-Doumer-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Mélanie-Elbaz-Place-Paul-Doumer/5-Mélanie-Elbaz-Place-Paul-Doumer-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Mélanie-Elbaz-Place-Paul-Doumer/6-Mélanie-Elbaz-Place-Paul-Doumer-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Mélanie-Elbaz-Place-Paul-Doumer/7-Mélanie-Elbaz-Place-Paul-Doumer-blondie-paris-blondie.paris-blondieparis.webp',
     ],
   },
   {
     title: 'D. Coste – Nord Pinus',
     cover: '/events/5-pastille+d+coste+nord+pinus-blondie-paris-blondie.paris-blondieparis.webp',
     gallery: [
-      '/events/5-pastille+d+coste+nord+pinus-blondie-paris-blondie.paris-blondieparis.webp',
-      '/events/2-pastille+cda-blondie-paris-blondie.paris-blondieparis.webp',
-      '/events/3-pastille+fast+théo+gosselin-blondie-paris-blondie.paris-blondieparis.webp',
-      '/events/4-pastille+mélanie+elbaz -blondie-paris-blondie.paris-blondieparis..webp',
+      '/events/Dimitri-Coste-Nord-Pinus/1-Dimitri-Coste-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Dimitri-Coste-Nord-Pinus/2-Dimitri-Coste-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Dimitri-Coste-Nord-Pinus/3-Dimitri-Coste-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Dimitri-Coste-Nord-Pinus/4-Dimitri-Coste-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Dimitri-Coste-Nord-Pinus/5-Dimitri-Coste-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Dimitri-Coste-Nord-Pinus/6-Dimitri-Coste-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Dimitri-Coste-Nord-Pinus/7-Dimitri-Coste-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      '/events/Dimitri-Coste-Nord-Pinus/8-Dimitri-Coste-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
     ],
   },
 ]
 
 const PAGE_SIZE_DESKTOP = 8 // >4 par page (desktop)
-const PAGE_SIZE_MOBILE = 4  // 2 par ligne, donc 4 éléments par page mobile
+const PAGE_SIZE_MOBILE = 10 // Tous les événements sur une page mobile
 
 export default function Events() {
   const [page, setPage] = useState(1)
@@ -135,10 +158,10 @@ export default function Events() {
                 <button
                   key={i}
                   onClick={() => setOpenIdx(((page - 1) * pageSize) + i)}
-                  className="group bg-white rounded-none border border-gray-200 overflow-hidden hover:shadow-md transition"
+                  className={`group bg-white rounded-none border border-gray-200 overflow-hidden hover:shadow-md transition ${ev.title === 'D. Coste – Nord Pinus' ? 'col-span-2' : ''}`}
                   aria-label={`Ouvrir la galerie ${ev.title}`}
                 >
-                  <div className="relative w-full pt-[133%] bg-white">
+                  <div className={`relative w-full ${ev.title === 'D. Coste – Nord Pinus' ? 'pt-[66.5%]' : 'pt-[133%]'} bg-white`}>
                     <img
                       src={ev.cover}
                       alt={ev.title}
@@ -146,8 +169,8 @@ export default function Events() {
                       loading="lazy"
                     />
                   </div>
-                  <div className="p-2 text-left">
-                    <p className="text-sm text-[#878787]">{ev.title}</p>
+                  <div className={`${ev.title === 'D. Coste – Nord Pinus' ? 'p-2' : 'p-2'} text-left`}>
+                    <p className="text-sm text-[#394140]">{ev.title}</p>
                   </div>
                 </button>
               ))}
@@ -157,15 +180,15 @@ export default function Events() {
             {totalPages > 1 && (
               <div className="flex items-center justify-center gap-3 mt-8">
                 <button
-                  className="px-3 py-1 border border-gray-300 text-sm text-[#878787] rounded disabled:opacity-40"
+                  className="px-3 py-1 border border-gray-300 text-sm text-[#394140] rounded disabled:opacity-40"
                   onClick={() => setPage((p) => Math.max(1, p - 1))}
                   disabled={page === 1}
                 >
                   Précédent
                 </button>
-                <span className="text-sm text-[#878787]">Page {page} / {totalPages}</span>
+                <span className="text-sm text-[#394140]">Page {page} / {totalPages}</span>
                 <button
-                  className="px-3 py-1 border border-gray-300 text-sm text-[#878787] rounded disabled:opacity-40"
+                  className="px-3 py-1 border border-gray-300 text-sm text-[#394140] rounded disabled:opacity-40"
                   onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
                   disabled={page === totalPages}
                 >
@@ -187,19 +210,28 @@ export default function Events() {
         >
           <div className="w-full max-w-6xl mx-auto bg-white rounded-none p-2 md:p-3 my-4" onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center justify-between px-1 md:px-2 py-2 sticky top-0 bg-white z-10">
-              <h2 className="text-lg md:text-xl font-semibold text-black">{allEvents[openIdx]?.title}</h2>
-              <button className="text-[#878787] hover:text-[#FFB6C1]" aria-label="Fermer" onClick={() => setOpenIdx(null)}>
+              <h2 className="text-lg md:text-xl font-semibold text-black">
+                {allEvents[openIdx]?.modalTitle ? (
+                  <>
+                    <span className="block md:inline">Le Club des Directeurs Artistiques</span>
+                    <span className="block md:inline">Galerie du Club, place Patrat</span>
+                  </>
+                ) : (
+                  allEvents[openIdx]?.title
+                )}
+              </h2>
+              <button className="text-[#394140] hover:text-[#FFB6C1]" aria-label="Fermer" onClick={() => setOpenIdx(null)}>
                 ✕
               </button>
             </div>
             {/* Grille 2 colonnes mobile et desktop */}
             <div className="grid grid-cols-2 gap-2 md:gap-3 px-1 md:px-2 pb-2">
               {allEvents[openIdx]?.gallery?.map((src, gi) => (
-                <div key={gi} className={`${(gi === 4 || gi === 11 ? 'col-span-2' : '')}`}>
+                <div key={gi} className={`${(gi === 0 || gi === 1 || gi === 2 || gi === 3 || gi === 6 || gi === 7 ? 'col-span-2' : '')}`}>
                   <img 
                     src={src} 
                     alt={`${allEvents[openIdx]?.title} - visuel ${gi + 1}`} 
-                    className="w-full h-auto object-contain bg-white" 
+                    className={`w-full h-auto object-contain bg-white ${gi === 0 ? 'mx-auto' : ''}`} 
                     loading="lazy"
                     onError={(e) => {
                       console.error(`Erreur de chargement pour l'image ${gi + 1}:`, src)

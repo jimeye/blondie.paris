@@ -1,4 +1,28 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blondie-paris.com/sitemap.xml 
+# Sitemap
+Sitemap: https://blondie-paris.com/sitemap.xml
+
+# Crawl-delay pour éviter de surcharger le serveur
+Crawl-delay: 1
+
+# Bloquer les fichiers sensibles
+Disallow: /api/
+Disallow: /_next/
+Disallow: /studio/
+Disallow: /*.json$
+
+# Permettre les images et assets
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.svg$
+Allow: /*.css$
+Allow: /*.js$
+
+# Meta robots pour les pages spécifiques
+# Les pages de contact et à propos peuvent être indexées
+# Les pages de revue de presse peuvent être indexées 
