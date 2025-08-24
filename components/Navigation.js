@@ -5,7 +5,6 @@ import Logo from './Logo'
 
 export default function Navigation({ hideLogo = false, centerMenu = false, transparent = false, hideHome = false, closeModal = null }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isPresseOpen, setIsPresseOpen] = useState(false)
   const router = useRouter()
 
   const [isLogoVisible, setIsLogoVisible] = useState(true)
@@ -111,9 +110,9 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
 
         {/* Menu mobile overlay */}
         {isMenuOpen && (
-          <div className="sm:hidden fixed top-0 right-0 w-64 h-screen bg-white/70 backdrop-blur-sm shadow-lg z-50">
-            <div className="flex flex-col space-y-4 p-6 menu-font text-right text-sm">
-              <div className="flex justify-end mb-6">
+          <div className="sm:hidden fixed top-0 right-0 w-48 h-screen bg-white/20 backdrop-blur-sm shadow-lg z-50">
+            <div className="flex flex-col space-y-4 p-4 menu-font text-right text-sm">
+              <div className="flex justify-end mb-4">
                 <button 
                   className="text-[#394140] hover:text-[#FFB6C1] transition-colors"
                   onClick={() => setIsMenuOpen(false)}
@@ -172,46 +171,41 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
                 EVENTS
               </Link>
               
-              {/* Sous-menu Presse mobile */}
-              <div>
-                <button 
-                  className="disco-link text-[#394140] hover:text-[#FFB6C1] transition-colors w-full text-right"
-                  onClick={() => setIsPresseOpen(!isPresseOpen)}
-                >
+              {/* Sous-menu Presse mobile avec comportement survol */}
+              <div className="relative group">
+                <div className="disco-link text-[#394140] hover:text-[#FFB6C1] transition-colors w-full text-right uppercase cursor-pointer">
                   REVUE DE PRESSE
-                </button>
-                {isPresseOpen && (
-                  <div className="pr-4 mt-2 space-y-2 text-right">
-                    <Link 
-                      href="/presse-btob" 
-                      className="disco-link block text-[#394140] hover:text-[#FFB6C1] transition-colors"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Presse BtoB
-                    </Link>
-                    <Link 
-                      href="/presse-grand-public" 
-                      className="disco-link block text-[#394140] hover:text-[#FFB6C1] transition-colors"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Presse Grand Public
-                    </Link>
-                    <Link 
-                      href="/tv" 
-                      className="disco-link block text-[#394140] hover:text-[#FFB6C1] transition-colors"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      TV
-                    </Link>
-                    <Link 
-                      href="/presse-internationale" 
-                      className="disco-link block text-[#394140] hover:text-[#FFB6C1] transition-colors"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Presse Internationale
-                    </Link>
-                  </div>
-                )}
+                </div>
+                <div className="pr-4 mt-2 space-y-2 text-right opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  <Link 
+                    href="/presse-btob" 
+                    className="disco-link block text-[#394140] hover:text-[#FFB6C1] transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Presse BtoB
+                  </Link>
+                  <Link 
+                    href="/presse-grand-public" 
+                    className="disco-link block text-[#394140] hover:text-[#FFB6C1] transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Presse Grand Public
+                  </Link>
+                  <Link 
+                    href="/tv" 
+                    className="disco-link block text-[#394140] hover:text-[#FFB6C1] transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    TV
+                  </Link>
+                  <Link 
+                    href="/presse-internationale" 
+                    className="disco-link block text-[#394140] hover:text-[#FFB6C1] transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Presse Internationale
+                  </Link>
+                </div>
               </div>
 
               <Link 
