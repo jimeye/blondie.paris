@@ -1,12 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    appDir: true,
+  },
+  eslint: {
+    dirs: ['pages', 'components', 'lib', 'utils']
+  },
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "img.freepik.com",
-      },
-    ],
+    domains: ['cdn.sanity.io'],
   },
 }
 
