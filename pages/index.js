@@ -283,7 +283,7 @@ export default function Home({cms, refs}) {
                 <div className="group bg-white rounded-none border border-gray-200 overflow-hidden hover:shadow-md transition">
                   <div className="relative w-full pt-[133%] bg-white">
                     <img
-                      src="/events/3-pastille+fast+théo+gosselin-blondie-paris-blondie.paris-blondieparis.webp"
+                      src="/events/3-pastille%2Bfast%2Bth%C3%A9o%2Bgosselin-blondie-paris-blondie.paris-blondieparis.webp"
                       alt="FAST – Théo Gosselin"
                       className="absolute inset-0 w-full h-full object-cover"
                       loading="lazy"
@@ -297,7 +297,7 @@ export default function Home({cms, refs}) {
                 <div className="group bg-white rounded-none border border-gray-200 overflow-hidden hover:shadow-md transition">
                   <div className="relative w-full pt-[133%] bg-white">
                     <img
-                      src="/events/4-pastille+mélanie+elbaz -blondie-paris-blondie.paris-blondieparis..webp"
+                      src="/events/4-pastille%2Bm%C3%A9lanie%2Belbaz%20-blondie-paris-blondie.paris-blondieparis..webp"
                       alt="Mélanie Elbaz"
                       className="absolute inset-0 w-full h-full object-cover"
                       loading="lazy"
