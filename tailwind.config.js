@@ -15,9 +15,19 @@ module.exports = {
         "text-grey": "#b0b0b0",
       },
       fontFamily: {
+        'sans': ['EB Garamond', 'Times New Roman', 'Times', 'serif'],
         'lilita': ['Lilita One', 'cursive'],
-        'garamond': ['adobe-garamond-pro', 'serif'],
+        'eb-garamond-light': ['EB Garamond', 'Times New Roman', 'Times', 'serif'],
+        'eb-garamond-regular': ['EB Garamond', 'Times New Roman', 'Times', 'serif'],
+        'eb-garamond-bold': ['EB Garamond', 'Times New Roman', 'Times', 'serif'],
         'din-condensed': ['din-condensed-web', 'sans-serif'],
+      },
+      fontWeight: {
+        'light': '300',
+        'normal': '400',
+        'medium': '500',
+        'semibold': '600',
+        'bold': '700',
       },
       transitionDuration: {
         '300': '300ms',
@@ -25,6 +35,25 @@ module.exports = {
       },
       transitionTimingFunction: {
         'custom': 'cubic-bezier(0.4, 0, 0.2, 1)',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.6s ease-out',
+        'slide-up': 'slideUp 0.5s ease-out',
+        'slide-down': 'slideDown 0.5s ease-out',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(100%)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        slideDown: {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(0)' },
+        },
       },
     },
   },
