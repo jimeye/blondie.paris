@@ -21,7 +21,7 @@ export default function StorySection() {
           {/* Contenu texte */}
           <div className="space-y-6">
             <h2 className="text-4xl font-bold text-custom-grey">
-              À <span className="text-black">propos</span>
+              À propos
             </h2>
             <div className="w-20 h-1 bg-[#FFB6C1]" />
             <p className="text-lg text-custom-grey/80">

@@ -8,18 +8,18 @@ export default function References() {
 
   // Logos organisés par ordre alphabétique
   const logos = [
-    { src: "/logos/4.png", alt: "4", name: "4" },
-    { src: "/logos/actu_27503_vignette_alaune.jpg", alt: "Actualité", name: "Actualité" },
+    { src: "/logos/havas-play.png", alt: "Havas Play", name: "Havas Play" },
+    { src: "/logos/babel-startégie-&-communication.jpg", alt: "Babel Stratégie & Communication", name: "Babel Stratégie & Communication" },
     { src: "/logos/aprileproductions.jpg", alt: "Aprile Productions", name: "Aprile Productions" },
     { src: "/logos/artbridge.png", alt: "Artbridge", name: "Artbridge" },
     { src: "/logos/BIRTH+-+LOGO.jpg", alt: "Birth", name: "Birth" },
     { src: "/logos/blueparisjpeg.jpeg", alt: "Blue Paris", name: "Blue Paris" },
     { src: "/logos/born+to+run.jpg", alt: "Born to Run", name: "Born to Run" },
-    { src: "/logos/logo+brand+station.jpg", alt: "Brand Station", name: "Brand Station" },
+    { src: "/logos/brand-station-an-FCB-alliance.jpg", alt: "Brand Station an FCB Alliance", name: "Brand Station an FCB Alliance" },
     { src: "/logos/cda.jpg", alt: "CDA", name: "CDA" },
     { src: "/logos/change.jpg", alt: "Change", name: "Change" },
     { src: "/logos/corbis.png", alt: "Corbis", name: "Corbis" },
-    { src: "/logos/logo+DAGOBERT.png", alt: "Dagobert", name: "Dagobert" },
+    { src: "/logos/DAGOBERT.png", alt: "Dagobert", name: "Dagobert" },
     { src: "/logos/logo+emergency+bikes.png", alt: "Emergency Bikes", name: "Emergency Bikes" },
     { src: "/logos/logo+estellon+(1).jpeg", alt: "Estellon", name: "Estellon" },
     { src: "/logos/LOGOS-FRENZY.png", alt: "Frenzy", name: "Frenzy" },
@@ -30,8 +30,8 @@ export default function References() {
     { src: "/logos/INTERMARCHE.jpg", alt: "Intermarché", name: "Intermarché" },
     { src: "/logos/logo-intuit-lab.jpg", alt: "Intuit Lab", name: "Intuit Lab" },
     { src: "/logos/kind.png", alt: "Kind", name: "Kind" },
-    { src: "/logos/LaPac-black.png", alt: "LaPac", name: "LaPac" },
-    { src: "/logos/Logo-Fond-Blanc.jpg", alt: "Logo Fond Blanc", name: "Logo Fond Blanc" },
+    { src: "/logos/La-Pac.png", alt: "La Pac", name: "La Pac" },
+    { src: "/logos/grace.jpg", alt: "Grace", name: "Grace" },
     { src: "/logos/Logo+Moonlike.png", alt: "Moonlike", name: "Moonlike" },
     { src: "/logos/midiscom.png", alt: "Midisc", name: "Midisc" },
     { src: "/logos/Monks_Logo.jpg", alt: "Monks", name: "Monks" },
@@ -42,16 +42,14 @@ export default function References() {
     { src: "/logos/Logo+SYNEIDO.jpg", alt: "SYNEIDO", name: "SYNEIDO" },
     { src: "/logos/Steve+Bleu+2021.png", alt: "Steve Bleu", name: "Steve Bleu" },
     { src: "/logos/ubi-bene.jpg", alt: "Ubi Bene", name: "Ubi Bene" },
-    { src: "/logos/unnamed.jpg", alt: "Unnamed", name: "Unnamed" },
-    { src: "/logos/unnamed.png", alt: "Unnamed", name: "Unnamed" },
-    { src: "/logos/unnamed-1.png", alt: "Unnamed 1", name: "Unnamed 1" },
-    { src: "/logos/unnamed-2.png", alt: "Unnamed 2", name: "Unnamed 2" },
+    { src: "/logos/publicis-luxe.jpg", alt: "Publicis Luxe", name: "Publicis Luxe" },
+    { src: "/logos/orange.png", alt: "Orange", name: "Orange" },
+    { src: "/logos/amazon-prime-video.png", alt: "Amazon Prime Video", name: "Amazon Prime Video" },
+    { src: "/logos/lonely-planet.png", alt: "Lonely Planet", name: "Lonely Planet" },
     { src: "/logos/WANDA.jpg", alt: "WANDA", name: "WANDA" },
-    { src: "/logos/264804273_4734739873255110_6858010056261785182_n.jpg", alt: "Image 2", name: "Image 2" },
-    { src: "/logos/438162233_922019656596001_6862005746192433780_n.jpg", alt: "Image 1", name: "Image 1" },
-    { src: "/logos/Capture+d'écran+2025-01-20+à+10.58.44.png", alt: "Capture 1", name: "Capture 1" },
-    { src: "/logos/Capture+d'écran+2025-01-20+à+10.59.37.png", alt: "Capture 2", name: "Capture 2" },
-    { src: "/logos/Marcel+copie.jpg", alt: "Marcel", name: "Marcel" }
+    { src: "/logos/altavia-disko.jpg", alt: "Altavia Disko", name: "Altavia Disko" },
+    { src: "/logos/été-indien(s)-arles.jpg", alt: "Été Indien(s) Arles", name: "Été Indien(s) Arles" },
+    { src: "/logos/Marcel.jpg", alt: "Marcel", name: "Marcel" }
   ]
 
   const breadcrumbsLd = {

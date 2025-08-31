@@ -29,16 +29,16 @@ export default function QuiSuisJe() {
           <Navigation />
           <div className="container mx-auto px-4">
             {/* Titre - visible sur mobile, caché sur desktop */}
-            <div className="md:hidden text-center mb-4 mt-8">
-              <h1 className="text-4xl font-bold text-black mb-4 uppercase">
-                Rendez-vous chez <span className="text-black">Blondie Paris-Arles</span>
+            <div className="md:hidden text-center mb-4 mt-4">
+              <h1 className="text-4xl font-bold text-black mb-4">
+                Rendez-vous chez Blondie Paris
               </h1>
               <div className="w-20 h-1 bg-[#FFB6C1] mx-auto" />
             </div>
 
-                          <div className="grid md:grid-cols-2 gap-12 items-start">
+                          <div className="grid md:grid-cols-2 gap-8 items-start">
                 {/* Image à gauche */}
-                <div className="w-full mt-8">
+                <div className="w-full mt-4">
                   <img
                     src="/nathalie-roland-blondie-paris-qui-suis-je.webp"
                     alt="Qui suis-je"
@@ -49,11 +49,11 @@ export default function QuiSuisJe() {
                 </div>
 
                 {/* Contenu texte à droite */}
-                <div className="space-y-6 mt-8">
+                <div className="space-y-4 mt-4">
                   {/* Titre - caché sur mobile, visible sur desktop */}
                   <div className="hidden md:block">
-                    <h1 className="text-4xl font-bold text-black mb-4 uppercase">
-                      Rendez-vous chez <span className="text-black">Blondie Paris-Arles</span>
+                    <h1 className="text-4xl font-bold text-black mb-4">
+                      Rendez-vous chez Blondie Paris
                     </h1>
                     <div className="w-20 h-1 bg-[#FFB6C1]" />
                   </div>

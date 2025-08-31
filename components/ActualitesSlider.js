@@ -41,7 +41,7 @@ export default function ActualitesSlider() {
       <div className="container mx-auto px-4">
         {/* Titre de la section */}
         <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-black mb-2 uppercase">
+          <h2 className="text-4xl font-bold text-black mb-2">
             Actualités
           </h2>
           <div className="w-20 h-1 bg-[#FFB6C1] mx-auto" />

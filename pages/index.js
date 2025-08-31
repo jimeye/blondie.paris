@@ -144,7 +144,7 @@ export default function Home({cms, refs}) {
             <div className="container mx-auto px-4">
               {/* Titre - visible sur mobile, caché sur desktop */}
               <div className="md:hidden text-center mb-4 mt-4">
-                <h1 className="text-4xl font-bold text-black mb-4 uppercase">À <span className="text-black">propos</span></h1>
+                <h1 className="text-4xl font-bold text-black mb-4">À propos</h1>
                 <div className="w-20 h-1 bg-[#FFB6C1] mx-auto" />
               </div>
 
@@ -162,8 +162,8 @@ export default function Home({cms, refs}) {
                 <div className="space-y-4 mt-4">
                   {/* Titre - caché sur mobile, visible sur desktop */}
                   <div className="hidden md:block">
-                    <h1 className="text-4xl font-bold text-black mb-4 uppercase">
-                      À <span className="text-black">propos</span>
+                    <h1 className="text-4xl font-bold text-black mb-4">
+                      À propos
                     </h1>
                     <div className="w-20 h-1 bg-[#FFB6C1]" />
                   </div>
@@ -189,8 +189,8 @@ export default function Home({cms, refs}) {
             <div className="container mx-auto px-4">
               {/* Titre - visible sur mobile, caché sur desktop */}
               <div className="md:hidden text-center mb-4 mt-4">
-                <h1 className="text-4xl font-bold text-black mb-4 uppercase">
-                  Rendez-vous chez <span className="text-black">Blondie Paris-Arles</span>
+                <h1 className="text-4xl font-bold text-black mb-4">
+                  Rendez-vous chez Blondie Paris
                 </h1>
                 <div className="w-20 h-1 bg-[#FFB6C1] mx-auto" />
               </div>
@@ -209,8 +209,8 @@ export default function Home({cms, refs}) {
                 <div className="space-y-4 mt-4">
                   {/* Titre - caché sur mobile, visible sur desktop */}
                   <div className="hidden md:block">
-                    <h1 className="text-4xl font-bold text-black mb-4 uppercase">
-                      Rendez-vous chez <span className="text-black">Blondie Paris-Arles</span>
+                    <h1 className="text-4xl font-bold text-black mb-4">
+                      Rendez-vous chez Blondie Paris
                     </h1>
                     <div className="w-20 h-1 bg-[#FFB6C1]" />
                   </div>
@@ -244,7 +244,7 @@ export default function Home({cms, refs}) {
           <section className="bg-white py-8">
             <div className="container mx-auto px-4">
               <div className="text-center mb-6">
-                <h2 className="text-4xl font-bold text-black mb-4 uppercase">
+                <h2 className="text-4xl font-bold text-black mb-4">
                   Events
                 </h2>
                 <div className="w-20 h-1 bg-[#FFB6C1] mx-auto" />
@@ -329,7 +329,7 @@ export default function Home({cms, refs}) {
           <section className="bg-white py-8">
             <div className="container mx-auto px-4">
               <div className="text-center mb-6">
-                <h2 className="text-4xl font-bold text-black mb-4 uppercase">
+                <h2 className="text-4xl font-bold text-black mb-4">
                   Références
                 </h2>
                 <div className="w-20 h-1 bg-[#FFB6C1] mx-auto" />
@@ -348,23 +348,23 @@ export default function Home({cms, refs}) {
           <section className="bg-white py-8">
             <div className="container mx-auto px-4">
               <div className="text-center mb-6">
-                <h2 className="text-4xl font-bold text-black mb-4 uppercase">
-                  Revue de Presse
+                <h2 className="text-4xl font-bold text-black mb-4">
+                  Revue de presse
                 </h2>
                 <div className="w-20 h-1 bg-[#FFB6C1] mx-auto" />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <Link href="/presse-btob" className="bg-white rounded-none border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
-                  <span className="text-xl font-semibold text-[#394140] uppercase text-center">Presse BtoB</span>
+                  <span className="text-xl font-semibold text-[#394140] text-center">Presse btoB</span>
                 </Link>
                 <Link href="/presse-grand-public" className="bg-white rounded-none border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
-                  <span className="text-xl font-semibold text-[#394140] uppercase text-center">Presse Grand Public</span>
+                  <span className="text-xl font-semibold text-[#394140] text-center">Presse grand public</span>
                 </Link>
                 <Link href="/tv" className="bg-white rounded-none border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
-                  <span className="text-xl font-semibold text-[#394140] uppercase text-center">TV</span>
+                  <span className="text-xl font-semibold text-[#394140] text-center">TV</span>
                 </Link>
                 <Link href="/presse-internationale" className="bg-white rounded-none border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
-                  <span className="text-xl font-semibold text-[#394140] uppercase text-center">Presse Internationale</span>
+                  <span className="text-xl font-semibold text-[#394140] text-center">Presse internationale</span>
                 </Link>
               </div>
             </div>
@@ -374,7 +374,7 @@ export default function Home({cms, refs}) {
           <section className="bg-gradient-to-br from-white to-[#FFB6C1]/5 py-8">
             <div className="container mx-auto px-4">
               <div className="text-center mb-6">
-                <h2 className="text-4xl font-bold text-[#394140] mb-4 uppercase">
+                <h2 className="text-4xl font-bold text-[#394140] mb-4">
                   Contact
                 </h2>
                 <div className="w-20 h-1 bg-[#FFB6C1] mx-auto mb-6" />

@@ -78,7 +78,7 @@ export default function HeroSlider() {
         href="https://www.deezer.com/fr/playlist/8889404982?utm_campaign=system-message&utm_content=playlist-8889404982&utm_medium=mobile&utm_source=user_sharing"
         target="_blank"
         rel="noopener noreferrer"
-        className="absolute left-4 bottom-4 md:left-6 md:bottom-6 text-white px-1.5 py-1.5 md:px-2 md:py-1.5 rounded-md backdrop-blur-sm transition flex items-center"
+        className="absolute left-4 bottom-4 md:left-6 md:bottom-6 text-white px-1.5 py-1.5 md:px-2 md:py-1.5 rounded-md backdrop-blur-sm transition flex items-center gap-2"
         aria-label="Écouter la playlist Deezer Blondie Paris-Arles"
       >
         <img
@@ -86,7 +86,7 @@ export default function HeroSlider() {
           alt="Deezer"
           className="h-5 w-auto md:h-6"
         />
-        <span className="sr-only">Écouter la playlist</span>
+        <span className="text-sm font-medium">My Playlist</span>
       </a>
     </div>
   )

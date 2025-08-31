@@ -18,6 +18,7 @@ module.exports = {
         'sans': ['EB Garamond', 'Times New Roman', 'Times', 'serif'],
         'lilita': ['Lilita One', 'cursive'],
         'eb-garamond-light': ['EB Garamond', 'Times New Roman', 'Times', 'serif'],
+        'eb-garamond-medium': ['EB Garamond', 'Times New Roman', 'Times', 'serif'],
         'eb-garamond-regular': ['EB Garamond', 'Times New Roman', 'Times', 'serif'],
         'eb-garamond-bold': ['EB Garamond', 'Times New Roman', 'Times', 'serif'],
         'din-condensed': ['din-condensed-web', 'sans-serif'],

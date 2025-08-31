@@ -39,7 +39,7 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
           )}
           
           {/* Menu desktop */}
-          <div className={`hidden sm:flex menu-font text-xs sm:text-sm lg:text-base justify-center ${centerMenu ? 'space-x-1 sm:space-x-2 lg:space-x-4' : 'space-x-1 sm:space-x-2 lg:space-x-4'}`}>
+          <div className={`hidden lg:flex menu-font text-xs sm:text-sm lg:text-base justify-center ${centerMenu ? 'space-x-1 sm:space-x-2 lg:space-x-4' : 'space-x-1 sm:space-x-2 lg:space-x-4'}`}>
             {!hideHome && router.pathname !== '/' && (
                               <Link href="/" className="disco-link text-gray-800 uppercase">
                 HOME
@@ -96,7 +96,7 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
 
           {/* Bouton menu mobile */}
           <button 
-            className="sm:hidden text-[#FFB6C1] menu-font hover:text-[#FFB6C1]/80 transition-colors"
+            className="lg:hidden text-[#FFB6C1] menu-font hover:text-[#FFB6C1]/80 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -111,7 +111,7 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
 
         {/* Menu mobile overlay */}
         {isMenuOpen && (
-          <div className="sm:hidden fixed top-0 right-0 w-48 h-screen bg-white/20 backdrop-blur-sm shadow-lg z-50">
+          <div className="lg:hidden fixed top-0 right-0 w-48 h-screen bg-white/20 backdrop-blur-sm shadow-lg z-50">
             <div className="flex flex-col space-y-4 p-4 menu-font text-right text-sm">
               <div className="flex justify-end mb-4">
                 <button 
@@ -174,8 +174,8 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
               
               {/* Sous-menu Presse mobile simple */}
               <div className="relative group">
-                <div className="disco-link text-[#394140] hover:text-[#FFB6C1] transition-colors w-full text-right uppercase cursor-pointer">
-                  REVUE DE PRESSE
+                <div className="disco-link text-[#394140] hover:text-[#FFB6C1] transition-colors w-full text-right cursor-pointer">
+                  Revue de presse
                 </div>
                 <div className="pr-4 mt-2 space-y-2 text-right opacity-100 visible transition-all duration-200">
                   <Link 

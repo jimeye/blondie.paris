@@ -45,13 +45,13 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-weight: 300;
+    font-weight: 400;
     text-transform: lowercase;
   }
   
   * {
     font-family: 'EB Garamond', 'Times New Roman', 'Times', serif;
-    font-weight: 300;
+    font-weight: 400;
   }
   
   /* Titres en capitalize (première lettre majuscule) et BOLD */
@@ -102,6 +102,11 @@
     font-weight: 300;
   }
   
+  .eb-garamond-medium {
+    font-family: 'EB Garamond', 'Times New Roman', 'Times', serif;
+    font-weight: 500;
+  }
+  
   .eb-garamond-regular {
     font-family: 'EB Garamond', 'Times New Roman', 'Times', serif;
     font-weight: 400;
@@ -120,7 +125,7 @@
   
   .body-case {
     text-transform: lowercase;
-    font-weight: 300;
+    font-weight: 400;
   }
 }
 

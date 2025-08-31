@@ -156,7 +156,7 @@ export default function Contact() {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto">
               <h1 className="text-4xl font-bold text-[#394140] mb-6">
-                CONTACT
+                Contact
               </h1>
               <div className="w-20 h-1 bg-[#FFB6C1] mx-auto mb-8"></div>
               <p className="text-lg text-[#394140]/80 leading-relaxed uppercase">
