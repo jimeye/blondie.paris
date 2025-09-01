@@ -41,23 +41,23 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
           {/* Menu desktop */}
           <div className={`hidden lg:flex menu-font text-sm sm:text-sm lg:text-base justify-center ${centerMenu ? 'space-x-1 sm:space-x-2 lg:space-x-4' : 'space-x-1 sm:space-x-2 lg:space-x-4'}`}>
             {!hideHome && router.pathname !== '/' && (
-                              <Link href="/" className="disco-link text-[#878787] font-semibold uppercase">
+                              <Link href="/" className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase">
                 HOME
               </Link>
             )}
-            <Link href="/a-propos" className="disco-link text-[#878787] font-semibold uppercase">
+            <Link href="/a-propos" className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase">
               À PROPOS
             </Link>
-            <Link href="/qui-suis-je" className="disco-link text-[#878787] font-semibold uppercase">
+            <Link href="/qui-suis-je" className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase">
               QUI SUIS-JE ?
             </Link>
-            <Link href="/actualites" className="disco-link text-[#878787] font-semibold uppercase">
+            <Link href="/actualites" className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase">
               ACTUALITÉS
             </Link>
-            <Link href="/references" className="disco-link text-[#878787] font-semibold uppercase">
+            <Link href="/references" className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase">
               REFERENCES
             </Link>
-            <Link href="/events" className="disco-link text-[#878787] font-semibold uppercase" onClick={closeModal}>
+            <Link href="/events" className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase" onClick={closeModal}>
               EVENTS
             </Link>
             
