@@ -33,7 +33,7 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
       <div className="container mx-auto px-4">
         <div className={`flex items-center ${centerMenu ? 'justify-center' : 'justify-between'}`}>
           {!hideLogo && (
-            <div className={router.pathname === '/' ? (isLogoVisible ? 'hidden lg:block' : 'invisible') : ''}>
+            <div className={router.pathname === '/' ? 'invisible' : ''}>
               <Logo />
             </div>
           )}
