@@ -643,46 +643,6 @@ export default function Home({cms, refs}) {
         </section>
       </main>
     </div>
-
-    <style jsx>{`
-      /* Effet rideau de théâtre pour les photos */
-      .curtain-left {
-        animation: curtainOpenLeft 2s ease-in-out;
-        transform-origin: left;
-      }
-      
-      .curtain-right {
-        animation: curtainOpenRight 2s ease-in-out;
-        transform-origin: right;
-      }
-      
-      @keyframes curtainOpenLeft {
-        0% {
-          transform: translateX(-100%);
-          clip-path: inset(0 100% 0 0);
-        }
-        100% {
-          transform: translateX(0);
-          clip-path: inset(0 0% 0 0);
-        }
-      }
-      
-      @keyframes curtainOpenRight {
-        0% {
-          transform: translateX(100%);
-          clip-path: inset(0 0 0 100%);
-        }
-        100% {
-          transform: translateX(0);
-          clip-path: inset(0 0 0 0%);
-        }
-      }
-      
-      /* Délai pour la deuxième photo */
-      .curtain-right {
-        animation-delay: 0.5s;
-      }
-    `}</style>
   )
 } 
 
