@@ -74,12 +74,12 @@ export default function References() {
           <Navigation />
           <div className="container mx-auto px-4">
             {/* Titre avec animation */}
-            <div className="hidden">
-              <h1 className="text-5xl font-bold text-gray-800 mb-4 animate-fade-in">
-                Nos <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-600">Références</span>
+            <div className="text-center mb-8">
+              <h1 className="text-4xl font-bold text-black mb-4">
+                Nos <span className="text-[#FFB6C1]">Références</span>
               </h1>
-              <div className="w-24 h-1 bg-gradient-to-r from-pink-400 to-purple-600 mx-auto rounded-full animate-pulse"></div>
-              <p className="text-gray-600 mt-6 text-lg">Découvrez nos partenaires de confiance</p>
+              <div className="w-20 h-1 bg-[#FFB6C1] mx-auto"></div>
+              <p className="text-[#394140] mt-4 text-lg">Découvrez nos partenaires de confiance</p>
             </div>
 
             {/* Grille avec effets modernes - Logos par ordre alphabétique */}
