@@ -96,12 +96,12 @@ export default function References() {
                       <img 
                         src={logo.src} 
                         alt={logo.alt} 
-                        className={`coin-face coin-front object-contain w-full h-full ${logo.name === "Été Indien(s) Arles" ? "max-w-[350px] max-h-[200px]" : "max-w-[280px] max-h-[160px]"}`}
+                        className={`coin-face coin-front object-contain w-full h-full ${logo.name === "Été Indien(s) Arles" ? "max-w-[350px] max-h-[200px] sm:max-w-[385px] sm:max-h-[220px]" : "max-w-[280px] max-h-[160px] sm:max-w-[308px] sm:max-h-[176px]"}`}
                       />
                       <img 
                         src={logo.src} 
                         alt={logo.alt} 
-                        className={`coin-face coin-back object-contain w-full h-full ${logo.name === "Été Indien(s) Arles" ? "max-w-[350px] max-h-[200px]" : "max-w-[280px] max-h-[160px]"}`}
+                        className={`coin-face coin-back object-contain w-full h-full ${logo.name === "Été Indien(s) Arles" ? "max-w-[350px] max-h-[200px] sm:max-w-[385px] sm:max-h-[220px]" : "max-w-[280px] max-h-[160px] sm:max-w-[308px] sm:max-h-[176px]"}`}
                       />
                     </div>
                   </a>
