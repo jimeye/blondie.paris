@@ -473,7 +473,9 @@ export default function Home({cms, refs}) {
                   Contact
                 </h2>
                 <div className="w-20 h-1 bg-[#FFB6C1] mx-auto mb-6" />
-
+                <p className="text-lg text-[#394140]/80 leading-relaxed normal-case mb-6">
+                  Prêt à collaborer ? Contactez-nous pour discuter de vos projets, notre équipe est là pour vous accompagner.
+                </p>
               </div>
               
               <div>
