@@ -221,7 +221,7 @@ export default function Home({cms, refs}) {
       onTouchStart={onTouchStart}
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
-      className="touch-pan-y"
+      className="touch-pan-y overflow-x-hidden"
       style={{ touchAction: 'pan-y', userSelect: 'none' }}
     >
       <Head>
@@ -785,7 +785,7 @@ export default function Home({cms, refs}) {
           {/* Modale des events */}
           {selectedEvent && (
             <div className="fixed inset-0 bg-black bg-opacity-90 z-[999999] flex items-center justify-center p-4" style={{ zIndex: 999999 }}>
-              <div className="relative max-w-6xl w-full max-h-full">
+              <div className="relative max-w-6xl w-full max-h-full overflow-x-hidden">
                 {/* Bouton fermer */}
                 <button
                   onClick={() => {

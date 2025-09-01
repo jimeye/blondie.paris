@@ -5,7 +5,7 @@ import FooterNew from '../components/FooterNew'
 
 export default function QuiSuisJe() {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Head>
         <title>Qui suis-je - Blondie Paris</title>
         <meta name="description" content="Découvrez Blondie Paris, bureau de relations presse fondé par Nathalie Roland. Expertise en communication, événements et accompagnement sur mesure." />

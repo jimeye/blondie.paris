@@ -5,7 +5,7 @@ import FooterNew from '../components/FooterNew'
 
 export default function APropos() {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Head>
         <title>À propos - Blondie Paris | Bureau de relations presse</title>
         <meta name="description" content="Découvrez BLONDIE Paris, bureau de relations presse fondé par Nathalie Roland. Expertise en communication, événements et accompagnement sur mesure. Basé à Arles." />

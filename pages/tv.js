@@ -134,7 +134,7 @@ export default function TV() {
   }
 
   return (
-    <div onKeyDown={handleKeyDown} tabIndex={0}>
+    <div onKeyDown={handleKeyDown} tabIndex={0} className="overflow-x-hidden">
       <Head>
         <title>TV - Blondie Paris</title>
         <meta name="description" content="Revue de presse TV – sélection BLONDIE Paris." />

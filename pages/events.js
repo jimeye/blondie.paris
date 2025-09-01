@@ -135,7 +135,7 @@ export default function Events() {
   const closeModal = () => setOpenIdx(null)
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Head>
         <title>Events - Blondie Paris</title>
         <meta name="description" content="Expositions et vernissages à Arles – sélection BLONDIE Paris." />
@@ -212,7 +212,7 @@ export default function Events() {
           onClick={() => setOpenIdx(null)}
           style={{ zIndex: 999999 }}
         >
-          <div className="w-full max-w-6xl mx-auto bg-white rounded-none p-2 md:p-3 my-4" onClick={(e) => e.stopPropagation()}>
+          <div className="w-full max-w-6xl mx-auto bg-white rounded-none p-2 md:p-3 my-4 overflow-x-hidden" onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center justify-between px-1 md:px-2 py-2 sticky top-0 bg-white z-[999999]">
               <h2 className="text-lg md:text-xl font-semibold text-black">
                 {allEvents[openIdx]?.modalTitle ? (

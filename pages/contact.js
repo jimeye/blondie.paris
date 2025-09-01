@@ -43,7 +43,7 @@ export default function Contact() {
   }
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Head>
         <title>Contact - Blondie Paris | Relations presse & communication</title>
         <meta name="description" content="Contactez BLONDIE Paris pour vos projets de relations presse, communication et événements. Bureau de relations presse à Arles. Nathalie Roland - Expert en RP et communication." />

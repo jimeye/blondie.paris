@@ -219,7 +219,7 @@ export default function PresseBtoB() {
   }
 
   return (
-    <div onKeyDown={handleKeyDown} tabIndex={0}>
+    <div onKeyDown={handleKeyDown} tabIndex={0} className="overflow-x-hidden">
       <Head>
         <title>Presse BtoB - Blondie Paris</title>
         <meta name="description" content="Revue de presse BtoB – sélection BLONDIE Paris." />

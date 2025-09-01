@@ -139,7 +139,7 @@ export default function PresseGrandPublic() {
   }
 
   return (
-    <div onKeyDown={handleKeyDown} tabIndex={0}>
+    <div onKeyDown={handleKeyDown} tabIndex={0} className="overflow-x-hidden">
       <Head>
         <title>Presse grand public - Blondie Paris</title>
         <meta name="description" content="Revue de presse Grand Public – sélection BLONDIE Paris." />

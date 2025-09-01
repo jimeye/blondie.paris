@@ -40,7 +40,7 @@ export default function Actualites() {
   }
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Head>
         <title>Actualités - Blondie Paris</title>
         <meta name="description" content="Découvrez les dernières actualités et réalisations de Blondie Paris. Relations presse, événements et communication sur mesure." />

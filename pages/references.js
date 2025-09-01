@@ -61,7 +61,7 @@ export default function References() {
   }
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Head>
         <title>Références - Blondie Paris</title>
         <meta name="description" content="Partenaires et références BLONDIE Paris: agences, médias, marques. Expertise en relations presse et communication." />

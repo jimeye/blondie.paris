@@ -144,7 +144,7 @@ export default function PresseInternationale() {
   }
 
   return (
-    <div onKeyDown={handleKeyDown} tabIndex={0}>
+    <div onKeyDown={handleKeyDown} tabIndex={0} className="overflow-x-hidden">
       <Head>
         <title>Presse internationale - Blondie Paris</title>
         <meta name="description" content="Revue de presse Internationale – sélection BLONDIE Paris." />
