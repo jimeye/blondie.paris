@@ -45,21 +45,31 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
                 HOME
               </Link>
             )}
-            <Link href="/a-propos" className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase">
-              À PROPOS
-            </Link>
-            <Link href="/qui-suis-je" className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase">
-              QUI SUIS-JE ?
-            </Link>
-            <Link href="/actualites" className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase">
-              ACTUALITÉS
-            </Link>
-            <Link href="/references" className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase">
-              REFERENCES
-            </Link>
-            <Link href="/events" className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase" onClick={closeModal}>
-              EVENTS
-            </Link>
+            {router.pathname !== '/a-propos' && (
+              <Link href="/a-propos" className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase">
+                À PROPOS
+              </Link>
+            )}
+            {router.pathname !== '/qui-suis-je' && (
+              <Link href="/qui-suis-je" className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase">
+                QUI SUIS-JE ?
+              </Link>
+            )}
+            {router.pathname !== '/actualites' && (
+              <Link href="/actualites" className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase">
+                ACTUALITÉS
+              </Link>
+            )}
+            {router.pathname !== '/references' && (
+              <Link href="/references" className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase">
+                REFERENCES
+              </Link>
+            )}
+            {router.pathname !== '/events' && (
+              <Link href="/events" className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase" onClick={closeModal}>
+                EVENTS
+              </Link>
+            )}
             
             {/* Menu Presse avec sous-menu */}
             <div className="relative group">
@@ -89,9 +99,11 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
               </div>
             </div>
 
-            <Link href="/contact" className="disco-link text-[#878787] hover:text-[#FFB6C1] transition-colors uppercase text-sm sm:text-sm lg:text-base font-semibold">
-              CONTACT
-            </Link>
+            {router.pathname !== '/contact' && (
+              <Link href="/contact" className="disco-link text-[#878787] hover:text-[#FFB6C1] transition-colors uppercase text-sm sm:text-sm lg:text-base font-semibold">
+                CONTACT
+              </Link>
+            )}
           </div>
 
           {/* Bouton menu mobile */}
@@ -133,44 +145,54 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
                   HOME
                 </Link>
               )}
-              <Link 
-                href="/a-propos" 
-                className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                À PROPOS
-              </Link>
-              <Link 
-                href="/qui-suis-je" 
-                className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                QUI SUIS-JE ?
-              </Link>
-              <Link 
-                href="/actualites" 
-                className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                ACTUALITÉS
-              </Link>
-              <Link 
-                href="/references" 
-                className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                REFERENCES
-              </Link>
-              <Link 
-                href="/events" 
-                className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
-                onClick={() => {
-                  setIsMenuOpen(false)
-                  if (closeModal) closeModal()
-                }}
-              >
-                EVENTS
-              </Link>
+              {router.pathname !== '/a-propos' && (
+                <Link 
+                  href="/a-propos" 
+                  className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  À PROPOS
+                </Link>
+              )}
+              {router.pathname !== '/qui-suis-je' && (
+                <Link 
+                  href="/qui-suis-je" 
+                  className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  QUI SUIS-JE ?
+                </Link>
+              )}
+              {router.pathname !== '/actualites' && (
+                <Link 
+                  href="/actualites" 
+                  className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  ACTUALITÉS
+                </Link>
+              )}
+              {router.pathname !== '/references' && (
+                <Link 
+                  href="/references" 
+                  className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  REFERENCES
+                </Link>
+              )}
+              {router.pathname !== '/events' && (
+                <Link 
+                  href="/events" 
+                  className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
+                  onClick={() => {
+                    setIsMenuOpen(false)
+                    if (closeModal) closeModal()
+                  }}
+                >
+                  EVENTS
+                </Link>
+              )}
               
               {/* Sous-menu Presse mobile simple */}
               <div className="relative group">
@@ -209,13 +231,15 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
                 </div>
               </div>
 
-              <Link 
-                href="/contact" 
-                className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                CONTACT
-              </Link>
+              {router.pathname !== '/contact' && (
+                <Link 
+                  href="/contact" 
+                  className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  CONTACT
+                </Link>
+              )}
             </div>
           </div>
         )}
