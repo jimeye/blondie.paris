@@ -432,7 +432,11 @@ export default function Home({cms, refs}) {
                     aria-label={logo.name}
                     className="bg-white rounded-lg border border-gray-200 p-4 flex items-center justify-center hover:border-[#FFB6C1] transition-colors"
                   >
-                    <img src={logo.src} alt={logo.alt} className="w-full h-20 object-contain" />
+                    <img 
+                      src={logo.src} 
+                      alt={logo.alt} 
+                      className={`w-full object-contain ${logo.name === "Ubi Bene" ? "h-25" : "h-20"}`}
+                    />
                   </a>
                 ))}
               </div>
