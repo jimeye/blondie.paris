@@ -29,7 +29,7 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
     : 'bg-white/80 backdrop-blur-sm shadow-sm'
 
   return (
-    <nav className={`fixed top-0 w-full z-50 ${navBg} ${centerMenu ? 'py-4' : 'py-0.25'}`}>
+    <nav className={`fixed top-0 w-full z-[9998] ${navBg} ${centerMenu ? 'py-4' : 'py-0.25'}`}>
       <div className="container mx-auto px-4">
         <div className={`flex items-center ${centerMenu ? 'justify-center' : 'justify-between'}`}>
           {!hideLogo && (
@@ -111,7 +111,7 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
 
         {/* Menu mobile overlay */}
         {isMenuOpen && (
-          <div className="lg:hidden fixed top-0 left-0 w-80 h-screen bg-black/90 backdrop-blur-sm shadow-lg z-50 animate-slide-in-left mobile-overlay">
+          <div className="lg:hidden fixed top-0 left-0 w-80 h-screen bg-black/90 backdrop-blur-sm shadow-lg z-[9999] animate-slide-in-left mobile-overlay">
             <div className="flex flex-col space-y-4 p-4 menu-font text-right text-sm">
               <div className="flex justify-end mb-4">
                 <button 
