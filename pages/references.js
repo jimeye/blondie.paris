@@ -63,7 +63,7 @@ export default function References() {
   return (
     <div>
       <Head>
-        <title>Références - BLONDIE Paris</title>
+        <title>Références - Blondie Paris</title>
         <meta name="description" content="Partenaires et références BLONDIE Paris: agences, médias, marques. Expertise en relations presse et communication." />
         <link rel="canonical" href="https://blondie-paris.vercel.app/references" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsLd) }} />
@@ -75,7 +75,7 @@ export default function References() {
           <div className="container mx-auto px-4">
             {/* Titre avec animation */}
             <div className="hidden">
-              <h1 className="text-5xl font-bold text-gray-800 mb-4 animate-fade-in uppercase">
+              <h1 className="text-5xl font-bold text-gray-800 mb-4 animate-fade-in">
                 Nos <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-600">Références</span>
               </h1>
               <div className="w-24 h-1 bg-gradient-to-r from-pink-400 to-purple-600 mx-auto rounded-full animate-pulse"></div>

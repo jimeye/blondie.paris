@@ -137,7 +137,7 @@ export default function Events() {
   return (
     <div>
       <Head>
-        <title>Events - BLONDIE Paris</title>
+        <title>Events - Blondie Paris</title>
         <meta name="description" content="Expositions et vernissages à Arles – sélection BLONDIE Paris." />
         <link rel="canonical" href="https://blondie-paris.vercel.app/events" />
       </Head>

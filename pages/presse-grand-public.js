@@ -141,7 +141,7 @@ export default function PresseGrandPublic() {
   return (
     <div onKeyDown={handleKeyDown} tabIndex={0}>
       <Head>
-        <title>Presse Grand Public - BLONDIE Paris</title>
+        <title>Presse grand public - Blondie Paris</title>
         <meta name="description" content="Revue de presse Grand Public – sélection BLONDIE Paris." />
         <link rel="canonical" href="https://blondie-paris.vercel.app/presse-grand-public" />
       </Head>

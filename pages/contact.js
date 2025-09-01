@@ -45,7 +45,7 @@ export default function Contact() {
   return (
     <div>
       <Head>
-        <title>Contact - BLONDIE Paris | Relations Presse & Communication</title>
+        <title>Contact - Blondie Paris | Relations presse & communication</title>
         <meta name="description" content="Contactez BLONDIE Paris pour vos projets de relations presse, communication et événements. Bureau de relations presse à Arles. Nathalie Roland - Expert en RP et communication." />
         <meta name="keywords" content="contact, relations presse, communication, événements, Arles, Nathalie Roland, BLONDIE Paris, bureau relations presse, conseil communication, devis" />
         <meta name="author" content="BLONDIE Paris - Nathalie Roland" />
@@ -57,7 +57,7 @@ export default function Contact() {
         <meta name="ICBM" content="43.6769, 4.6283" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Contact - BLONDIE Paris | Relations Presse & Communication" />
+        <meta property="og:title" content="Contact - Blondie Paris | Relations presse & communication" />
         <meta property="og:description" content="Contactez BLONDIE Paris pour vos projets de relations presse, communication et événements. Bureau de relations presse à Arles." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://blondie-paris.com/contact" />
@@ -70,7 +70,7 @@ export default function Contact() {
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact - BLONDIE Paris | Relations Presse & Communication" />
+        <meta name="twitter:title" content="Contact - Blondie Paris | Relations presse & communication" />
         <meta name="twitter:description" content="Contactez BLONDIE Paris pour vos projets de relations presse, communication et événements." />
         <meta name="twitter:image" content="https://blondie-paris.com/logo.png" />
         <meta name="twitter:image:alt" content="Contact BLONDIE Paris - Bureau de relations presse" />
@@ -96,7 +96,7 @@ export default function Contact() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "ContactPage",
-              "name": "Contact BLONDIE Paris",
+              "name": "Contact Blondie Paris",
               "description": "Page de contact pour BLONDIE Paris - Bureau de relations presse et communication",
               "url": "https://blondie-paris.com/contact",
               "mainEntity": {
@@ -159,7 +159,7 @@ export default function Contact() {
                 Contact
               </h1>
               <div className="w-20 h-1 bg-[#FFB6C1] mx-auto mb-8"></div>
-              <p className="text-lg text-[#394140]/80 leading-relaxed uppercase">
+              <p className="text-lg text-[#394140]/80 leading-relaxed normal-case">
                 <span className="block md:inline">Prêt à collaborer ? Contactez-nous pour discuter de vos projets.</span>
                 <span className="block md:inline">Notre équipe est là pour vous accompagner.</span>
               </p>
@@ -174,7 +174,7 @@ export default function Contact() {
               
               {/* Formulaire de contact */}
               <div className="bg-white rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-[#394140] mb-6 uppercase">
+                <h2 className="text-2xl font-bold text-[#394140] mb-6">
                   Envoyez-nous un message
                 </h2>
                 

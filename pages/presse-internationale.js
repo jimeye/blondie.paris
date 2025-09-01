@@ -146,7 +146,7 @@ export default function PresseInternationale() {
   return (
     <div onKeyDown={handleKeyDown} tabIndex={0}>
       <Head>
-        <title>Presse Internationale - BLONDIE Paris</title>
+        <title>Presse internationale - Blondie Paris</title>
         <meta name="description" content="Revue de presse Internationale – sélection BLONDIE Paris." />
         <link rel="canonical" href="https://blondie-paris.vercel.app/presse-internationale" />
       </Head>

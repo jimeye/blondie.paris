@@ -9,7 +9,7 @@ const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || process.env.SANITY_DAT
 
 export default defineConfig({
   name: 'blondie-cms',
-  title: 'BLONDIE CMS',
+  title: 'Blondie CMS',
   basePath: '/studio',
   projectId,
   dataset,

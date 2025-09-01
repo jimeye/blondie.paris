@@ -7,7 +7,7 @@ export default function APropos() {
   return (
     <div>
       <Head>
-        <title>À propos - BLONDIE Paris | Bureau de Relations Presse</title>
+        <title>À propos - Blondie Paris | Bureau de relations presse</title>
         <meta name="description" content="Découvrez BLONDIE Paris, bureau de relations presse fondé par Nathalie Roland. Expertise en communication, événements et accompagnement sur mesure. Basé à Arles." />
         <meta name="keywords" content="à propos, BLONDIE Paris, Nathalie Roland, relations presse, bureau communication, événements, agences publicité, Arles, conseil relations publiques" />
         <meta name="author" content="BLONDIE Paris - Nathalie Roland" />
@@ -19,7 +19,7 @@ export default function APropos() {
         <meta name="ICBM" content="43.6769, 4.6283" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="À propos - BLONDIE Paris | Bureau de Relations Presse" />
+        <meta property="og:title" content="À propos - Blondie Paris | Bureau de relations presse" />
         <meta property="og:description" content="Découvrez BLONDIE Paris, bureau de relations presse fondé par Nathalie Roland. Expertise en communication et événements." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://blondie-paris.com/a-propos" />
@@ -32,7 +32,7 @@ export default function APropos() {
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="À propos - BLONDIE Paris | Bureau de Relations Presse" />
+        <meta name="twitter:title" content="À propos - Blondie Paris | Bureau de relations presse" />
         <meta name="twitter:description" content="Découvrez BLONDIE Paris, bureau de relations presse fondé par Nathalie Roland." />
         <meta name="twitter:image" content="https://blondie-paris.com/logo.png" />
         <meta name="twitter:image:alt" content="À propos BLONDIE Paris - Bureau de relations presse" />
@@ -58,12 +58,12 @@ export default function APropos() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "AboutPage",
-              "name": "À propos - BLONDIE Paris",
+                              "name": "À propos - Blondie Paris",
               "description": "Page à propos de BLONDIE Paris - Bureau de relations presse et communication",
               "url": "https://blondie-paris.com/a-propos",
               "mainEntity": {
                 "@type": "Organization",
-                "name": "BLONDIE Paris",
+                "name": "Blondie Paris",
                 "description": "Bureau de relations presse et communication fondé par Nathalie Roland",
                 "url": "https://blondie-paris.com",
                 "founder": {
@@ -72,7 +72,7 @@ export default function APropos() {
                   "jobTitle": "Fondatrice",
                   "worksFor": {
                     "@type": "Organization",
-                    "name": "BLONDIE Paris"
+                    "name": "Blondie Paris"
                   }
                 },
                 "foundingDate": "2020",

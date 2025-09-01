@@ -115,7 +115,7 @@ export default function Home({cms, refs}) {
       style={{ touchAction: 'pan-y', userSelect: 'none' }}
     >
       <Head>
-        <title>{cms?.seo?.title || 'BLONDIE Paris — Relations Presse, Communication & Événements'}</title>
+        <title>{cms?.seo?.title || 'Blondie Paris — Relations presse, communication & événements'}</title>
         <meta name="description" content={cms?.seo?.description || "BLONDIE Paris accompagne agences, médias et marques: relations presse, relations publiques, production d'événements. Expertise sur‑mesure, réseau, confidentialité."} />
         <meta name="keywords" content="relations presse, communication, événements, agence, médias, marques, Paris, Arles, Nathalie Roland, bureau relations presse, conseil communication, production événements" />
         <meta name="author" content="BLONDIE Paris - Nathalie Roland" />
@@ -127,7 +127,7 @@ export default function Home({cms, refs}) {
         <meta name="ICBM" content="43.6769, 4.6283" />
         
         {/* Open Graph */}
-        <meta property="og:title" content={cms?.seo?.title || 'BLONDIE Paris — Relations Presse, Communication & Événements'} />
+        <meta property="og:title" content={cms?.seo?.title || 'Blondie Paris — Relations presse, communication & événements'} />
         <meta property="og:description" content={cms?.seo?.description || "BLONDIE Paris accompagne agences, médias et marques: relations presse, relations publiques, production d'événements. Expertise sur‑mesure, réseau, confidentialité."} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://blondie-paris.com/" />
@@ -140,7 +140,7 @@ export default function Home({cms, refs}) {
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={cms?.seo?.title || 'BLONDIE Paris — Relations Presse, Communication & Événements'} />
+        <meta name="twitter:title" content={cms?.seo?.title || 'Blondie Paris — Relations presse, communication & événements'} />
         <meta name="twitter:description" content={cms?.seo?.description || "BLONDIE Paris accompagne agences, médias et marques: relations presse, relations publiques, production d'événements."} />
         <meta name="twitter:image" content="https://blondie-paris.com/logo.png" />
         <meta name="twitter:image:alt" content="BLONDIE Paris - Bureau de relations presse" />
@@ -244,9 +244,9 @@ export default function Home({cms, refs}) {
                 <div className="space-y-4 mt-4">
                   {/* Titre - caché sur mobile, visible sur desktop */}
                   <div className="hidden md:block">
-                    <h1 className="text-4xl font-bold text-black mb-4">
-                      À propos
-                    </h1>
+                                    <h1 className="text-4xl font-bold text-black mb-4">
+                  À propos
+                </h1>
                     <div className="w-20 h-1 bg-[#FFB6C1]" />
                   </div>
                                         <p className="text-lg text-[#8a8a8a] normal-case">
@@ -438,13 +438,13 @@ export default function Home({cms, refs}) {
             <div className="container mx-auto px-4">
               <div className="text-center mb-6">
                 <h2 className="text-4xl font-bold text-black mb-4">
-                  REVUE DE PRESSE
+                  Revue de presse
                 </h2>
                 <div className="w-20 h-1 bg-[#FFB6C1] mx-auto" />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <Link href="/presse-btob" className="bg-white rounded-lg border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
-                  <span className="text-xl font-semibold text-[#394140] text-center uppercase">PRESSE BTOB</span>
+                  <span className="text-xl font-semibold text-[#394140] text-center">Presse BtoB</span>
                 </Link>
                 <Link href="/presse-grand-public" className="bg-white rounded-lg border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
                   <span className="text-xl font-semibold text-[#394140] text-center uppercase">PRESSE GRAND PUBLIC</span>
@@ -467,9 +467,9 @@ export default function Home({cms, refs}) {
                   Contact
                 </h2>
                 <div className="w-20 h-1 bg-[#FFB6C1] mx-auto mb-6" />
-                <p className="text-lg text-[#394140]/80 leading-relaxed uppercase">
-                  <span className="block md:inline">PRÊT À COLLABORER ? CONTACTEZ-NOUS POUR DISCUTER DE VOS PROJETS,</span>
-                  <span className="block md:inline">NOTRE ÉQUIPE EST LÀ POUR VOUS ACCOMPAGNER.</span>
+                <p className="text-lg text-[#394140]/80 leading-relaxed normal-case">
+                  <span className="block md:inline">Prêt à collaborer ? Contactez-nous pour discuter de vos projets.</span>
+                  <span className="block md:inline">Notre équipe est là pour vous accompagner.</span>
                 </p>
               </div>
               
@@ -480,7 +480,7 @@ export default function Home({cms, refs}) {
                     Envoyez-nous un message
                   </h3>
                   
-                  <form className="space-y-4">
+                  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" className="space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <label htmlFor="nom" className="block text-sm font-medium text-[#394140] mb-2 uppercase">
@@ -568,12 +568,52 @@ export default function Home({cms, refs}) {
                     
                     <button
                       type="submit"
-                      className="w-full bg-[#FFB6C1] hover:bg-[#FFB6C1]/80 hover:text-[#394140] text-white font-semibold py-3 px-6 border border-[#394140] transition-all duration-200 uppercase"
+                      className="block w-[30%] mx-auto bg-[#FFB6C1] hover:bg-[#FFB6C1]/80 hover:text-[#394140] text-white font-semibold py-3 px-6 border border-[#394140] rounded-lg transition-all duration-200 uppercase"
                     >
                       Envoyer le message
                     </button>
                   </form>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Section Newsletter */}
+          <section className="bg-white py-16">
+            <div className="px-4 ml-5 lg:ml-0">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold text-[#394140] mb-6">
+                  Newsletter
+                </h2>
+                <div className="w-20 h-1 bg-[#FFB6C1] mx-auto mb-8" />
+                <p className="text-lg text-[#8a8a8a] normal-case max-w-2xl mx-auto leading-relaxed">
+                  Restez informé de nos actualités, événements et conseils en relations presse. 
+                  Recevez nos insights exclusifs directement dans votre boîte mail.
+                </p>
+              </div>
+              
+              <div className="max-w-md mx-auto">
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" className="flex flex-col sm:flex-row gap-4">
+                  <div className="flex-1">
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Votre adresse email"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFB6C1] focus:border-transparent transition-all duration-200 text-[#394140] placeholder-gray-400"
+                      required
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="bg-[#FFB6C1] hover:bg-[#FFB6C1]/80 hover:text-[#394140] text-white font-semibold py-3 px-8 border border-[#394140] rounded-lg transition-all duration-200 uppercase whitespace-nowrap"
+                  >
+                    S'abonner
+                  </button>
+                </form>
+                <p className="text-xs text-[#8a8a8a] text-center mt-4 normal-case">
+                  En vous abonnant, vous acceptez de recevoir nos newsletters. 
+                  Vous pouvez vous désabonner à tout moment.
+                </p>
               </div>
             </div>
           </section>

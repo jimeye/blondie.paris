@@ -63,9 +63,9 @@
     font-weight: 400;
   }
   
-  /* Titres en capitalize (première lettre majuscule) et BOLD */
+  /* Titres en normal-case (pas de transformation forcée) et BOLD */
   h1, h2, h3, h4, h5, h6 {
-    text-transform: capitalize;
+    text-transform: none;
     font-weight: 700;
   }
   

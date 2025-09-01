@@ -42,18 +42,18 @@ export default function Actualites() {
   return (
     <div>
       <Head>
-        <title>Actualités - BLONDIE Paris</title>
+        <title>Actualités - Blondie Paris</title>
         <meta name="description" content="Découvrez les dernières actualités et réalisations de Blondie Paris. Relations presse, événements et communication sur mesure." />
         <meta name="keywords" content="actualités Blondie Paris, relations presse, événements, communication, médias, presse" />
         <meta name="author" content="Nathalie Roland" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Actualités - BLONDIE Paris" />
+        <meta property="og:title" content="Actualités - Blondie Paris" />
         <meta property="og:description" content="Découvrez les dernières actualités et réalisations de Blondie Paris. Relations presse et événements." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://blondie-paris.com/actualites" />
         <meta property="og:image" content="/nathalie-roland-blondie-paris-hero-actualites-1.webp" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Actualités - BLONDIE Paris" />
+        <meta name="twitter:title" content="Actualités - Blondie Paris" />
         <meta name="twitter:description" content="Dernières actualités et réalisations" />
         <link rel="canonical" href="https://blondie-paris.com/actualites" />
         <link rel="icon" href="/favicon.ico" />

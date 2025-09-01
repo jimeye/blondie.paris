@@ -136,7 +136,7 @@ export default function TV() {
   return (
     <div onKeyDown={handleKeyDown} tabIndex={0}>
       <Head>
-        <title>TV - BLONDIE Paris</title>
+        <title>TV - Blondie Paris</title>
         <meta name="description" content="Revue de presse TV – sélection BLONDIE Paris." />
         <link rel="canonical" href="https://blondie-paris.vercel.app/tv" />
       </Head>

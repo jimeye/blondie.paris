@@ -221,7 +221,7 @@ export default function PresseBtoB() {
   return (
     <div onKeyDown={handleKeyDown} tabIndex={0}>
       <Head>
-        <title>Presse BtoB - BLONDIE Paris</title>
+        <title>Presse BtoB - Blondie Paris</title>
         <meta name="description" content="Revue de presse BtoB – sélection BLONDIE Paris." />
         <link rel="canonical" href="https://blondie-paris.vercel.app/presse-btob" />
       </Head>
