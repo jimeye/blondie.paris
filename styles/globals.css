@@ -206,8 +206,8 @@ img {
 /* Animation alternative pour déclenchement au scroll */
 .curtain-right-scroll {
   opacity: 1;
-  transform: translateX(100%);
-  clip-path: inset(0 0 0 100%);
+  transform: translateX(0);
+  clip-path: inset(0 0 0 0%);
   transition: all 1.5s ease-in-out;
 }
 
