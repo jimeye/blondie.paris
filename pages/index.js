@@ -334,7 +334,7 @@ export default function Home({cms, refs}) {
               
               {/* Grille des events: 2 colonnes mobile, 4 colonnes desktop + 5ème sur toute la largeur */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
-                <div className="group bg-transparent overflow-hidden hover:shadow-md transition">
+                <div className="group bg-transparent overflow-hidden transition">
                   <div className="relative w-full pt-[133%] bg-transparent">
                     <img
                       src="/events/1-pastille+CAN+PAPER-blondie-paris-blondie.paris-blondieparis.webp"
@@ -348,7 +348,7 @@ export default function Home({cms, refs}) {
                   </div>
                 </div>
                 
-                <div className="group bg-transparent overflow-hidden hover:shadow-md transition">
+                <div className="group bg-transparent overflow-hidden transition">
                   <div className="relative w-full pt-[133%] bg-transparent">
                     <img
                       src="/events/2-pastille+cda-blondie-paris-blondie.paris-blondieparis.webp"
@@ -362,7 +362,7 @@ export default function Home({cms, refs}) {
                   </div>
                 </div>
                 
-                <div className="group bg-transparent overflow-hidden hover:shadow-md transition">
+                <div className="group bg-transparent overflow-hidden transition">
                   <div className="relative w-full pt-[133%] bg-transparent">
                     <img
                       src="/events/3-pastille%2Bfast%2Bth%C3%A9o%2Bgosselin-blondie-paris-blondie.paris-blondieparis.webp"
@@ -376,7 +376,7 @@ export default function Home({cms, refs}) {
                   </div>
                 </div>
                 
-                <div className="group bg-transparent overflow-hidden hover:shadow-md transition">
+                <div className="group bg-transparent overflow-hidden transition">
                   <div className="relative w-full pt-[133%] bg-transparent">
                     <img
                       src="/events/4-pastille%2Bm%C3%A9lanie%2Belbaz%20-blondie-paris-blondie.paris-blondieparis..webp"
@@ -390,7 +390,7 @@ export default function Home({cms, refs}) {
                   </div>
                 </div>
                 
-                <div className="group bg-transparent overflow-hidden hover:shadow-md transition col-span-2 md:col-span-4">
+                <div className="group bg-transparent overflow-hidden transition col-span-2 md:col-span-4">
                   <div className="relative w-full pt-[66.5%] bg-transparent">
                     <img
                       src="/events/5-pastille+d+coste+nord+pinus-blondie-paris-blondie.paris-blondieparis.webp"
