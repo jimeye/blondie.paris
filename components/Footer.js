@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-br from-white to-[#FFB6C1]/5 text-[#394140] border-t border-gray-300 menu-font">
       <div className="container mx-auto pt-2 pb-4 md:pb-6 ml-5 lg:ml-0">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ml-5">
           <div>
             <h3 className="text-lg font-semibold mb-2">
               BLONDIE PARIS
@@ -16,7 +16,7 @@ export default function Footer() {
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-2">
-              Contact & © 2025 BLONDIE.PARIS
+              Contact
               <div className="w-20 h-0.5 bg-[#FFB6C1] mt-2"></div>
             </h3>
             <div className="flex items-center space-x-4 mt-2 mb-2">
@@ -31,7 +31,7 @@ export default function Footer() {
               </a>
             </div>
             <p className="text-sm normal-case">Website design by <a href="tel:+330608251223" className="hover:text-[#FFB6C1] transition-colors">JOSEPH-STUDIO.COM</a></p>
-            <p className="text-sm normal-case">Tous droits réservés</p>
+            <p className="text-sm normal-case">© 2025 BLONDIE.PARIS - Tous droits réservés</p>
           </div>
         </div>
       </div>

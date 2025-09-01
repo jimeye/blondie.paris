@@ -31,7 +31,7 @@ export const logos = [
   { src: "/logos/ROMANCE+-+copie.jpg", alt: "ROMANCE", name: "ROMANCE", url: "https://www.romance.fr" },
   { src: "/logos/logo+standard.png", alt: "Standard", name: "Standard", url: "https://www.standard.fr" },
   { src: "/logos/Logo+SYNEIDO.jpg", alt: "SYNEIDO", name: "SYNEIDO", url: "https://www.syneido.com" },
-  { src: "/logos/Steve+Bleu+2021.png", alt: "Steve Bleu", name: "Steve Bleu", url: "https://www.stevebleu.com" },
+  { src: "/logos/Steve+Bleu+2021.png", alt: "Steve Bleu", name: "Steve Bleu", url: "https://www.steve.paris/" },
   { src: "/logos/ubi-bene.jpg", alt: "Ubi Bene", name: "Ubi Bene", url: "https://www.ubibene.com" },
   { src: "/logos/publicis-luxe.jpg", alt: "Publicis Luxe", name: "Publicis Luxe", url: "https://www.publicis-luxe.com" },
   { src: "/logos/orange.png", alt: "Orange", name: "Orange", url: "https://www.orange.com" },

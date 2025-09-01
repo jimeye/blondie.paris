@@ -153,8 +153,8 @@ export default function Contact() {
         
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-white to-[#FFB6C1]/5 pt-24 pb-6">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-3xl mx-auto">
+          <div className="px-4 ml-5 lg:ml-0">
+            <div className="text-center">
               <h1 className="text-4xl font-bold text-[#394140] mb-6">
                 Contact
               </h1>
@@ -169,8 +169,8 @@ export default function Contact() {
 
         {/* Contact Content */}
         <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-2xl mx-auto">
+          <div className="px-4 ml-5 lg:ml-0">
+            <div>
               
               {/* Formulaire de contact */}
               <div className="bg-white rounded-lg p-8">
@@ -230,42 +230,40 @@ export default function Contact() {
                         placeholder="votre@email.com"
                       />
                     </div>
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="telephone" className="block text-sm font-medium text-[#394140] mb-2 uppercase">
-                      Téléphone
-                    </label>
-                    <input
-                      type="tel"
-                      id="telephone"
-                      name="telephone"
-                      value={formData.telephone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFB6C1] focus:border-transparent transition-all duration-200"
-                      placeholder="+33 6 12 34 56 78"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="sujet" className="block text-sm font-medium text-[#394140] mb-2 uppercase">
-                      Sujet *
-                    </label>
-                    <select
-                      id="sujet"
-                      name="sujet"
-                      value={formData.sujet}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFB6C1] focus:border-transparent transition-all duration-200"
-                    >
-                      <option value="">Sélectionnez un sujet</option>
-                      <option value="relations-presse">Relations presse</option>
-                      <option value="production-evenements">Production d'événements</option>
-                      <option value="conseil">Conseil</option>
-                      <option value="demande-devis">Demande de devis</option>
-                      <option value="autre">Autre</option>
-                    </select>
+                    <div>
+                      <label htmlFor="telephone" className="block text-sm font-medium text-[#394140] mb-2 uppercase">
+                        Téléphone
+                      </label>
+                      <input
+                        type="tel"
+                        id="telephone"
+                        name="telephone"
+                        value={formData.telephone}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFB6C1] focus:border-transparent transition-all duration-200"
+                        placeholder="+33 6 12 34 56 78"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="sujet" className="block text-sm font-medium text-[#394140] mb-2 uppercase">
+                        Sujet *
+                      </label>
+                      <select
+                        id="sujet"
+                        name="sujet"
+                        value={formData.sujet}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFB6C1] focus:border-transparent transition-all duration-200"
+                      >
+                        <option value="">Sélectionnez un sujet</option>
+                        <option value="relations-presse">Relations presse</option>
+                        <option value="production-evenements">Production d'événements</option>
+                        <option value="conseil">Conseil</option>
+                        <option value="demande-devis">Demande de devis</option>
+                        <option value="autre">Autre</option>
+                      </select>
+                    </div>
                   </div>
                   
                   <div>
@@ -287,7 +285,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-[#FFB6C1] hover:bg-[#FFB6C1]/80 text-white font-semibold py-4 px-6 border border-[#394140] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed uppercase"
+                    className="w-full bg-[#FFB6C1] hover:bg-[#FFB6C1]/80 hover:text-[#394140] text-white font-semibold py-4 px-6 border border-[#394140] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed uppercase"
                   >
                     {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
                   </button>

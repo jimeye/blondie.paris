@@ -461,19 +461,19 @@ export default function Home({cms, refs}) {
 
           {/* Section Contact complète */}
           <section className="bg-gradient-to-br from-white to-[#FFB6C1]/5 py-8">
-            <div className="container mx-auto px-4">
+            <div className="ml-5 lg:ml-0">
               <div className="text-center mb-6">
                 <h2 className="text-4xl font-bold text-[#394140] mb-4">
                   Contact
                 </h2>
                 <div className="w-20 h-1 bg-[#FFB6C1] mx-auto mb-6" />
-                <p className="text-lg text-[#394140]/80 leading-relaxed uppercase max-w-3xl mx-auto">
+                <p className="text-lg text-[#394140]/80 leading-relaxed uppercase">
                   <span className="block md:inline">PRÊT À COLLABORER ? CONTACTEZ-NOUS POUR DISCUTER DE VOS PROJETS,</span>
                   <span className="block md:inline">NOTRE ÉQUIPE EST LÀ POUR VOUS ACCOMPAGNER.</span>
                 </p>
               </div>
               
-              <div className="max-w-2xl mx-auto">
+              <div>
                 {/* Formulaire de contact */}
                 <div className="bg-white rounded-lg p-6">
                   <h3 className="text-2xl font-bold text-[#394140] mb-4 uppercase">
@@ -532,25 +532,24 @@ export default function Home({cms, refs}) {
                           placeholder="+33 6 12 34 56 78"
                         />
                       </div>
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="sujet" className="block text-sm font-medium text-[#394140] mb-2 uppercase">
-                        Sujet *
-                      </label>
-                      <select
-                        id="sujet"
-                        name="sujet"
-                        required
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFB6C1] focus:border-transparent transition-all duration-200"
-                      >
-                        <option value="">Sélectionnez un sujet</option>
-                        <option value="relations-presse">Relations presse</option>
-                        <option value="production-evenements">Production d'événements</option>
-                        <option value="conseil">Conseil</option>
-                        <option value="demande-devis">Demande de devis</option>
-                        <option value="autre">Autre</option>
-                      </select>
+                      <div>
+                        <label htmlFor="sujet" className="block text-sm font-medium text-[#394140] mb-2 uppercase">
+                          Sujet *
+                        </label>
+                        <select
+                          id="sujet"
+                          name="sujet"
+                          required
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFB6C1] focus:border-transparent transition-all duration-200"
+                        >
+                          <option value="">Sélectionnez un sujet</option>
+                          <option value="relations-presse">Relations presse</option>
+                          <option value="production-evenements">Production d'événements</option>
+                          <option value="conseil">Conseil</option>
+                          <option value="demande-devis">Demande de devis</option>
+                          <option value="autre">Autre</option>
+                        </select>
+                      </div>
                     </div>
                     
                     <div>
@@ -569,7 +568,7 @@ export default function Home({cms, refs}) {
                     
                     <button
                       type="submit"
-                      className="w-full bg-[#FFB6C1] hover:bg-[#FFB6C1]/80 text-white font-semibold py-3 px-6 border border-[#394140] transition-all duration-200 uppercase"
+                      className="w-full bg-[#FFB6C1] hover:bg-[#FFB6C1]/80 hover:text-[#394140] text-white font-semibold py-3 px-6 border border-[#394140] transition-all duration-200 uppercase"
                     >
                       Envoyer le message
                     </button>
