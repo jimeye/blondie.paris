@@ -178,7 +178,7 @@ img {
 .curtain-right {
   animation: curtainOpenRight 2s ease-in-out;
   transform-origin: right;
-  animation-delay: 0.5s;
+  animation-delay: 1s;
 }
 
 @keyframes curtainOpenLeft {
