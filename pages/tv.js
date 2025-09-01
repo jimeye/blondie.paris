@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Head from 'next/head'
 import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import FooterNew from '../components/FooterNew'
 
 // Données des images TV avec noms descriptifs
 const tvImages = [
@@ -180,7 +180,7 @@ export default function TV() {
           </div>
         </section>
 
-        <Footer />
+        <FooterNew />
       </main>
 
       {/* Carrousel Modal */}

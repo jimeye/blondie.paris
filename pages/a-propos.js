@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Head from 'next/head'
 import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import FooterNew from '../components/FooterNew'
 
 export default function APropos() {
   return (
@@ -160,7 +160,7 @@ export default function APropos() {
             </div>
           </div>
           <div className="mt-8">
-            <Footer />
+            <FooterNew />
           </div>
         </section>
       </main>

@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import FooterNew from '../components/FooterNew'
 import { useState } from 'react'
 
 export default function Contact() {
@@ -294,7 +294,7 @@ export default function Contact() {
           </div>
         </section>
 
-        <Footer />
+        <FooterNew />
       </main>
     </div>
   )

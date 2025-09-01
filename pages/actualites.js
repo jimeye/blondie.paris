@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import FooterNew from '../components/FooterNew'
 
 const slides = [
   { image: '/nathalie-roland-blondie-paris-hero-actualites-1.webp' },
@@ -100,7 +100,7 @@ export default function Actualites() {
             </button>
           </div>
           <div className="mt-8">
-            <Footer />
+            <FooterNew />
           </div>
         </section>
       </main>

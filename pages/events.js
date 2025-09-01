@@ -1,7 +1,7 @@
 import { useMemo, useState, useEffect } from 'react'
 import Head from 'next/head'
 import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import FooterNew from '../components/FooterNew'
 
 // Données locales (5 visuels fournis dans /public/events)
 const allEvents = [
@@ -199,7 +199,7 @@ export default function Events() {
           </div>
         </section>
 
-        <Footer />
+        <FooterNew />
       </main>
 
       {/* Modal Galerie */}

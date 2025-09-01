@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Head from 'next/head'
 import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import FooterNew from '../components/FooterNew'
 
 // Données des images Presse BtoB avec noms descriptifs
 const presseBtoBImages = [
@@ -262,7 +262,7 @@ export default function PresseBtoB() {
           </div>
         </section>
 
-        <Footer />
+        <FooterNew />
       </main>
 
               {/* Carrousel Modal */}

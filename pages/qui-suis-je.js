@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Head from 'next/head'
 import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import FooterNew from '../components/FooterNew'
 
 export default function QuiSuisJe() {
   return (
@@ -81,7 +81,7 @@ export default function QuiSuisJe() {
           </div>
           
           <div className="mt-8">
-            <Footer />
+            <FooterNew />
           </div>
         </section>
       </main>
