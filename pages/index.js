@@ -231,13 +231,15 @@ export default function Home({cms, refs}) {
               </div>
 
               <div className="grid md:grid-cols-2 gap-8 items-start">
-                {/* Image à gauche */}
-                <div className="w-full mt-4">
-                  <img
-                    src="/nathalie-roland-blondie-paris-a-propos.webp"
-                    alt="À propos"
-                    className="w-full h-auto"
-                  />
+                {/* Image à gauche - Rideau depuis la gauche */}
+                <div className="w-full mt-4 overflow-hidden">
+                  <div className="curtain-left">
+                    <img
+                      src="/nathalie-roland-blondie-paris-a-propos.webp"
+                      alt="À propos"
+                      className="w-full h-auto"
+                    />
+                  </div>
                 </div>
 
                 {/* Contenu texte à droite */}
@@ -278,13 +280,15 @@ export default function Home({cms, refs}) {
               </div>
 
               <div className="grid md:grid-cols-2 gap-8 items-start">
-                {/* Image à gauche */}
-                <div className="w-full mt-4">
-                  <img
-                    src="/nathalie-roland-blondie-paris-qui-suis-je.webp"
-                    alt="Qui suis-je"
-                    className="w-full h-auto"
-                  />
+                {/* Image à gauche - Rideau depuis la droite */}
+                <div className="w-full mt-4 overflow-hidden">
+                  <div className="curtain-right">
+                    <img
+                      src="/nathalie-roland-blondie-paris-qui-suis-je.webp"
+                      alt="Qui suis-je"
+                      className="w-full h-auto"
+                    />
+                  </div>
                 </div>
 
                 {/* Contenu texte à droite */}
@@ -639,6 +643,46 @@ export default function Home({cms, refs}) {
         </section>
       </main>
     </div>
+
+    <style jsx>{`
+      /* Effet rideau de théâtre pour les photos */
+      .curtain-left {
+        animation: curtainOpenLeft 2s ease-in-out;
+        transform-origin: left;
+      }
+      
+      .curtain-right {
+        animation: curtainOpenRight 2s ease-in-out;
+        transform-origin: right;
+      }
+      
+      @keyframes curtainOpenLeft {
+        0% {
+          transform: translateX(-100%);
+          clip-path: inset(0 100% 0 0);
+        }
+        100% {
+          transform: translateX(0);
+          clip-path: inset(0 0% 0 0);
+        }
+      }
+      
+      @keyframes curtainOpenRight {
+        0% {
+          transform: translateX(100%);
+          clip-path: inset(0 0 0 100%);
+        }
+        100% {
+          transform: translateX(0);
+          clip-path: inset(0 0 0 0%);
+        }
+      }
+      
+      /* Délai pour la deuxième photo */
+      .curtain-right {
+        animation-delay: 0.5s;
+      }
+    `}</style>
   )
 } 
 
