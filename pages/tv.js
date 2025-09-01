@@ -157,7 +157,7 @@ export default function TV() {
                 <button
                   key={image.id}
                   onClick={() => openCarousel(index)}
-                  className="group bg-white overflow-hidden hover:shadow-lg transition-shadow duration-300 border border-gray-200"
+                  className="group bg-white overflow-hidden hover:shadow-lg transition-shadow duration-300 border border-[#FFB6C1]"
                   aria-label={`Ouvrir ${image.title}`}
                 >
                   {/* Format 16/9 */}

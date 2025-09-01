@@ -167,7 +167,7 @@ export default function PresseInternationale() {
                 <button
                   key={image.id}
                   onClick={() => openCarousel(index)}
-                  className="group bg-white rounded-none border border-gray-200 overflow-hidden hover:shadow-md transition"
+                  className="group bg-white rounded-none border border-[#FFB6C1] overflow-hidden hover:shadow-md transition"
                   aria-label={`Ouvrir ${image.title}`}
                 >
                   <div className="relative w-full pt-[133%] bg-white">

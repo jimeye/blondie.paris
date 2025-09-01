@@ -232,7 +232,7 @@ export default function PresseBtoB() {
 
           <div className="container mx-auto px-4">
             <div className="mb-6 text-center">
-              <h1 className="text-4xl font-bold text-black">Presse btoB</h1>
+                              <h1 className="text-4xl font-bold text-black">Presse BtoB</h1>
               <div className="w-20 h-1 bg-[#FFB6C1] mt-2 mx-auto"></div>
             </div>
 
@@ -242,7 +242,7 @@ export default function PresseBtoB() {
                 <button
                   key={image.id}
                   onClick={() => openCarousel(index)}
-                  className="group bg-white rounded-none border border-gray-200 overflow-hidden hover:shadow-md transition"
+                  className="group bg-white rounded-none border border-[#FFB6C1] overflow-hidden hover:shadow-md transition"
                   aria-label={`Ouvrir ${image.title}`}
                 >
                   <div className="relative w-full pt-[133%] bg-white">

@@ -443,16 +443,16 @@ export default function Home({cms, refs}) {
                 <div className="w-20 h-1 bg-[#FFB6C1] mx-auto" />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <Link href="/presse-btob" className="bg-white rounded-lg border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
-                  <span className="text-xl font-semibold text-[#394140] text-center">Presse BtoB</span>
+                <Link href="/presse-btob" className="bg-white rounded-lg border border-[#FFB6C1] p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
+                  <span className="text-xl font-semibold text-[#394140] text-center uppercase">PRESSE BTOB</span>
                 </Link>
-                <Link href="/presse-grand-public" className="bg-white rounded-lg border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
+                <Link href="/presse-grand-public" className="bg-white rounded-lg border border-[#FFB6C1] p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
                   <span className="text-xl font-semibold text-[#394140] text-center uppercase">PRESSE GRAND PUBLIC</span>
                 </Link>
-                <Link href="/tv" className="bg-white rounded-lg border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
+                <Link href="/tv" className="bg-white rounded-lg border border-[#FFB6C1] p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
                   <span className="text-xl font-semibold text-[#394140] text-center uppercase">TV</span>
                 </Link>
-                <Link href="/presse-internationale" className="bg-white rounded-lg border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
+                <Link href="/presse-internationale" className="bg-white rounded-lg border border-[#FFB6C1] p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
                   <span className="text-xl font-semibold text-[#394140] text-center uppercase">PRESSE INTERNATIONALE</span>
                 </Link>
               </div>
