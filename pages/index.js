@@ -249,18 +249,18 @@ export default function Home({cms, refs}) {
                     </h1>
                     <div className="w-20 h-1 bg-[#FFB6C1]" />
                   </div>
-                  <p className="text-lg text-[#b0b0b0]/80 normal-case">
-                    Fondé par Nathalie Roland, Blondie Paris est un bureau de relations presse, relations publiques et production d'événements qui accompagne à l'année ou en one shot les agences de publicité, les sociétés de production, les médias et les marques.
-                  </p>
-                  <p className="text-lg text-[#b0b0b0]/80 italic normal-case">
-                    « Dans un monde ultra connecté, il est primordial d'avoir un.e expert.e à ses côtés pour accompagner et conseiller les marques dans leur communication. Nous faisons du sur-mesure pour nos partenaires, dont l'objectif principal est de développer leur image et les mettre en lumière » déclare Nathalie Roland.
-                  </p>
-                  <p className="text-lg text-[#b0b0b0]/80 normal-case">
-                    Écoute, rigueur, curiosité et observation sont le secret d'une collaboration pérenne et la marque de fabrique de Blondie Paris. Avec une expertise unique, un savoir-faire reconnu, basé à Arles et Paris, le bureau élabore une stratégie de communication sur mesure dans le respect de la plus grande confidentialité, développe et entretient les relations avec la presse française et internationale, et les influenceurs clefs avec pour objectif d'augmenter la visibilité de chaque client. Il s'entoure, depuis sa création, d'un pôle de free-lance très expérimenté, agile et réactif à vos côtés. Blondie Paris c'est avant tout une équipe qui décrypte l'actualité et les tendances d'aujourd'hui.
-                  </p>
-                  <p className="text-lg text-[#b0b0b0]/80 normal-case">
-                    Doté d'une parfaite connaissance et expertise de l'écosystème de la communication, le bureau dispose d'un solide réseau de professionnels et d'une organisation flexible pour accompagner les clients dans tous leurs projets et dispositifs.
-                  </p>
+                                        <p className="text-lg text-[#8a8a8a] normal-case">
+                        Fondé par Nathalie Roland, Blondie Paris est un bureau de relations presse, relations publiques et production d'événements qui accompagne à l'année ou en one shot les agences de publicité, les sociétés de production, les médias et les marques.
+                      </p>
+                      <p className="text-lg text-[#8a8a8a] italic normal-case">
+                        « Dans un monde ultra connecté, il est primordial d'avoir un.e expert.e à ses côtés pour accompagner et conseiller les marques dans leur communication. Nous faisons du sur-mesure pour nos partenaires, dont l'objectif principal est de développer leur image et les mettre en lumière » déclare Nathalie Roland.
+                      </p>
+                      <p className="text-lg text-[#8a8a8a] normal-case">
+                        Écoute, rigueur, curiosité et observation sont le secret d'une collaboration pérenne et la marque de fabrique de Blondie Paris. Avec une expertise unique, un savoir-faire reconnu, basé à Arles et Paris, le bureau élabore une stratégie de communication sur mesure dans le respect de la plus grande confidentialité, développe et entretient les relations avec la presse française et internationale, et les influenceurs clefs avec pour objectif d'augmenter la visibilité de chaque client. Il s'entoure, depuis sa création, d'un pôle de free-lance très expérimenté, agile et réactif à vos côtés. Blondie Paris c'est avant tout une équipe qui décrypte l'actualité et les tendances d'aujourd'hui.
+                      </p>
+                      <p className="text-lg text-[#8a8a8a] normal-case">
+                        Doté d'une parfaite connaissance et expertise de l'écosystème de la communication, le bureau dispose d'un solide réseau de professionnels et d'une organisation flexible pour accompagner les clients dans tous leurs projets et dispositifs.
+                      </p>
                 </div>
               </div>
             </div>
@@ -296,25 +296,25 @@ export default function Home({cms, refs}) {
                     </h1>
                     <div className="w-20 h-1 bg-[#FFB6C1]" />
                   </div>
-                  <p className="text-lg text-[#b0b0b0]/80 normal-case">
+                  <p className="text-lg text-[#8a8a8a] normal-case">
                     Mon parcours dans la communication s'est façonné au travers de mes rencontres. Plus de 25 ans d'expérience(s) qui m'ont permis d'acquérir une connaissance et une expertise uniques que je mets au service des agences de publicité, sociétés de production, médias et marques.
                   </p>
-                  <p className="text-lg text-[#b0b0b0]/80 normal-case">
+                  <p className="text-lg text-[#8a8a8a] normal-case">
                     Je me nourris des rencontres et des histoires que chacun porte. Mon écoute et mon sens de l'observation m'ont amené à tisser un réseau privilégié de professionnels. Je transforme les récits de mes clients en messages, leur offrant une mise en lumière toujours sincère et originale, qui fait la part belle au conseil et à la rigueur.
                   </p>
-                  <p className="text-lg text-[#b0b0b0]/80 normal-case">
+                  <p className="text-lg text-[#8a8a8a] normal-case">
                     Je suis un artisan. Quelle que soit la nature de la mission et des moyens techniques à déployer, le sur-mesure est chez moi de mise. C'est une des raisons qui m'ont poussé, il y a 15 ans, à me lancer en free-lance.
                   </p>
-                  <p className="text-lg text-[#b0b0b0]/80 normal-case">
+                  <p className="text-lg text-[#8a8a8a] normal-case">
                     En 2019 avec la naissance de Blondie Paris, je crée mon bureau de relations presse, relations publiques et productions d'événements. Au plus près des besoins de mes clients, je pose un diagnostic pour leur proposer les solutions efficaces et innovantes, les retombées qu'ils attendent. Mon rôle est de comprendre leurs enjeux, les accompagner et les conseiller au mieux.
                   </p>
-                  <p className="text-lg text-[#b0b0b0]/80 normal-case">
+                  <p className="text-lg text-[#8a8a8a] normal-case">
                     J'ai d'abord appris le métier d'acheteuse d'art, puis assuré l'organisation des cérémonies de remises de prix et les opérations de relations publiques du magazine Stratégies. Pour ensuite gérer la communication (interne, externe) de différentes agences de publicité (TBWA Paris, BETC, Havas…) et associations professionnelles (le Club des Directeurs Artistiques et l'AACC, association des Agences-Conseils en communication).
                   </p>
-                  <p className="text-lg text-[#b0b0b0]/80 normal-case">
+                  <p className="text-lg text-[#8a8a8a] normal-case">
                     Je viens du sud. J'ai mes racines sous le soleil, le bureau à Arles me permet d'être, chaque année, lors des Rencontres de la photographie au plus près de mes clients (vernissages et expositions, relations presse, séminaires…), aidée d'un réseau de qualité que j'ai constitué au fil des ans.
                   </p>
-                  <p className="text-lg text-[#b0b0b0]/80 normal-case">
+                  <p className="text-lg text-[#8a8a8a] normal-case">
                     Blondie Paris-Arles c'est une équipe curieuse, toujours au fait de ce qu'il faut savoir.
                   </p>
                 </div>
@@ -418,7 +418,7 @@ export default function Home({cms, refs}) {
               </div>
               <div className="grid grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
                 {logos.map((logo, index) => (
-                  <div key={index} className="bg-white rounded-none border border-gray-200 p-4 flex items-center justify-center">
+                  <div key={index} className="bg-white rounded-lg border border-gray-200 p-4 flex items-center justify-center">
                     <img src={logo.src} alt={logo.alt} className="w-full h-20 object-contain" />
                   </div>
                 ))}
@@ -431,22 +431,22 @@ export default function Home({cms, refs}) {
             <div className="container mx-auto px-4">
               <div className="text-center mb-6">
                 <h2 className="text-4xl font-bold text-black mb-4">
-                  Revue de presse
+                  REVUE DE PRESSE
                 </h2>
                 <div className="w-20 h-1 bg-[#FFB6C1] mx-auto" />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <Link href="/presse-btob" className="bg-white rounded-none border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
-                  <span className="text-xl font-semibold text-[#394140] text-center normal-case">Presse btoB</span>
+                <Link href="/presse-btob" className="bg-white rounded-lg border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
+                  <span className="text-xl font-semibold text-[#394140] text-center uppercase">PRESSE BTOB</span>
                 </Link>
-                <Link href="/presse-grand-public" className="bg-white rounded-none border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
-                  <span className="text-xl font-semibold text-[#394140] text-center normal-case">Presse grand public</span>
+                <Link href="/presse-grand-public" className="bg-white rounded-lg border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
+                  <span className="text-xl font-semibold text-[#394140] text-center uppercase">PRESSE GRAND PUBLIC</span>
                 </Link>
-                <Link href="/tv" className="bg-white rounded-none border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
-                  <span className="text-xl font-semibold text-[#394140] text-center normal-case">TV</span>
+                <Link href="/tv" className="bg-white rounded-lg border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
+                  <span className="text-xl font-semibold text-[#394140] text-center uppercase">TV</span>
                 </Link>
-                <Link href="/presse-internationale" className="bg-white rounded-none border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
-                  <span className="text-xl font-semibold text-[#394140] text-center normal-case">Presse internationale</span>
+                <Link href="/presse-internationale" className="bg-white rounded-lg border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
+                  <span className="text-xl font-semibold text-[#394140] text-center uppercase">PRESSE INTERNATIONALE</span>
                 </Link>
               </div>
             </div>

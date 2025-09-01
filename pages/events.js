@@ -158,7 +158,7 @@ export default function Events() {
                 <button
                   key={i}
                   onClick={() => setOpenIdx(((page - 1) * pageSize) + i)}
-                  className={`group bg-white rounded-none border border-gray-200 overflow-hidden hover:shadow-md transition ${ev.title === 'D. Coste – Nord Pinus' ? 'col-span-2' : ''}`}
+                  className={`group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-md transition ${ev.title === 'D. Coste – Nord Pinus' ? 'col-span-2' : ''}`}
                   aria-label={`Ouvrir la galerie ${ev.title}`}
                 >
                   <div className={`relative w-full ${ev.title === 'D. Coste – Nord Pinus' ? 'pt-[66.5%]' : 'pt-[133%]'} bg-white`}>
