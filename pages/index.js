@@ -574,12 +574,7 @@ export default function Home({cms, refs}) {
 
           <Footer />
 
-          {/* Indicateurs de swipe */}
-          <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-40 flex space-x-1.5">
-            <div className="w-1.5 h-1.5 bg-[#FFB6C1]/60 rounded-full"></div>
-            <div className="w-1.5 h-1.5 bg-[#FFB6C1] rounded-full"></div>
-            <div className="w-1.5 h-1.5 bg-[#FFB6C1]/60 rounded-full"></div>
-          </div>
+
 
           {showBackToTop && (
             <button
