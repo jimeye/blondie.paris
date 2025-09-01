@@ -73,17 +73,17 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
               </div>
               
               {/* Sous-menu Presse */}
-              <div className="absolute left-0 mt-1 w-48 bg-black/90 backdrop-blur-sm shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <Link href="/presse-btob" className="disco-link block px-4 py-0.5 text-white hover:bg-[#FFB6C1]/20 font-semibold uppercase">
+              <div className="absolute left-0 mt-1 w-52 bg-black/90 backdrop-blur-sm shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <Link href="/presse-btob" className="disco-link block px-4 py-0.5 text-white hover:bg-[#FFB6C1]/20 font-semibold uppercase text-xs">
                   PRESSE BTOB
                 </Link>
-                <Link href="/presse-grand-public" className="disco-link block px-4 py-0.5 text-white hover:bg-[#FFB6C1]/20 font-semibold uppercase">
+                <Link href="/presse-grand-public" className="disco-link block px-4 py-0.5 text-white hover:bg-[#FFB6C1]/20 font-semibold uppercase text-xs">
                   PRESSE GRAND PUBLIC
                 </Link>
-                <Link href="/tv" className="disco-link block px-4 py-0.5 text-white hover:bg-[#FFB6C1]/20 font-semibold uppercase">
+                <Link href="/tv" className="disco-link block px-4 py-0.5 text-white hover:bg-[#FFB6C1]/20 font-semibold uppercase text-xs">
                   TV
                 </Link>
-                <Link href="/presse-internationale" className="disco-link block px-4 py-0.5 text-white hover:bg-[#FFB6C1]/20 font-semibold uppercase">
+                <Link href="/presse-internationale" className="disco-link block px-4 py-0.5 text-white hover:bg-[#FFB6C1]/20 font-semibold uppercase text-xs">
                   PRESSE INTERNATIONALE
                 </Link>
               </div>
