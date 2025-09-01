@@ -261,9 +261,9 @@ export default function Contact() {
                     >
                       <option value="">Sélectionnez un sujet</option>
                       <option value="relations-presse">Relations presse</option>
-                      <option value="evenements">Événements</option>
-                      <option value="communication">Communication</option>
-                      <option value="devis">Demande de devis</option>
+                      <option value="production-evenements">Production d'événements</option>
+                      <option value="conseil">Conseil</option>
+                      <option value="demande-devis">Demande de devis</option>
                       <option value="autre">Autre</option>
                     </select>
                   </div>

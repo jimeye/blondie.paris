@@ -379,8 +379,7 @@ export default function Home({cms, refs}) {
                 </h2>
                 <div className="w-20 h-1 bg-[#FFB6C1] mx-auto mb-6" />
                 <p className="text-lg text-[#394140]/80 leading-relaxed uppercase max-w-3xl mx-auto">
-                  Prêt à collaborer ? Contactez-nous pour discuter de vos projets de relations presse, 
-                  communication et événements. Notre équipe est là pour vous accompagner.
+                  PRÊT À COLLABORER ? CONTACTEZ-NOUS POUR DISCUTER DE VOS PROJETS, NOTRE ÉQUIPE EST LÀ POUR VOUS ACCOMPAGNER.
                 </p>
               </div>
               
@@ -457,9 +456,9 @@ export default function Home({cms, refs}) {
                       >
                         <option value="">Sélectionnez un sujet</option>
                         <option value="relations-presse">Relations presse</option>
-                        <option value="evenements">Événements</option>
-                        <option value="communication">Communication</option>
-                        <option value="devis">Demande de devis</option>
+                        <option value="production-evenements">Production d'événements</option>
+                        <option value="conseil">Conseil</option>
+                        <option value="demande-devis">Demande de devis</option>
                         <option value="autre">Autre</option>
                       </select>
                     </div>
