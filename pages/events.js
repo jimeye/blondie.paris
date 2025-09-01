@@ -24,7 +24,7 @@ const allEvents = [
     ],
   },
   {
-    title: 'Le Club des Directeurs Artistiques',
+    title: 'Le Club des D.A',
     modalTitle: 'Le Club des Directeurs Artistiques Galerie du Club, place Patrat',
     cover: '/events/2-pastille+cda-blondie-paris-blondie.paris-blondieparis.webp',
     gallery: [

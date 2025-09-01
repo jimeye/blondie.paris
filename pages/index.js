@@ -47,7 +47,7 @@ export default function Home({cms, refs}) {
       ],
     },
     {
-      title: 'Le Club des Directeurs Artistiques',
+      title: 'Le Club des D.A',
       modalTitle: 'Le Club des Directeurs Artistiques Galerie du Club, place Patrat',
       cover: '/events/2-pastille+cda-blondie-paris-blondie.paris-blondieparis.webp',
       gallery: [
@@ -74,7 +74,7 @@ export default function Home({cms, refs}) {
     {
       title: 'FAST – Théo Gosselin',
       modalTitle: 'Théo Gosselin Garage du Nord Pinus',
-      cover: '/events/3-pastille+fast+théo+gosselin-blondie-paris-blondie.paris-blondieparis.webp',
+      cover: '/events/3-pastille-fast-theo-gosselin.webp',
       gallery: [
         '/events/Théo-Gosselin-Garage-du-Nord-Pinus/1-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
         '/events/Théo-Gosselin-Garage-du-Nord-Pinus/2-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
@@ -96,7 +96,7 @@ export default function Home({cms, refs}) {
     {
       title: 'Mélanie Elbaz',
       modalTitle: 'Mélanie Elbaz Place Paul Doumer',
-      cover: '/events/4-pastille+mélanie+elbaz -blondie-paris-blondie.paris-blondieparis..webp',
+      cover: '/events/4-pastille-melanie-elbaz.webp',
       gallery: [
         '/events/Mélanie-Elbaz-Place-Paul-Doumer/1-Mélanie-Elbaz-Place-Paul-Doumer-blondie-paris-blondie.paris-blondieparis.webp',
         '/events/Mélanie-Elbaz-Place-Paul-Doumer/2-Mélanie-Elbaz-Place-Paul-Doumer-blondie-paris-blondie.paris-blondieparis.webp',
@@ -461,6 +461,9 @@ export default function Home({cms, refs}) {
                       alt={allEvents[0].title}
                       className="absolute inset-0 w-full h-full object-cover"
                       loading="lazy"
+                      onError={(e) => {
+                        console.error(`Erreur de chargement pour ${allEvents[0].title}:`, allEvents[0].cover)
+                      }}
                     />
                   </div>
                   <div className="p-1 text-left">
@@ -481,6 +484,9 @@ export default function Home({cms, refs}) {
                       alt={allEvents[1].title}
                       className="absolute inset-0 w-full h-full object-cover"
                       loading="lazy"
+                      onError={(e) => {
+                        console.error(`Erreur de chargement pour ${allEvents[1].title}:`, allEvents[1].cover)
+                      }}
                     />
                   </div>
                   <div className="p-1 text-left">
@@ -501,6 +507,9 @@ export default function Home({cms, refs}) {
                       alt={allEvents[2].title}
                       className="absolute inset-0 w-full h-full object-cover"
                       loading="lazy"
+                      onError={(e) => {
+                        console.error(`Erreur de chargement pour ${allEvents[2].title}:`, allEvents[2].title)
+                      }}
                     />
                   </div>
                   <div className="p-1 text-left">
@@ -521,6 +530,9 @@ export default function Home({cms, refs}) {
                       alt={allEvents[3].title}
                       className="absolute inset-0 w-full h-full object-cover"
                       loading="lazy"
+                      onError={(e) => {
+                        console.error(`Erreur de chargement pour ${allEvents[3].title}:`, allEvents[3].cover)
+                      }}
                     />
                   </div>
                   <div className="p-1 text-left">
@@ -541,6 +553,9 @@ export default function Home({cms, refs}) {
                       alt={allEvents[4].title}
                       className="absolute inset-0 w-full h-full object-cover"
                       loading="lazy"
+                      onError={(e) => {
+                        console.error(`Erreur de chargement pour ${allEvents[4].title}:`, allEvents[4].cover)
+                      }}
                     />
                   </div>
                   <div className="p-1 text-left">
