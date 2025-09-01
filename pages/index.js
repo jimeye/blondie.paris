@@ -578,7 +578,8 @@ export default function Home({cms, refs}) {
             </div>
           </section>
 
-          {/* Section Newsletter */}
+          {/* Section Newsletter - MASQUÉE TEMPORAIREMENT */}
+          {/* 
           <section className="bg-white py-16">
             <div className="px-4 ml-5 lg:ml-0">
               <div className="text-center mb-12">
@@ -617,6 +618,7 @@ export default function Home({cms, refs}) {
               </div>
             </div>
           </section>
+          */}
 
           <Footer />
 
