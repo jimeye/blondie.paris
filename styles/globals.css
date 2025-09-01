@@ -173,12 +173,14 @@ img {
 .curtain-left {
   animation: curtainOpenLeft 2s ease-in-out;
   transform-origin: left;
+  animation-fill-mode: both;
 }
 
 .curtain-right {
   animation: curtainOpenRight 2s ease-in-out;
   transform-origin: right;
   animation-delay: 0.5s;
+  animation-fill-mode: both;
 }
 
 @keyframes curtainOpenLeft {
@@ -201,6 +203,20 @@ img {
     transform: translateX(0);
     clip-path: inset(0 0 0 0%);
   }
+}
+
+/* Animation alternative pour déclenchement au scroll */
+.curtain-right-scroll {
+  opacity: 0;
+  transform: translateX(100%);
+  clip-path: inset(0 0 0 100%);
+  transition: all 2s ease-in-out;
+}
+
+.curtain-right-scroll.animate {
+  opacity: 1;
+  transform: translateX(0);
+  clip-path: inset(0 0 0 0%);
 }
 
 /* Styles pour le scrollbar */

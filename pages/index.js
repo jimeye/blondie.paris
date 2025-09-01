@@ -50,6 +50,28 @@ export default function Home({cms, refs}) {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  // Animation de la deuxième photo au scroll
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate')
+        }
+      })
+    }, { threshold: 0.3 })
+
+    const curtainElement = document.getElementById('curtain-right-photo')
+    if (curtainElement) {
+      observer.observe(curtainElement)
+    }
+
+    return () => {
+      if (curtainElement) {
+        observer.unobserve(curtainElement)
+      }
+    }
+  }, [])
+
   // Fonctions pour le swipe
   const onTouchStart = (e) => {
     // Éviter les swipes sur les éléments interactifs
@@ -282,7 +304,7 @@ export default function Home({cms, refs}) {
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 {/* Image à gauche - Rideau depuis la droite */}
                 <div className="w-full mt-4 overflow-hidden">
-                  <div className="curtain-right">
+                  <div className="curtain-right-scroll" id="curtain-right-photo">
                     <img
                       src="/nathalie-roland-blondie-paris-qui-suis-je.webp"
                       alt="Qui suis-je"
