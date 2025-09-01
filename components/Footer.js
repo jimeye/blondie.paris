@@ -31,7 +31,7 @@ export default function Footer() {
               </a>
             </div>
             <p className="text-sm normal-case">Website design by <a href="tel:+330608251223" className="hover:text-[#FFB6C1] transition-colors">JOSEPH-STUDIO.COM</a></p>
-            <p className="text-sm normal-case">© 2025 BLONDIE.PARIS - Tous droits réservés</p>
+            <p className="text-sm normal-case">© 2025 © BLONDIE.PARIS - Tous droits réservés</p>
           </div>
         </div>
       </div>
