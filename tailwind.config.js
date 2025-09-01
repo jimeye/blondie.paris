@@ -33,6 +33,8 @@ module.exports = {
       transitionDuration: {
         '300': '300ms',
         '500': '500ms',
+        '1200': '1200ms',
+        '2000': '2000ms',
       },
       transitionTimingFunction: {
         'custom': 'cubic-bezier(0.4, 0, 0.2, 1)',
@@ -42,6 +44,7 @@ module.exports = {
         'slide-up': 'slideUp 0.5s ease-out',
         'slide-down': 'slideDown 0.5s ease-out',
         'slide-in-left': 'slideInLeft 0.8s ease-out',
+        'slide-out-left': 'slideOutLeft 2s ease-in',
       },
       keyframes: {
         fadeIn: {
@@ -59,6 +62,10 @@ module.exports = {
         slideInLeft: {
           '0%': { transform: 'translateX(-100%)' },
           '100%': { transform: 'translateX(0)' },
+        },
+        slideOutLeft: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
         },
       },
     },

@@ -33,7 +33,7 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
       <div className="container mx-auto px-4">
         <div className={`flex items-center ${centerMenu ? 'justify-center' : 'justify-between'}`}>
           {!hideLogo && (
-            <div className={router.pathname === '/' ? (isLogoVisible ? '' : 'invisible') : ''}>
+            <div className={router.pathname === '/' ? (isLogoVisible ? 'hidden lg:block' : 'invisible') : ''}>
               <Logo />
             </div>
           )}
@@ -111,7 +111,7 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
 
         {/* Menu mobile overlay */}
         {isMenuOpen && (
-          <div className="lg:hidden fixed top-0 left-0 w-96 h-screen bg-black/90 backdrop-blur-sm shadow-lg z-50 animate-slide-in-left">
+          <div className="lg:hidden fixed top-0 left-0 w-96 h-screen bg-black/90 backdrop-blur-sm shadow-lg z-50 animate-slide-in-left mobile-overlay">
             <div className="flex flex-col space-y-4 p-4 menu-font text-right text-sm">
               <div className="flex justify-end mb-4">
                 <button 
@@ -241,6 +241,14 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
         }
         @media (prefers-reduced-motion: reduce) {
           .disco-link:hover { animation: none; }
+        }
+        
+        /* Animation de fermeture plus lente pour l'overlay */
+        .mobile-overlay {
+          transition: transform 2s ease-in-out;
+        }
+        .mobile-overlay.closing {
+          transform: translateX(-100%);
         }
       `}</style>
     </nav>

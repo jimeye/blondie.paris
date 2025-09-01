@@ -12,6 +12,36 @@ import { useEffect, useState } from 'react'
 export default function Home({cms, refs}) {
   const logos = (refs?.length ? refs : allLogos).sort((a, b) => (a.name || '').localeCompare(b.name || '', 'fr', { sensitivity: 'base' }))
   const [showBackToTop, setShowBackToTop] = useState(false)
+  const [touchStart, setTouchStart] = useState(null)
+  const [touchEnd, setTouchEnd] = useState(null)
+
+  // Configuration des pages pour le swipe
+  const pages = [
+    { path: '/', name: 'HOME' },
+    { path: '/a-propos', name: 'À PROPOS' },
+    { path: '/qui-suis-je', name: 'QUI SUIS-JE ?' },
+    { path: '/actualites', name: 'ACTUALITÉS' },
+    { path: '/references', name: 'REFERENCES' },
+    { path: '/events', name: 'EVENTS' },
+    { path: '/presse-btob', name: 'REVUE DE PRESSE' },
+    { path: '/contact', name: 'CONTACT' }
+  ]
+
+  const [currentPageIndex, setCurrentPageIndex] = useState(0)
+
+  // Détecter la page actuelle dynamiquement côté client
+  useEffect(() => {
+    const getCurrentPageIndex = () => {
+      const currentPath = window.location.pathname
+      const index = pages.findIndex(page => page.path === currentPath)
+      return index >= 0 ? index : 0
+    }
+    
+    const index = getCurrentPageIndex()
+    setCurrentPageIndex(index)
+    console.log('Pages configurées:', pages.map(p => p.name))
+    console.log('Index actuel:', index, 'Page actuelle:', pages[index].name, 'Path actuel:', window.location.pathname)
+  }, [])
 
   useEffect(() => {
     const onScroll = () => setShowBackToTop(window.scrollY > 300)
@@ -19,6 +49,52 @@ export default function Home({cms, refs}) {
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  // Fonctions pour le swipe
+  const onTouchStart = (e) => {
+    // Éviter les swipes sur les éléments interactifs
+    if (e.target.closest('button, a, input, textarea, select')) return
+    
+    console.log('Touch start:', e.targetTouches[0].clientX)
+    setTouchEnd(null)
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+
+  const onTouchMove = (e) => {
+    if (!touchStart) return
+    console.log('Touch move:', e.targetTouches[0].clientX)
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return
+    
+    const distance = touchStart - touchEnd
+    const minSwipeDistance = 80 // Distance minimale réduite
+    const isLeftSwipe = distance > minSwipeDistance
+    const isRightSwipe = distance < -minSwipeDistance
+
+    console.log('Distance de swipe:', distance, 'minSwipeDistance:', minSwipeDistance)
+    console.log('isLeftSwipe:', isLeftSwipe, 'isRightSwipe:', isRightSwipe)
+
+    if (isLeftSwipe) {
+      // Swipe gauche - page suivante
+      const nextPageIndex = (currentPageIndex + 1) % pages.length
+      console.log('Swipe gauche - Index actuel:', currentPageIndex, 'Index suivant:', nextPageIndex)
+      console.log('Swipe gauche vers:', pages[nextPageIndex].name, 'Path:', pages[nextPageIndex].path)
+      window.location.href = pages[nextPageIndex].path
+    } else if (isRightSwipe) {
+      // Swipe droite - page précédente
+      const prevPageIndex = currentPageIndex === 0 ? pages.length - 1 : currentPageIndex - 1
+      console.log('Swipe droite - Index actuel:', currentPageIndex, 'Index précédent:', prevPageIndex)
+      console.log('Swipe droite vers:', pages[prevPageIndex].name, 'Path:', pages[prevPageIndex].path)
+      window.location.href = pages[prevPageIndex].path
+    }
+    
+    // Reset
+    setTouchStart(null)
+    setTouchEnd(null)
+  }
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
@@ -31,7 +107,13 @@ export default function Home({cms, refs}) {
   }
 
   return (
-    <div>
+    <div 
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+      className="touch-pan-y"
+      style={{ touchAction: 'pan-y', userSelect: 'none' }}
+    >
       <Head>
         <title>{cms?.seo?.title || 'BLONDIE Paris — Relations Presse, Communication & Événements'}</title>
         <meta name="description" content={cms?.seo?.description || "BLONDIE Paris accompagne agences, médias et marques: relations presse, relations publiques, production d'événements. Expertise sur‑mesure, réseau, confidentialité."} />
@@ -490,6 +572,13 @@ export default function Home({cms, refs}) {
           </section>
 
           <Footer />
+
+          {/* Indicateurs de swipe */}
+          <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-40 flex space-x-1.5">
+            <div className="w-1.5 h-1.5 bg-[#FFB6C1]/60 rounded-full"></div>
+            <div className="w-1.5 h-1.5 bg-[#FFB6C1] rounded-full"></div>
+            <div className="w-1.5 h-1.5 bg-[#FFB6C1]/60 rounded-full"></div>
+          </div>
 
           {showBackToTop && (
             <button
