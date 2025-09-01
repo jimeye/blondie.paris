@@ -64,7 +64,7 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
             {/* Menu Presse avec sous-menu */}
             <div className="relative group">
               <div className="disco-link text-[#878787] hover:text-[#FFB6C1] transition-colors uppercase text-sm sm:text-sm lg:text-base cursor-pointer font-semibold">
-                <span className="inline-flex items-center">
+                <span className="inline-flex items-center uppercase">
                   REVUE DE PRESSE
                   <svg className="w-3 h-3 ml-1 transition-transform duration-200 group-hover:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
