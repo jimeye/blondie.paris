@@ -13,7 +13,7 @@ export default function ReferencesSection() {
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
           {references.map((ref) => (
-            <div key={ref.name} className="w-32 h-32 relative grayscale hover:grayscale-0 transition-all duration-300">
+            <div key={ref.name} className={`${ref.name === "Été Indien(s) Arles" ? "w-40 h-40" : "w-32 h-32"} relative grayscale hover:grayscale-0 transition-all duration-300`}>
               <a 
                 href={ref.url || '#'} 
                 target="_blank" 
