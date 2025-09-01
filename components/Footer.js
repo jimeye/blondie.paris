@@ -11,7 +11,7 @@ export default function Footer() {
               BLONDIE PARIS
               <div className="w-20 h-0.5 bg-[#FFB6C1] mt-2"></div>
             </h3>
-            <p className="text-sm normal-case">Bureau de relations presse</p>
+            <p className="text-sm normal-case">Bureau de relations presse, relations publiques, événements</p>
             <p className="text-sm normal-case">Conseil en relations publiques<br />et communication</p>
           </div>
           <div>
