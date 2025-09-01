@@ -111,7 +111,7 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
 
         {/* Menu mobile overlay */}
         {isMenuOpen && (
-          <div className="lg:hidden fixed top-0 left-0 w-96 h-screen bg-black/90 backdrop-blur-sm shadow-lg z-50 animate-slide-in-left mobile-overlay">
+          <div className="lg:hidden fixed top-0 left-0 w-72 h-screen bg-black/90 backdrop-blur-sm shadow-lg z-50 animate-slide-in-left mobile-overlay">
             <div className="flex flex-col space-y-4 p-4 menu-font text-right text-sm">
               <div className="flex justify-end mb-4">
                 <button 
@@ -127,7 +127,7 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
               {!hideHome && router.pathname !== '/' && (
                 <Link 
                   href="/" 
-                  className="disco-link text-[#878787] font-semibold uppercase"
+                  className="disco-link text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   HOME
@@ -135,35 +135,35 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
               )}
               <Link 
                 href="/a-propos" 
-                className="disco-link text-[#878787] font-semibold uppercase"
+                className="disco-link text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
                 onClick={() => setIsMenuOpen(false)}
               >
                 À PROPOS
               </Link>
               <Link 
                 href="/qui-suis-je" 
-                className="disco-link text-[#878787] font-semibold uppercase"
+                className="disco-link text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
                 onClick={() => setIsMenuOpen(false)}
               >
                 QUI SUIS-JE ?
               </Link>
               <Link 
                 href="/actualites" 
-                className="disco-link text-[#878787] font-semibold uppercase"
+                className="disco-link text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
                 onClick={() => setIsMenuOpen(false)}
               >
                 ACTUALITÉS
               </Link>
               <Link 
                 href="/references" 
-                className="disco-link text-[#878787] font-semibold uppercase"
+                className="disco-link text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
                 onClick={() => setIsMenuOpen(false)}
               >
                 REFERENCES
               </Link>
               <Link 
                 href="/events" 
-                className="disco-link text-[#878787] font-semibold uppercase"
+                className="disco-link text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
                 onClick={() => {
                   setIsMenuOpen(false)
                   if (closeModal) closeModal()

@@ -249,16 +249,16 @@ export default function Home({cms, refs}) {
                     </h1>
                     <div className="w-20 h-1 bg-[#FFB6C1]" />
                   </div>
-                  <p className="text-lg text-[#b0b0b0]/80">
+                  <p className="text-lg text-[#b0b0b0]/80 normal-case">
                     Fondé par Nathalie Roland, Blondie Paris est un bureau de relations presse, relations publiques et production d'événements qui accompagne à l'année ou en one shot les agences de publicité, les sociétés de production, les médias et les marques.
                   </p>
-                  <p className="text-lg text-[#b0b0b0]/80 italic">
+                  <p className="text-lg text-[#b0b0b0]/80 italic normal-case">
                     « Dans un monde ultra connecté, il est primordial d'avoir un.e expert.e à ses côtés pour accompagner et conseiller les marques dans leur communication. Nous faisons du sur-mesure pour nos partenaires, dont l'objectif principal est de développer leur image et les mettre en lumière » déclare Nathalie Roland.
                   </p>
-                  <p className="text-lg text-[#b0b0b0]/80">
-                    Ecoute, rigueur, curiosité et observation sont le secret d'une collaboration pérenne et la marque de fabrique de Blondie Paris. Avec une expertise unique, un savoir-faire reconnu, basé à Arles et Paris, le bureau élabore une stratégie de communication sur mesure dans le respect de la plus grande confidentialité, développe et entretient les relations avec la presse française et internationale, et les influenceurs clefs avec pour objectif d'augmenter la visibilité de chaque client. Il s'entoure, depuis sa création, d'un pôle de free-lance très expérimenté, agile et réactif à vos côtés. Blondie Paris c'est avant tout une équipe qui décrypte l'actualité et les tendances d'aujourd'hui.
+                  <p className="text-lg text-[#b0b0b0]/80 normal-case">
+                    Écoute, rigueur, curiosité et observation sont le secret d'une collaboration pérenne et la marque de fabrique de Blondie Paris. Avec une expertise unique, un savoir-faire reconnu, basé à Arles et Paris, le bureau élabore une stratégie de communication sur mesure dans le respect de la plus grande confidentialité, développe et entretient les relations avec la presse française et internationale, et les influenceurs clefs avec pour objectif d'augmenter la visibilité de chaque client. Il s'entoure, depuis sa création, d'un pôle de free-lance très expérimenté, agile et réactif à vos côtés. Blondie Paris c'est avant tout une équipe qui décrypte l'actualité et les tendances d'aujourd'hui.
                   </p>
-                  <p className="text-lg text-[#b0b0b0]/80">
+                  <p className="text-lg text-[#b0b0b0]/80 normal-case">
                     Doté d'une parfaite connaissance et expertise de l'écosystème de la communication, le bureau dispose d'un solide réseau de professionnels et d'une organisation flexible pour accompagner les clients dans tous leurs projets et dispositifs.
                   </p>
                 </div>
@@ -334,8 +334,8 @@ export default function Home({cms, refs}) {
               
               {/* Grille des events: 2 colonnes mobile, 4 colonnes desktop + 5ème sur toute la largeur */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
-                <div className="group bg-white rounded-none border border-gray-200 overflow-hidden hover:shadow-md transition">
-                  <div className="relative w-full pt-[133%] bg-white">
+                <div className="group bg-transparent overflow-hidden hover:shadow-md transition">
+                  <div className="relative w-full pt-[133%] bg-transparent">
                     <img
                       src="/events/1-pastille+CAN+PAPER-blondie-paris-blondie.paris-blondieparis.webp"
                       alt="CAN Paper Gallery"
@@ -348,8 +348,8 @@ export default function Home({cms, refs}) {
                   </div>
                 </div>
                 
-                <div className="group bg-white rounded-none border border-gray-200 overflow-hidden hover:shadow-md transition">
-                  <div className="relative w-full pt-[133%] bg-white">
+                <div className="group bg-transparent overflow-hidden hover:shadow-md transition">
+                  <div className="relative w-full pt-[133%] bg-transparent">
                     <img
                       src="/events/2-pastille+cda-blondie-paris-blondie.paris-blondieparis.webp"
                       alt="Le Club des Directeurs Artistiques"
@@ -362,8 +362,8 @@ export default function Home({cms, refs}) {
                   </div>
                 </div>
                 
-                <div className="group bg-white rounded-none border border-gray-200 overflow-hidden hover:shadow-md transition">
-                  <div className="relative w-full pt-[133%] bg-white">
+                <div className="group bg-transparent overflow-hidden hover:shadow-md transition">
+                  <div className="relative w-full pt-[133%] bg-transparent">
                     <img
                       src="/events/3-pastille%2Bfast%2Bth%C3%A9o%2Bgosselin-blondie-paris-blondie.paris-blondieparis.webp"
                       alt="FAST – Théo Gosselin"
@@ -376,8 +376,8 @@ export default function Home({cms, refs}) {
                   </div>
                 </div>
                 
-                <div className="group bg-white rounded-none border border-gray-200 overflow-hidden hover:shadow-md transition">
-                  <div className="relative w-full pt-[133%] bg-white">
+                <div className="group bg-transparent overflow-hidden hover:shadow-md transition">
+                  <div className="relative w-full pt-[133%] bg-transparent">
                     <img
                       src="/events/4-pastille%2Bm%C3%A9lanie%2Belbaz%20-blondie-paris-blondie.paris-blondieparis..webp"
                       alt="Mélanie Elbaz"
@@ -390,8 +390,8 @@ export default function Home({cms, refs}) {
                   </div>
                 </div>
                 
-                <div className="group bg-white rounded-none border border-gray-200 overflow-hidden hover:shadow-md transition col-span-2 md:col-span-4">
-                  <div className="relative w-full pt-[66.5%] bg-white">
+                <div className="group bg-transparent overflow-hidden hover:shadow-md transition col-span-2 md:col-span-4">
+                  <div className="relative w-full pt-[66.5%] bg-transparent">
                     <img
                       src="/events/5-pastille+d+coste+nord+pinus-blondie-paris-blondie.paris-blondieparis.webp"
                       alt="D. Coste – Nord Pinus"
