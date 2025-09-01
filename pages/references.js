@@ -73,13 +73,10 @@ export default function References() {
         <section className="bg-gradient-to-br from-white via-gray-50 to-pink-50 py-20">
           <Navigation />
           <div className="container mx-auto px-4">
-            {/* Titre avec animation */}
-            <div className="text-center mb-8">
-              <h1 className="text-4xl font-bold text-black mb-4">
-                Nos <span className="text-[#FFB6C1]">Références</span>
-              </h1>
-              <div className="w-20 h-1 bg-[#FFB6C1] mx-auto"></div>
-              <p className="text-[#394140] mt-4 text-lg">Découvrez nos partenaires de confiance</p>
+            {/* Titre de la page */}
+            <div className="mb-6 text-center">
+              <h1 className="text-4xl font-bold text-black mb-4">REFERENCES</h1>
+              <div className="w-20 h-1 bg-[#FFB6C1] mt-2 mx-auto"></div>
             </div>
 
             {/* Grille avec effets modernes - Logos par ordre alphabétique */}

@@ -28,12 +28,10 @@ export default function QuiSuisJe() {
         <section className="bg-white py-20">
           <Navigation />
           <div className="container mx-auto px-4">
-            {/* Titre - visible sur mobile, caché sur desktop */}
-            <div className="md:hidden text-center mb-4 mt-4">
-              <h1 className="text-4xl font-bold text-black mb-4">
-                Rendez-vous chez Blondie Paris
-              </h1>
-              <div className="w-20 h-1 bg-[#FFB6C1] mx-auto" />
+            {/* Titre de la page */}
+            <div className="mb-6 text-center">
+              <h1 className="text-4xl font-bold text-black mb-4">QUI SUIS-JE ?</h1>
+              <div className="w-20 h-1 bg-[#FFB6C1] mt-2 mx-auto"></div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 items-start">
@@ -48,13 +46,7 @@ export default function QuiSuisJe() {
 
               {/* Contenu texte à droite */}
               <div className="space-y-4 mt-4">
-                {/* Titre - caché sur mobile, visible sur desktop */}
-                <div className="hidden md:block">
-                  <h1 className="text-4xl font-bold text-black mb-4">
-                    Rendez-vous chez Blondie Paris
-                  </h1>
-                  <div className="w-20 h-1 bg-[#FFB6C1]" />
-                </div>
+
                 <p className="text-lg text-[#8a8a8a] normal-case">
                   Mon parcours dans la communication s'est façonné au travers de mes rencontres. Plus de 25 ans d'expérience(s) qui m'ont permis d'acquérir une connaissance et une expertise uniques que je mets au service des agences de publicité, sociétés de production, médias et marques.
                 </p>

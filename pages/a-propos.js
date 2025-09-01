@@ -117,12 +117,10 @@ export default function APropos() {
         <section className="bg-white py-20">
           <Navigation />
           <div className="container mx-auto px-4">
-            {/* Titre - visible sur mobile, caché sur desktop */}
-            <div className="md:hidden text-center mb-4 mt-4">
-              <h1 className="text-4xl font-bold text-black mb-4">
-                À propos
-              </h1>
-              <div className="w-20 h-1 bg-[#FFB6C1] mx-auto" />
+            {/* Titre de la page */}
+            <div className="mb-6 text-center">
+              <h1 className="text-4xl font-bold text-black mb-4">À PROPOS</h1>
+              <div className="w-20 h-1 bg-[#FFB6C1] mt-2 mx-auto"></div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 items-start">
@@ -137,13 +135,7 @@ export default function APropos() {
 
               {/* Contenu texte à droite */}
               <div className="space-y-4 mt-4">
-                {/* Titre - caché sur mobile, visible sur desktop */}
-                <div className="hidden md:block">
-                  <h1 className="text-4xl font-bold text-black mb-4">
-                    À propos
-                  </h1>
-                  <div className="w-20 h-1 bg-[#FFB6C1]" />
-                </div>
+
                 <p className="text-lg text-[#8a8a8a] normal-case">
                   Fondé par Nathalie Roland, Blondie Paris est un bureau de relations presse, relations publiques et production d'événements qui accompagne à l'année ou en one shot les agences de publicité, les sociétés de production, les médias et les marques.
                 </p>
