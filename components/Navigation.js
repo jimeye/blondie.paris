@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Logo from './Logo'
 
-export default function Navigation({ hideLogo = false, centerMenu = false, transparent = false, hideHome = false, closeModal = null }) {
+export default function Navigation({ hideLogo = false, centerMenu = false, transparent = false, hideHome = false, closeModal = null, hideOnModal = false }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isPresseOpen, setIsPresseOpen] = useState(false)
   const router = useRouter()
@@ -29,7 +29,7 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
     : 'bg-white/80 backdrop-blur-sm shadow-sm'
 
   return (
-    <nav className={`fixed top-0 w-full z-[9998] ${navBg} ${centerMenu ? 'py-4' : 'py-0.25'}`}>
+    <nav className={`fixed top-0 w-full z-[9998] ${navBg} ${centerMenu ? 'py-4' : 'py-0.25'} ${hideOnModal ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'} transition-opacity duration-300`}>
       <div className="container mx-auto px-4">
         <div className={`flex items-center ${centerMenu ? 'justify-center' : 'justify-between'}`}>
           {!hideLogo && (

@@ -14,6 +14,114 @@ export default function Home({cms, refs}) {
   const [showBackToTop, setShowBackToTop] = useState(false)
   const [touchStart, setTouchStart] = useState(null)
   const [touchEnd, setTouchEnd] = useState(null)
+  
+  // États pour les modales des events
+  const [selectedEvent, setSelectedEvent] = useState(null)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  
+  // Reset l'index d'image quand on change d'event
+  useEffect(() => {
+    if (selectedEvent) {
+      setCurrentImageIndex(0)
+    }
+  }, [selectedEvent])
+  
+  // Données des events
+  const allEvents = [
+    {
+      title: 'CAN Paper Gallery',
+      cover: '/events/1-pastille+CAN+PAPER-blondie-paris-blondie.paris-blondieparis.webp',
+      gallery: [
+        '/events/1-CAN+PAPER/1-CAN+PAPER-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/1-CAN+PAPER/2-CAN+PAPER-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/1-CAN+PAPER/3-CAN+PAPER-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/1-CAN+PAPER/4-CAN+PAPER-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/1-CAN+PAPER/5-CAN+PAPER-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/1-CAN+PAPER/6-CAN+PAPER-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/1-CAN+PAPER/7-CAN+PAPER-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/1-CAN+PAPER/8-CAN+PAPER-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/1-CAN+PAPER/9-CAN+PAPER-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/1-CAN+PAPER/12-CAN+PAPER-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/1-CAN+PAPER/10-CAN+PAPER-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/1-CAN+PAPER/11-CAN+PAPER-blondie-paris-blondie.paris-blondieparis.webp',
+      ],
+    },
+    {
+      title: 'Le Club des Directeurs Artistiques',
+      modalTitle: 'Le Club des Directeurs Artistiques Galerie du Club, place Patrat',
+      cover: '/events/2-pastille+cda-blondie-paris-blondie.paris-blondieparis.webp',
+      gallery: [
+        '/events/Le-Club/1-Le-Club-des-Directeurs-Artistiques-Galerie-du-Club-place-Patrat-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Le-Club/2-Le-Club-des-Directeurs-Artistiques-Galerie-du-Club-place-Patrat-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Le-Club/3-Le-Club-des-Directeurs-Artistiques-Galerie-du-Club-place-Patrat-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Le-Club/4-Le-Club-des-Directeurs-Artistiques-Galerie-du-Club-place-Patrat-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Le-Club/5-Le-Club-des-Directeurs-Artistiques-Galerie-du-Club-place-Patrat-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Le-Club/6-Le-Club-des-Directeurs-Artistiques-Galerie-du-Club-place-Patrat-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Le-Club/7-Le-Club-des-Directeurs-Artistiques-Galerie-du-Club-place-Patrat-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Le-Club/8-Le-Club-des-Directeurs-Artistiques-Galerie-du-Club-place-Patrat-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Le-Club/9-Le-Club-des-Directeurs-Artistiques-Galerie-du-Club-place-Patrat-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Le-Club/10-Le-Club-des-Directeurs-Artistiques-Galerie-du-Club-place-Patrat-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Le-Club/11-Le-Club-des-Directeurs-Artistiques-Galerie-du-Club-place-Patrat-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Le-Club/12-Le-Club-des-Directeurs-Artistiques-Galerie-du-Club-place-Patrat-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Le-Club/13-Le-Club-des-Directeurs-Artistiques-Galerie-du-Club-place-Patrat-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Le-Club/14-Le-Club-des-Directeurs-Artistiques-Galerie-du-Club-place-Patrat-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Le-Club/15-Le-Club-des-Directeurs-Artistiques-Galerie-du-Club-place-Patrat-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Le-Club/16-Le-Club-des-Directeurs-Artistiques-Galerie-du-Club-place-Patrat-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Le-Club/17-Le-Club-des-Directeurs-Artistiques-Galerie-du-Club-place-Patrat-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Le-Club/18-Le-Club-des-Directeurs-Artistiques-Galerie-du-Club-place-Patrat-blondie-paris-blondie.paris-blondieparis.webp',
+      ],
+    },
+    {
+      title: 'FAST – Théo Gosselin',
+      modalTitle: 'Théo Gosselin Garage du Nord Pinus',
+      cover: '/events/3-pastille+fast+théo+gosselin-blondie-paris-blondie.paris-blondieparis.webp',
+      gallery: [
+        '/events/Théo-Gosselin-Garage-du-Nord-Pinus/1-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Théo-Gosselin-Garage-du-Nord-Pinus/2-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Théo-Gosselin-Garage-du-Nord-Pinus/4-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Théo-Gosselin-Garage-du-Nord-Pinus/5-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Théo-Gosselin-Garage-du-Nord-Pinus/6-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Théo-Gosselin-Garage-du-Nord-Pinus/7-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Théo-Gosselin-Garage-du-Nord-Pinus/3-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Théo-Gosselin-Garage-du-Nord-Pinus/8-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Théo-Gosselin-Garage-du-Nord-Pinus/9-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Théo-Gosselin-Garage-du-Nord-Pinus/10-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Théo-Gosselin-Garage-du-Nord-Pinus/11-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Théo-Gosselin-Garage-du-Nord-Pinus/12-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Théo-Gosselin-Garage-du-Nord-Pinus/13-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Théo-Gosselin-Garage-du-Nord-Pinus/14-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Théo-Gosselin-Garage-du-Nord-Pinus/15-Théo-Gosselin-Garage-du-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      ],
+    },
+    {
+      title: 'Mélanie Elbaz',
+      modalTitle: 'Mélanie Elbaz Place Paul Doumer',
+      cover: '/events/4-pastille+mélanie+elbaz -blondie-paris-blondie.paris-blondieparis..webp',
+      gallery: [
+        '/events/Mélanie-Elbaz-Place-Paul-Doumer/1-Mélanie-Elbaz-Place-Paul-Doumer-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Mélanie-Elbaz-Place-Paul-Doumer/2-Mélanie-Elbaz-Place-Paul-Doumer-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Mélanie-Elbaz-Place-Paul-Doumer/3-Mélanie-Elbaz-Place-Paul-Doumer-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Mélanie-Elbaz-Place-Paul-Doumer/4-Mélanie-Elbaz-Place-Paul-Doumer-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Mélanie-Elbaz-Place-Paul-Doumer/5-Mélanie-Elbaz-Place-Paul-Doumer-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Mélanie-Elbaz-Place-Paul-Doumer/6-Mélanie-Elbaz-Place-Paul-Doumer-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Mélanie-Elbaz-Place-Paul-Doumer/7-Mélanie-Elbaz-Place-Paul-Doumer-blondie-paris-blondie.paris-blondieparis.webp',
+      ],
+    },
+    {
+      title: 'D. Coste – Nord Pinus',
+      cover: '/events/5-pastille+d+coste+nord+pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      gallery: [
+        '/events/Dimitri-Coste-Nord-Pinus/1-Dimitri-Coste-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Dimitri-Coste-Nord-Pinus/2-Dimitri-Coste-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Dimitri-Coste-Nord-Pinus/3-Dimitri-Coste-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Dimitri-Coste-Nord-Pinus/4-Dimitri-Coste-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Dimitri-Coste-Nord-Pinus/5-Dimitri-Coste-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Dimitri-Coste-Nord-Pinus/6-Dimitri-Coste-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Dimitri-Coste-Nord-Pinus/7-Dimitri-Coste-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+        '/events/Dimitri-Coste-Nord-Pinus/8-Dimitri-Coste-Nord-Pinus-blondie-paris-blondie.paris-blondieparis.webp',
+      ],
+    },
+  ]
 
   // Configuration des pages pour le swipe
   const pages = [
@@ -220,7 +328,7 @@ export default function Home({cms, refs}) {
 
       <main>
         <section className="relative bg-white">
-          <Navigation transparent={true} hideHome={true} />
+          <Navigation transparent={true} hideHome={true} hideOnModal={!!selectedEvent} />
           <HeroSlider />
           
           {/* Section À propos complète */}
@@ -340,73 +448,103 @@ export default function Home({cms, refs}) {
               
               {/* Grille des events: 2 colonnes mobile, 4 colonnes desktop + 5ème sur toute la largeur */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
-                <div className="group bg-transparent overflow-hidden transition">
+                <div 
+                  className="group bg-transparent overflow-hidden transition cursor-pointer"
+                  onClick={() => {
+                    setSelectedEvent(allEvents[0])
+                    setCurrentImageIndex(0)
+                  }}
+                >
                   <div className="relative w-full pt-[133%] bg-transparent">
                     <img
-                      src="/events/1-pastille+CAN+PAPER-blondie-paris-blondie.paris-blondieparis.webp"
-                      alt="CAN Paper Gallery"
+                      src={allEvents[0].cover}
+                      alt={allEvents[0].title}
                       className="absolute inset-0 w-full h-full object-cover"
                       loading="lazy"
                     />
                   </div>
                   <div className="p-1 text-left">
-                    <p className="text-xs text-[#394140] normal-case">CAN Paper Gallery</p>
+                    <p className="text-xs text-[#394140] normal-case">{allEvents[0].title}</p>
                   </div>
                 </div>
                 
-                <div className="group bg-transparent overflow-hidden transition">
+                <div 
+                  className="group bg-transparent overflow-hidden transition cursor-pointer"
+                  onClick={() => {
+                    setSelectedEvent(allEvents[1])
+                    setCurrentImageIndex(0)
+                  }}
+                >
                   <div className="relative w-full pt-[133%] bg-transparent">
                     <img
-                      src="/events/2-pastille+cda-blondie-paris-blondie.paris-blondieparis.webp"
-                      alt="Le Club des Directeurs Artistiques"
+                      src={allEvents[1].cover}
+                      alt={allEvents[1].title}
                       className="absolute inset-0 w-full h-full object-cover"
                       loading="lazy"
                     />
                   </div>
                   <div className="p-1 text-left">
-                    <p className="text-xs text-[#394140] normal-case">Le Club des Directeurs Artistiques</p>
+                    <p className="text-xs text-[#394140] normal-case">{allEvents[1].title}</p>
                   </div>
                 </div>
                 
-                <div className="group bg-transparent overflow-hidden transition">
+                <div 
+                  className="group bg-transparent overflow-hidden transition cursor-pointer"
+                  onClick={() => {
+                    setSelectedEvent(allEvents[2])
+                    setCurrentImageIndex(0)
+                  }}
+                >
                   <div className="relative w-full pt-[133%] bg-transparent">
                     <img
-                      src="/events/3-pastille%2Bfast%2Bth%C3%A9o%2Bgosselin-blondie-paris-blondie.paris-blondieparis.webp"
-                      alt="FAST – Théo Gosselin"
+                      src={allEvents[2].cover}
+                      alt={allEvents[2].title}
                       className="absolute inset-0 w-full h-full object-cover"
                       loading="lazy"
                     />
                   </div>
                   <div className="p-1 text-left">
-                    <p className="text-xs text-[#394140] normal-case">FAST – Théo Gosselin</p>
+                    <p className="text-xs text-[#394140] normal-case">{allEvents[2].title}</p>
                   </div>
                 </div>
                 
-                <div className="group bg-transparent overflow-hidden transition">
+                <div 
+                  className="group bg-transparent overflow-hidden transition cursor-pointer"
+                  onClick={() => {
+                    setSelectedEvent(allEvents[3])
+                    setCurrentImageIndex(0)
+                  }}
+                >
                   <div className="relative w-full pt-[133%] bg-transparent">
                     <img
-                      src="/events/4-pastille%2Bm%C3%A9lanie%2Belbaz%20-blondie-paris-blondie.paris-blondieparis..webp"
-                      alt="Mélanie Elbaz"
+                      src={allEvents[3].cover}
+                      alt={allEvents[3].title}
                       className="absolute inset-0 w-full h-full object-cover"
                       loading="lazy"
                     />
                   </div>
                   <div className="p-1 text-left">
-                    <p className="text-xs text-[#394140] normal-case">Mélanie Elbaz</p>
+                    <p className="text-xs text-[#394140] normal-case">{allEvents[3].title}</p>
                   </div>
                 </div>
                 
-                <div className="group bg-transparent overflow-hidden transition col-span-2 md:col-span-4">
+                <div 
+                  className="group bg-transparent overflow-hidden transition col-span-2 md:col-span-4 cursor-pointer"
+                  onClick={() => {
+                    setSelectedEvent(allEvents[4])
+                    setCurrentImageIndex(0)
+                  }}
+                >
                   <div className="relative w-full pt-[66.5%] bg-transparent">
                     <img
-                      src="/events/5-pastille+d+coste+nord+pinus-blondie-paris-blondie.paris-blondieparis.webp"
-                      alt="D. Coste – Nord Pinus"
+                      src={allEvents[4].cover}
+                      alt={allEvents[4].title}
                       className="absolute inset-0 w-full h-full object-cover"
                       loading="lazy"
                     />
                   </div>
                   <div className="p-1 text-left">
-                    <p className="text-xs text-[#394140] normal-case">D. Coste – Nord Pinus</p>
+                    <p className="text-xs text-[#394140] normal-case">{allEvents[4].title}</p>
                   </div>
                 </div>
               </div>
@@ -628,6 +766,91 @@ export default function Home({cms, refs}) {
             </div>
           </section>
           */}
+
+          {/* Modale des events */}
+          {selectedEvent && (
+            <div className="fixed inset-0 bg-black bg-opacity-90 z-[999999] flex items-center justify-center p-4" style={{ zIndex: 999999 }}>
+              <div className="relative max-w-6xl w-full max-h-full">
+                {/* Bouton fermer */}
+                <button
+                  onClick={() => {
+                    setSelectedEvent(null)
+                    setCurrentImageIndex(0)
+                  }}
+                  className="fixed top-8 right-8 z-[999999] text-white hover:text-[#FFB6C1] transition-colors bg-black bg-opacity-80 rounded-full p-3 cursor-pointer"
+                  style={{ zIndex: 999999 }}
+                  aria-label="Fermer la galerie"
+                >
+                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+                
+                {/* Titre */}
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                    {selectedEvent.modalTitle || selectedEvent.title}
+                  </h3>
+                  <div className="w-20 h-1 bg-[#FFB6C1] mx-auto" />
+                </div>
+                
+                {/* Image principale */}
+                <div className="relative mb-4">
+                  <img
+                    src={selectedEvent.gallery[currentImageIndex]}
+                    alt={`${selectedEvent.title} - Image ${currentImageIndex + 1}`}
+                    className="w-full h-auto max-h-[70vh] object-contain mx-auto pointer-events-none"
+                  />
+                </div>
+                
+                {/* Navigation */}
+                <div className="flex justify-center items-center space-x-4 mb-4">
+                  <button
+                    onClick={() => setCurrentImageIndex(prev => prev > 0 ? prev - 1 : selectedEvent.gallery.length - 1)}
+                    className="bg-transparent hover:bg-[#FFB6C1]/20 text-[#FFB6C1] p-2 rounded-full transition-colors"
+                    aria-label="Image précédente"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  
+                  <span className="text-white text-sm">
+                    {currentImageIndex + 1} / {selectedEvent.gallery.length}
+                  </span>
+                  
+                  <button
+                    onClick={() => setCurrentImageIndex(prev => prev < selectedEvent.gallery.length - 1 ? prev + 1 : 0)}
+                    className="bg-transparent hover:bg-[#FFB6C1]/20 text-[#FFB6C1] p-2 rounded-full transition-colors"
+                    aria-label="Image suivante"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
+                
+                {/* Miniatures */}
+                <div className="flex justify-center space-x-2 overflow-x-auto pb-4">
+                  {selectedEvent.gallery.map((image, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`flex-shrink-0 w-16 h-16 border-2 transition-colors ${
+                        index === currentImageIndex ? 'border-[#FFB6C1]' : 'border-gray-400'
+                      }`}
+                    >
+                      <img
+                        src={image}
+                        alt={`Miniature ${index + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
 
           <FooterNew />
 
