@@ -205,21 +205,25 @@ img {
 
 /* Animation alternative pour déclenchement au scroll */
 .curtain-right-scroll {
-  opacity: 1;
-  transform: translateX(100%);
-  clip-path: inset(0 0 0 100%);
-  animation: curtainOpenRightScroll 1.5s ease-in-out 1s forwards;
+  position: relative;
+  overflow: hidden;
 }
 
-@keyframes curtainOpenRightScroll {
-  0% {
-    transform: translateX(100%);
-    clip-path: inset(0 0 0 100%);
-  }
-  100% {
-    transform: translateX(0);
-    clip-path: inset(0 0 0 0%);
-  }
+.curtain-right-scroll::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  transform: translateX(100%);
+  transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1;
+}
+
+.curtain-right-scroll.animate::before {
+  transform: translateX(0);
 }
 
 /* Styles pour le scrollbar */
