@@ -223,17 +223,13 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
       <style jsx>{`
         .disco-link { position: relative; transition: color 0.2s ease-in-out; display: inline-block; }
         .disco-link:hover {
-          color: transparent !important;
-          -webkit-text-fill-color: transparent;
-          background-image:
-            linear-gradient(90deg, #ffffff 0%, #ffd1dc 20%, #ffb6c1 40%, #ffd1dc 60%, #ffffff 80%, #ffd1dc 100%),
-            radial-gradient(closest-side, rgba(255,255,255,.9), rgba(255,255,255,0));
-          background-size: 200% 100%, 8px 8px;
-          background-repeat: no-repeat, repeat;
-          -webkit-background-clip: text;
-          background-clip: text;
-          animation: shimmer 1.6s linear infinite;
-          text-shadow: 0 0 8px rgba(255,182,193,.45), 0 0 16px rgba(255,209,220,.35);
+          color: #FFB6C1 !important;
+          -webkit-text-fill-color: #FFB6C1;
+          background-image: none;
+          background-clip: initial;
+          -webkit-background-clip: initial;
+          animation: none;
+          text-shadow: none;
         }
         @keyframes shimmer {
           0% { background-position: 0% 50%, 0 0; }
