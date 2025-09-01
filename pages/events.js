@@ -158,10 +158,10 @@ export default function Events() {
                 <button
                   key={i}
                   onClick={() => setOpenIdx(((page - 1) * pageSize) + i)}
-                  className={`group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-md transition ${ev.title === 'D. Coste – Nord Pinus' ? 'col-span-2' : ''}`}
+                  className={`group bg-transparent overflow-hidden transition ${ev.title === 'D. Coste – Nord Pinus' ? 'col-span-2' : ''}`}
                   aria-label={`Ouvrir la galerie ${ev.title}`}
                 >
-                  <div className={`relative w-full ${ev.title === 'D. Coste – Nord Pinus' ? 'pt-[66.5%]' : 'pt-[133%]'} bg-white`}>
+                  <div className={`relative w-full ${ev.title === 'D. Coste – Nord Pinus' ? 'pt-[66.5%]' : 'pt-[133%]'} bg-transparent`}>
                     <img
                       src={ev.cover}
                       alt={ev.title}
@@ -170,7 +170,7 @@ export default function Events() {
                     />
                   </div>
                   <div className={`${ev.title === 'D. Coste – Nord Pinus' ? 'p-2' : 'p-2'} text-left`}>
-                    <p className="text-sm text-[#394140]">{ev.title}</p>
+                    <p className="text-sm text-[#394140] normal-case">{ev.title}</p>
                   </div>
                 </button>
               ))}
@@ -180,15 +180,15 @@ export default function Events() {
             {totalPages > 1 && (
               <div className="flex items-center justify-center gap-3 mt-8">
                 <button
-                  className="px-3 py-1 border border-gray-300 text-sm text-[#394140] rounded disabled:opacity-40"
+                  className="px-3 py-1 border border-[#FFB6C1] text-sm text-[#394140] rounded-lg disabled:opacity-40 hover:bg-[#FFB6C1]/10 transition-colors"
                   onClick={() => setPage((p) => Math.max(1, p - 1))}
                   disabled={page === 1}
                 >
                   Précédent
                 </button>
-                <span className="text-sm text-[#394140]">Page {page} / {totalPages}</span>
+                <span className="text-sm text-[#394140] normal-case">Page {page} / {totalPages}</span>
                 <button
-                  className="px-3 py-1 border border-gray-300 text-sm text-[#394140] rounded disabled:opacity-40"
+                  className="px-3 py-1 border border-[#FFB6C1] text-sm text-[#394140] rounded-lg disabled:opacity-40 hover:bg-[#FFB6C1]/10 transition-colors"
                   onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
                   disabled={page === totalPages}
                 >

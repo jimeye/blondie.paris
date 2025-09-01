@@ -418,9 +418,16 @@ export default function Home({cms, refs}) {
               </div>
               <div className="grid grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
                 {logos.map((logo, index) => (
-                  <div key={index} className="bg-white rounded-lg border border-gray-200 p-4 flex items-center justify-center">
+                  <a 
+                    key={index} 
+                    href={logo.url || '#'} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    aria-label={logo.name}
+                    className="bg-white rounded-lg border border-gray-200 p-4 flex items-center justify-center hover:border-[#FFB6C1] transition-colors"
+                  >
                     <img src={logo.src} alt={logo.alt} className="w-full h-20 object-contain" />
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>

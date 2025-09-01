@@ -96,7 +96,7 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
 
           {/* Bouton menu mobile */}
           <button 
-            className={`lg:hidden text-[#FFB6C1] menu-font hover:text-[#878787] transition-colors ${isMenuOpen ? 'hidden' : ''}`}
+            className={`lg:hidden text-[#FFB6C1] menu-font hover:text-[#878787] transition-colors ml-auto ${isMenuOpen ? 'hidden' : ''} ${router.pathname === '/' ? (isLogoVisible ? 'invisible' : 'block') : 'block'}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">

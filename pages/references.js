@@ -13,7 +13,7 @@ export default function References() {
     { src: "/logos/artbridge.png", alt: "Artbridge", name: "Artbridge", url: "https://www.artbridge.fr" },
     { src: "/logos/BIRTH+-+LOGO.jpg", alt: "Birth", name: "Birth", url: "https://www.birth.fr" },
     { src: "/logos/blueparisjpeg.jpeg", alt: "Blue Paris", name: "Blue Paris", url: "https://www.blueparis.com" },
-    { src: "/logos/born+to+run.jpg", alt: "Born to Run", name: "Born to Run", url: "https://www.borntorun.fr" },
+    { src: "/logos/born+to+run.jpg", alt: "Born to Run", name: "Born to Run", url: "http://www.borntorun.fr/index.php" },
     { src: "/logos/brand-station-an-FCB-alliance.jpg", alt: "Brand Station an FCB Alliance", name: "Brand Station an FCB Alliance", url: "https://www.brandstation.fr" },
     { src: "/logos/cda.jpg", alt: "CDA", name: "CDA", url: "https://www.clubdirecteursartistiques.fr" },
     { src: "/logos/change.jpg", alt: "Change", name: "Change", url: "https://www.change.fr" },
