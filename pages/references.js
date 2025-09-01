@@ -4,52 +4,51 @@ import Footer from '../components/Footer'
 import { useState } from 'react'
 
 export default function References() {
-  const [hoveredLogo, setHoveredLogo] = useState(null)
 
   // Logos organisés par ordre alphabétique
   const logos = [
-    { src: "/logos/havas-play.png", alt: "Havas Play", name: "Havas Play" },
-    { src: "/logos/babel-startégie-&-communication.jpg", alt: "Babel Stratégie & Communication", name: "Babel Stratégie & Communication" },
-    { src: "/logos/aprileproductions.jpg", alt: "Aprile Productions", name: "Aprile Productions" },
-    { src: "/logos/artbridge.png", alt: "Artbridge", name: "Artbridge" },
-    { src: "/logos/BIRTH+-+LOGO.jpg", alt: "Birth", name: "Birth" },
-    { src: "/logos/blueparisjpeg.jpeg", alt: "Blue Paris", name: "Blue Paris" },
-    { src: "/logos/born+to+run.jpg", alt: "Born to Run", name: "Born to Run" },
-    { src: "/logos/brand-station-an-FCB-alliance.jpg", alt: "Brand Station an FCB Alliance", name: "Brand Station an FCB Alliance" },
-    { src: "/logos/cda.jpg", alt: "CDA", name: "CDA" },
-    { src: "/logos/change.jpg", alt: "Change", name: "Change" },
-    { src: "/logos/corbis.png", alt: "Corbis", name: "Corbis" },
-    { src: "/logos/DAGOBERT.png", alt: "Dagobert", name: "Dagobert" },
-    { src: "/logos/logo+emergency+bikes.png", alt: "Emergency Bikes", name: "Emergency Bikes" },
-    { src: "/logos/logo+estellon+(1).jpeg", alt: "Estellon", name: "Estellon" },
-    { src: "/logos/LOGOS-FRENZY.png", alt: "Frenzy", name: "Frenzy" },
-    { src: "/logos/gang+films.png", alt: "Gang Films", name: "Gang Films" },
-    { src: "/logos/grenade&sparks.jpg", alt: "Grenade & Sparks", name: "Grenade & Sparks" },
-    { src: "/logos/Logo+HEREZIE.jpg", alt: "HEREZIE", name: "HEREZIE" },
-    { src: "/logos/Logo+Hungry+and+Foolish.png", alt: "Hungry and Foolish", name: "Hungry & Foolish" },
-    { src: "/logos/INTERMARCHE.jpg", alt: "Intermarché", name: "Intermarché" },
-    { src: "/logos/logo-intuit-lab.jpg", alt: "Intuit Lab", name: "Intuit Lab" },
-    { src: "/logos/kind.png", alt: "Kind", name: "Kind" },
-    { src: "/logos/La-Pac.png", alt: "La Pac", name: "La Pac" },
-    { src: "/logos/grace.jpg", alt: "Grace", name: "Grace" },
-    { src: "/logos/Logo+Moonlike.png", alt: "Moonlike", name: "Moonlike" },
-    { src: "/logos/midiscom.png", alt: "Midisc", name: "Midisc" },
-    { src: "/logos/Monks_Logo.jpg", alt: "Monks", name: "Monks" },
-    { src: "/logos/logo+oisx.jpg", alt: "OISX", name: "OISX" },
-    { src: "/logos/logo-Ricard.png", alt: "Ricard", name: "Ricard" },
-    { src: "/logos/ROMANCE+-+copie.jpg", alt: "ROMANCE", name: "ROMANCE" },
-    { src: "/logos/logo+standard.png", alt: "Standard", name: "Standard" },
-    { src: "/logos/Logo+SYNEIDO.jpg", alt: "SYNEIDO", name: "SYNEIDO" },
-    { src: "/logos/Steve+Bleu+2021.png", alt: "Steve Bleu", name: "Steve Bleu" },
-    { src: "/logos/ubi-bene.jpg", alt: "Ubi Bene", name: "Ubi Bene" },
-    { src: "/logos/publicis-luxe.jpg", alt: "Publicis Luxe", name: "Publicis Luxe" },
-    { src: "/logos/orange.png", alt: "Orange", name: "Orange" },
-    { src: "/logos/amazon-prime-video.png", alt: "Amazon Prime Video", name: "Amazon Prime Video" },
-    { src: "/logos/lonely-planet.png", alt: "Lonely Planet", name: "Lonely Planet" },
-    { src: "/logos/WANDA.jpg", alt: "WANDA", name: "WANDA" },
-    { src: "/logos/altavia-disko.jpg", alt: "Altavia Disko", name: "Altavia Disko" },
-    { src: "/logos/été-indien(s)-arles.jpg", alt: "Été Indien(s) Arles", name: "Été Indien(s) Arles" },
-    { src: "/logos/Marcel.jpg", alt: "Marcel", name: "Marcel" }
+    { src: "/logos/havas-play.png", alt: "Havas Play", name: "Havas Play", url: "https://www.havasplay.com" },
+    { src: "/logos/babel-startégie-&-communication.jpg", alt: "Babel Stratégie & Communication", name: "Babel Stratégie & Communication", url: "https://www.babel-strategie.com" },
+    { src: "/logos/aprileproductions.jpg", alt: "Aprile Productions", name: "Aprile Productions", url: "https://www.aprileproductions.com" },
+    { src: "/logos/artbridge.png", alt: "Artbridge", name: "Artbridge", url: "https://www.artbridge.fr" },
+    { src: "/logos/BIRTH+-+LOGO.jpg", alt: "Birth", name: "Birth", url: "https://www.birth.fr" },
+    { src: "/logos/blueparisjpeg.jpeg", alt: "Blue Paris", name: "Blue Paris", url: "https://www.blueparis.com" },
+    { src: "/logos/born+to+run.jpg", alt: "Born to Run", name: "Born to Run", url: "https://www.borntorun.fr" },
+    { src: "/logos/brand-station-an-FCB-alliance.jpg", alt: "Brand Station an FCB Alliance", name: "Brand Station an FCB Alliance", url: "https://www.brandstation.fr" },
+    { src: "/logos/cda.jpg", alt: "CDA", name: "CDA", url: "https://www.clubdirecteursartistiques.fr" },
+    { src: "/logos/change.jpg", alt: "Change", name: "Change", url: "https://www.change.fr" },
+    { src: "/logos/corbis.png", alt: "Corbis", name: "Corbis", url: "https://www.corbis.com" },
+    { src: "/logos/DAGOBERT.png", alt: "Dagobert", name: "Dagobert", url: "https://www.dagobert.fr" },
+    { src: "/logos/logo+emergency+bikes.png", alt: "Emergency Bikes", name: "Emergency Bikes", url: "https://www.emergencybikes.com" },
+    { src: "/logos/logo+estellon+(1).jpeg", alt: "Estellon", name: "Estellon", url: "https://www.estellon.com" },
+    { src: "/logos/LOGOS-FRENZY.png", alt: "Frenzy", name: "Frenzy", url: "https://www.frenzy.fr" },
+    { src: "/logos/gang+films.png", alt: "Gang Films", name: "Gang Films", url: "https://www.gangfilms.com" },
+    { src: "/logos/grenade&sparks.jpg", alt: "Grenade & Sparks", name: "Grenade & Sparks", url: "https://www.grenadeandsparks.com" },
+    { src: "/logos/Logo+HEREZIE.jpg", alt: "HEREZIE", name: "HEREZIE", url: "https://www.herezie.com" },
+    { src: "/logos/Logo+Hungry+and+Foolish.png", alt: "Hungry and Foolish", name: "Hungry & Foolish", url: "https://www.hungryandfoolish.com" },
+    { src: "/logos/INTERMARCHE.jpg", alt: "Intermarché", name: "Intermarché", url: "https://www.intermarche.com" },
+    { src: "/logos/logo-intuit-lab.jpg", alt: "Intuit Lab", name: "Intuit Lab", url: "https://www.intuit-lab.com" },
+    { src: "/logos/kind.png", alt: "Kind", name: "Kind", url: "https://www.kind.com" },
+    { src: "/logos/La-Pac.png", alt: "La Pac", name: "La Pac", url: "https://www.lapac.fr" },
+    { src: "/logos/grace.jpg", alt: "Grace", name: "Grace", url: "https://www.grace.com" },
+    { src: "/logos/Logo+Moonlike.png", alt: "Moonlike", name: "Moonlike", url: "https://www.moonlike.com" },
+    { src: "/logos/midiscom.png", alt: "Midisc", name: "Midisc", url: "https://www.midisc.com" },
+    { src: "/logos/Monks_Logo.jpg", alt: "Monks", name: "Monks", url: "https://www.monks.com" },
+    { src: "/logos/logo+oisx.jpg", alt: "OISX", name: "OISX", url: "https://www.oisx.com" },
+    { src: "/logos/logo-Ricard.png", alt: "Ricard", name: "Ricard", url: "https://www.ricard.com" },
+    { src: "/logos/ROMANCE+-+copie.jpg", alt: "ROMANCE", name: "ROMANCE", url: "https://www.romance.fr" },
+    { src: "/logos/logo+standard.png", alt: "Standard", name: "Standard", url: "https://www.standard.fr" },
+    { src: "/logos/Logo+SYNEIDO.jpg", alt: "SYNEIDO", name: "SYNEIDO", url: "https://www.syneido.com" },
+    { src: "/logos/Steve+Bleu+2021.png", alt: "Steve Bleu", name: "Steve Bleu", url: "https://www.stevebleu.com" },
+    { src: "/logos/ubi-bene.jpg", alt: "Ubi Bene", name: "Ubi Bene", url: "https://www.ubibene.com" },
+    { src: "/logos/publicis-luxe.jpg", alt: "Publicis Luxe", name: "Publicis Luxe", url: "https://www.publicis-luxe.com" },
+    { src: "/logos/orange.png", alt: "Orange", name: "Orange", url: "https://www.orange.com" },
+    { src: "/logos/amazon-prime-video.png", alt: "Amazon Prime Video", name: "Amazon Prime Video", url: "https://www.primevideo.com" },
+    { src: "/logos/lonely-planet.png", alt: "Lonely Planet", name: "Lonely Planet", url: "https://www.lonelyplanet.com" },
+    { src: "/logos/WANDA.jpg", alt: "WANDA", name: "WANDA", url: "https://www.wanda.com" },
+    { src: "/logos/altavia-disko.jpg", alt: "Altavia Disko", name: "Altavia Disko", url: "https://www.disko.fr" },
+    { src: "/logos/été-indien(s)-arles.jpg", alt: "Été Indien(s) Arles", name: "Été Indien(s) Arles", url: "https://www.eteindien.com" },
+    { src: "/logos/Marcel.jpg", alt: "Marcel", name: "Marcel", url: "https://www.marcel.com" }
   ]
 
   const breadcrumbsLd = {
@@ -91,8 +90,6 @@ export default function References() {
                 <div 
                   key={index}
                   className="group relative overflow-hidden rounded-none bg-white shadow-lg hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-2 hover:scale-105 perspective-1000"
-                  onMouseEnter={() => setHoveredLogo(index)}
-                  onMouseLeave={() => setHoveredLogo(null)}
                 >
                   <a href={logo.url || '#'} target="_blank" rel="noopener noreferrer" aria-label={logo.name} className="block relative flex items-center justify-center h-40 p-6 cursor-pointer">
                     <div className="flip-coin">
@@ -108,13 +105,6 @@ export default function References() {
                       />
                     </div>
                   </a>
-                  {hoveredLogo === index && (
-                    <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center pointer-events-none">
-                      <div className="bg-white rounded-lg px-4 py-2 shadow-lg">
-                        <p className="text-sm font-semibold text-gray-800">{logo.name}</p>
-                      </div>
-                    </div>
-                  )}
                 </div>
               ))}
             </div>

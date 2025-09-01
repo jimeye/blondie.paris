@@ -39,31 +39,31 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
           )}
           
           {/* Menu desktop */}
-          <div className={`hidden lg:flex menu-font text-xs sm:text-sm lg:text-base justify-center ${centerMenu ? 'space-x-1 sm:space-x-2 lg:space-x-4' : 'space-x-1 sm:space-x-2 lg:space-x-4'}`}>
+          <div className={`hidden lg:flex menu-font text-sm sm:text-sm lg:text-base justify-center ${centerMenu ? 'space-x-1 sm:space-x-2 lg:space-x-4' : 'space-x-1 sm:space-x-2 lg:space-x-4'}`}>
             {!hideHome && router.pathname !== '/' && (
-                              <Link href="/" className="disco-link text-gray-800 uppercase">
+                              <Link href="/" className="disco-link text-[#878787] font-semibold uppercase">
                 HOME
               </Link>
             )}
-            <Link href="/a-propos" className="disco-link text-[#394140] uppercase">
+            <Link href="/a-propos" className="disco-link text-[#878787] font-semibold uppercase">
               À PROPOS
             </Link>
-            <Link href="/qui-suis-je" className="disco-link text-[#394140] uppercase">
+            <Link href="/qui-suis-je" className="disco-link text-[#878787] font-semibold uppercase">
               QUI SUIS-JE ?
             </Link>
-            <Link href="/actualites" className="disco-link text-[#394140] uppercase">
+            <Link href="/actualites" className="disco-link text-[#878787] font-semibold uppercase">
               ACTUALITÉS
             </Link>
-            <Link href="/references" className="disco-link text-[#394140] uppercase">
-              RÉFÉRENCES
+            <Link href="/references" className="disco-link text-[#878787] font-semibold uppercase">
+              REFERENCES
             </Link>
-            <Link href="/events" className="disco-link text-[#394140] uppercase" onClick={closeModal}>
+            <Link href="/events" className="disco-link text-[#878787] font-semibold uppercase" onClick={closeModal}>
               EVENTS
             </Link>
             
             {/* Menu Presse avec sous-menu */}
             <div className="relative group">
-              <div className="disco-link text-[#394140] hover:text-[#FFB6C1] transition-colors uppercase text-xs sm:text-sm lg:text-base cursor-pointer">
+              <div className="disco-link text-[#878787] hover:text-[#FFB6C1] transition-colors uppercase text-sm sm:text-sm lg:text-base cursor-pointer font-semibold">
                 <span className="inline-flex items-center">
                   REVUE DE PRESSE
                   <svg className="w-3 h-3 ml-1 transition-transform duration-200 group-hover:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -73,33 +73,33 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
               </div>
               
               {/* Sous-menu Presse */}
-              <div className="absolute left-0 mt-1 w-48 bg-[#FFB6C1]/10 backdrop-blur-sm shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <Link href="/presse-btob" className="disco-link block px-4 py-0.5 text-[#394140] hover:bg-[#FFB6C1]/10">
-                  Presse BtoB
+              <div className="absolute left-0 mt-1 w-48 bg-black/90 backdrop-blur-sm shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <Link href="/presse-btob" className="disco-link block px-4 py-0.5 text-white hover:bg-[#FFB6C1]/20 font-semibold uppercase">
+                  PRESSE BTOB
                 </Link>
-                <Link href="/presse-grand-public" className="disco-link block px-4 py-0.5 text-[#394140] hover:bg-[#FFB6C1]/10">
-                  Presse Grand Public
+                <Link href="/presse-grand-public" className="disco-link block px-4 py-0.5 text-white hover:bg-[#FFB6C1]/20 font-semibold uppercase">
+                  PRESSE GRAND PUBLIC
                 </Link>
-                <Link href="/tv" className="disco-link block px-4 py-0.5 text-[#394140] hover:bg-[#FFB6C1]/10">
+                <Link href="/tv" className="disco-link block px-4 py-0.5 text-white hover:bg-[#FFB6C1]/20 font-semibold uppercase">
                   TV
                 </Link>
-                <Link href="/presse-internationale" className="disco-link block px-4 py-0.5 text-[#394140] hover:bg-[#FFB6C1]/10">
-                  Presse Internationale
+                <Link href="/presse-internationale" className="disco-link block px-4 py-0.5 text-white hover:bg-[#FFB6C1]/20 font-semibold uppercase">
+                  PRESSE INTERNATIONALE
                 </Link>
               </div>
             </div>
 
-            <Link href="/contact" className="disco-link text-[#394140] hover:text-[#FFB6C1] transition-colors uppercase text-xs sm:text-sm lg:text-base">
+            <Link href="/contact" className="disco-link text-[#878787] hover:text-[#FFB6C1] transition-colors uppercase text-sm sm:text-sm lg:text-base font-semibold">
               CONTACT
             </Link>
           </div>
 
           {/* Bouton menu mobile */}
           <button 
-            className="lg:hidden text-[#FFB6C1] menu-font hover:text-[#FFB6C1]/80 transition-colors"
+            className={`lg:hidden text-[#FFB6C1] menu-font hover:text-[#878787] transition-colors ${isMenuOpen ? 'hidden' : ''}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
@@ -111,11 +111,11 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
 
         {/* Menu mobile overlay */}
         {isMenuOpen && (
-          <div className="lg:hidden fixed top-0 right-0 w-48 h-screen bg-white/20 backdrop-blur-sm shadow-lg z-50">
+          <div className="lg:hidden fixed top-0 left-0 w-96 h-screen bg-black/90 backdrop-blur-sm shadow-lg z-50 animate-slide-in-left">
             <div className="flex flex-col space-y-4 p-4 menu-font text-right text-sm">
               <div className="flex justify-end mb-4">
                 <button 
-                  className="text-[#394140] hover:text-[#FFB6C1] transition-colors"
+                  className="text-[#FFB6C1] hover:text-[#FFB6C1]/80 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -127,7 +127,7 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
               {!hideHome && router.pathname !== '/' && (
                 <Link 
                   href="/" 
-                  className="disco-link text-[#394140] uppercase"
+                  className="disco-link text-[#878787] font-semibold uppercase"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   HOME
@@ -135,35 +135,35 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
               )}
               <Link 
                 href="/a-propos" 
-                className="disco-link text-[#394140] uppercase"
+                className="disco-link text-[#878787] font-semibold uppercase"
                 onClick={() => setIsMenuOpen(false)}
               >
                 À PROPOS
               </Link>
               <Link 
                 href="/qui-suis-je" 
-                className="disco-link text-[#394140] uppercase"
+                className="disco-link text-[#878787] font-semibold uppercase"
                 onClick={() => setIsMenuOpen(false)}
               >
                 QUI SUIS-JE ?
               </Link>
               <Link 
                 href="/actualites" 
-                className="disco-link text-[#394140] uppercase"
+                className="disco-link text-[#878787] font-semibold uppercase"
                 onClick={() => setIsMenuOpen(false)}
               >
                 ACTUALITÉS
               </Link>
               <Link 
                 href="/references" 
-                className="disco-link text-[#394140] uppercase"
+                className="disco-link text-[#878787] font-semibold uppercase"
                 onClick={() => setIsMenuOpen(false)}
               >
-                RÉFÉRENCES
+                REFERENCES
               </Link>
               <Link 
                 href="/events" 
-                className="disco-link text-[#394140] uppercase"
+                className="disco-link text-[#878787] font-semibold uppercase"
                 onClick={() => {
                   setIsMenuOpen(false)
                   if (closeModal) closeModal()
@@ -174,44 +174,44 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
               
               {/* Sous-menu Presse mobile simple */}
               <div className="relative group">
-                <div className="disco-link text-[#394140] hover:text-[#FFB6C1] transition-colors w-full text-right cursor-pointer">
-                  Revue de presse
+                <div className="disco-link text-[#878787] hover:text-[#FFB6C1] transition-colors w-full text-right cursor-pointer font-semibold uppercase">
+                  REVUE DE PRESSE
                 </div>
                 <div className="pr-4 mt-2 space-y-2 text-right opacity-100 visible transition-all duration-200">
                   <Link 
                     href="/presse-btob" 
-                    className="disco-link block text-[#394140] hover:text-[#FFB6C1] transition-colors"
+                    className="disco-link block text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Presse BtoB
+                    PRESSE BTOB
                   </Link>
                   <Link 
                     href="/presse-grand-public" 
-                    className="disco-link block text-[#394140] hover:text-[#FFB6C1] transition-colors"
+                    className="disco-link block text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Presse Grand Public
+                    PRESSE GRAND PUBLIC
                   </Link>
                   <Link 
                     href="/tv" 
-                    className="disco-link block text-[#394140] hover:text-[#FFB6C1] transition-colors"
+                    className="disco-link block text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     TV
                   </Link>
                   <Link 
                     href="/presse-internationale" 
-                    className="disco-link block text-[#394140] hover:text-[#FFB6C1] transition-colors"
+                    className="disco-link block text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Presse Internationale
+                    PRESSE INTERNATIONALE
                   </Link>
                 </div>
               </div>
 
               <Link 
                 href="/contact" 
-                className="disco-link text-[#394140] hover:text-[#FFB6C1] transition-colors"
+                className="disco-link text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold"
                 onClick={() => setIsMenuOpen(false)}
               >
                 CONTACT

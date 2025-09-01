@@ -214,25 +214,25 @@ export default function Home({cms, refs}) {
                     </h1>
                     <div className="w-20 h-1 bg-[#FFB6C1]" />
                   </div>
-                  <p className="text-lg text-[#b0b0b0]/80">
+                  <p className="text-lg text-[#b0b0b0]/80 normal-case">
                     Mon parcours dans la communication s'est façonné au travers de mes rencontres. Plus de 25 ans d'expérience(s) qui m'ont permis d'acquérir une connaissance et une expertise uniques que je mets au service des agences de publicité, sociétés de production, médias et marques.
                   </p>
-                  <p className="text-lg text-[#b0b0b0]/80">
+                  <p className="text-lg text-[#b0b0b0]/80 normal-case">
                     Je me nourris des rencontres et des histoires que chacun porte. Mon écoute et mon sens de l'observation m'ont amené à tisser un réseau privilégié de professionnels. Je transforme les récits de mes clients en messages, leur offrant une mise en lumière toujours sincère et originale, qui fait la part belle au conseil et à la rigueur.
                   </p>
-                  <p className="text-lg text-[#b0b0b0]/80">
+                  <p className="text-lg text-[#b0b0b0]/80 normal-case">
                     Je suis un artisan. Quelle que soit la nature de la mission et des moyens techniques à déployer, le sur-mesure est chez moi de mise. C'est une des raisons qui m'ont poussé, il y a 15 ans, à me lancer en free-lance.
                   </p>
-                  <p className="text-lg text-[#b0b0b0]/80">
+                  <p className="text-lg text-[#b0b0b0]/80 normal-case">
                     En 2019 avec la naissance de Blondie Paris, je crée mon bureau de relations presse, relations publiques et productions d'événements. Au plus près des besoins de mes clients, je pose un diagnostic pour leur proposer les solutions efficaces et innovantes, les retombées qu'ils attendent. Mon rôle est de comprendre leurs enjeux, les accompagner et les conseiller au mieux.
                   </p>
-                  <p className="text-lg text-[#b0b0b0]/80">
+                  <p className="text-lg text-[#b0b0b0]/80 normal-case">
                     J'ai d'abord appris le métier d'acheteuse d'art, puis assuré l'organisation des cérémonies de remises de prix et les opérations de relations publiques du magazine Stratégies. Pour ensuite gérer la communication (interne, externe) de différentes agences de publicité (TBWA Paris, BETC, Havas…) et associations professionnelles (le Club des Directeurs Artistiques et l'AACC, association des Agences-Conseils en communication).
                   </p>
-                  <p className="text-lg text-[#b0b0b0]/80">
+                  <p className="text-lg text-[#b0b0b0]/80 normal-case">
                     Je viens du sud. J'ai mes racines sous le soleil, le bureau à Arles me permet d'être, chaque année, lors des Rencontres de la photographie au plus près de mes clients (vernissages et expositions, relations presse, séminaires…), aidée d'un réseau de qualité que j'ai constitué au fil des ans.
                   </p>
-                  <p className="text-lg text-[#b0b0b0]/80">
+                  <p className="text-lg text-[#b0b0b0]/80 normal-case">
                     Blondie Paris-Arles c'est une équipe curieuse, toujours au fait de ce qu'il faut savoir.
                   </p>
                 </div>
@@ -262,7 +262,7 @@ export default function Home({cms, refs}) {
                     />
                   </div>
                   <div className="p-1 text-left">
-                    <p className="text-xs text-[#394140]">CAN Paper Gallery</p>
+                    <p className="text-xs text-[#394140] normal-case">CAN Paper Gallery</p>
                   </div>
                 </div>
                 
@@ -276,7 +276,7 @@ export default function Home({cms, refs}) {
                     />
                   </div>
                   <div className="p-1 text-left">
-                    <p className="text-xs text-[#394140]">Le Club des Directeurs Artistiques</p>
+                    <p className="text-xs text-[#394140] normal-case">Le Club des Directeurs Artistiques</p>
                   </div>
                 </div>
                 
@@ -290,7 +290,7 @@ export default function Home({cms, refs}) {
                     />
                   </div>
                   <div className="p-1 text-left">
-                    <p className="text-xs text-[#394140]">FAST – Théo Gosselin</p>
+                    <p className="text-xs text-[#394140] normal-case">FAST – Théo Gosselin</p>
                   </div>
                 </div>
                 
@@ -304,7 +304,7 @@ export default function Home({cms, refs}) {
                     />
                   </div>
                   <div className="p-1 text-left">
-                    <p className="text-xs text-[#394140]">Mélanie Elbaz</p>
+                    <p className="text-xs text-[#394140] normal-case">Mélanie Elbaz</p>
                   </div>
                 </div>
                 
@@ -318,7 +318,7 @@ export default function Home({cms, refs}) {
                     />
                   </div>
                   <div className="p-1 text-left">
-                    <p className="text-xs text-[#394140]">D. Coste – Nord Pinus</p>
+                    <p className="text-xs text-[#394140] normal-case">D. Coste – Nord Pinus</p>
                   </div>
                 </div>
               </div>
@@ -355,16 +355,16 @@ export default function Home({cms, refs}) {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <Link href="/presse-btob" className="bg-white rounded-none border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
-                  <span className="text-xl font-semibold text-[#394140] text-center">Presse btoB</span>
+                  <span className="text-xl font-semibold text-[#394140] text-center normal-case">Presse btoB</span>
                 </Link>
                 <Link href="/presse-grand-public" className="bg-white rounded-none border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
-                  <span className="text-xl font-semibold text-[#394140] text-center">Presse grand public</span>
+                  <span className="text-xl font-semibold text-[#394140] text-center normal-case">Presse grand public</span>
                 </Link>
                 <Link href="/tv" className="bg-white rounded-none border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
-                  <span className="text-xl font-semibold text-[#394140] text-center">TV</span>
+                  <span className="text-xl font-semibold text-[#394140] text-center normal-case">TV</span>
                 </Link>
                 <Link href="/presse-internationale" className="bg-white rounded-none border border-gray-200 p-8 flex items-center justify-center hover:border-[#FFB6C1] transition-colors">
-                  <span className="text-xl font-semibold text-[#394140] text-center">Presse internationale</span>
+                  <span className="text-xl font-semibold text-[#394140] text-center normal-case">Presse internationale</span>
                 </Link>
               </div>
             </div>

@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-white to-[#FFB6C1]/5 text-[#394140] border-t border-gray-300">
+    <footer className="bg-gradient-to-br from-white to-[#FFB6C1]/5 text-[#394140] border-t border-gray-300 menu-font">
       <div className="container mx-auto pt-2 pb-4 md:pb-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -11,8 +11,8 @@ export default function Footer() {
               BLONDIE PARIS
               <div className="w-20 h-0.5 bg-[#FFB6C1] mt-2"></div>
             </h3>
-            <p className="text-sm">Bureau de relations presse</p>
-            <p className="text-sm">Conseil en relations publiques<br />et communication</p>
+            <p className="text-sm normal-case">Bureau de relations presse</p>
+            <p className="text-sm normal-case">Conseil en relations publiques<br />et communication</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-2">
@@ -30,8 +30,8 @@ export default function Footer() {
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
               </a>
             </div>
-            <p className="text-sm">Website design by <a href="tel:+330608251223" className="hover:text-[#FFB6C1] transition-colors">JOSEPH-STUDIO.COM</a></p>
-            <p className="text-sm">Tous droits réservés</p>
+            <p className="text-sm normal-case">Website design by <a href="tel:+330608251223" className="hover:text-[#FFB6C1] transition-colors">JOSEPH-STUDIO.COM</a></p>
+            <p className="text-sm normal-case">Tous droits réservés</p>
           </div>
         </div>
       </div>
