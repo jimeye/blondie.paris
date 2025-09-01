@@ -443,8 +443,8 @@ export default function Home({cms, refs}) {
           <section className="bg-white py-8">
             <div className="container mx-auto px-4">
               <div className="text-center mb-6">
-                <h2 className="text-4xl font-bold text-black mb-4 uppercase">
-                  REVUE DE PRESSE
+                <h2 className="text-4xl font-bold text-black mb-4">
+                  Revue de presse
                 </h2>
                 <div className="w-20 h-1 bg-[#FFB6C1] mx-auto" />
               </div>
