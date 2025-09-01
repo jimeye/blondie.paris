@@ -461,7 +461,8 @@ export default function Home({cms, refs}) {
                 </h2>
                 <div className="w-20 h-1 bg-[#FFB6C1] mx-auto mb-6" />
                 <p className="text-lg text-[#394140]/80 leading-relaxed uppercase max-w-3xl mx-auto">
-                  PRÊT À COLLABORER ? CONTACTEZ-NOUS POUR DISCUTER DE VOS PROJETS, NOTRE ÉQUIPE EST LÀ POUR VOUS ACCOMPAGNER.
+                  <span className="block md:inline">PRÊT À COLLABORER ? CONTACTEZ-NOUS POUR DISCUTER DE VOS PROJETS,</span>
+                  <span className="block md:inline">NOTRE ÉQUIPE EST LÀ POUR VOUS ACCOMPAGNER.</span>
                 </p>
               </div>
               

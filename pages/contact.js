@@ -160,8 +160,8 @@ export default function Contact() {
               </h1>
               <div className="w-20 h-1 bg-[#FFB6C1] mx-auto mb-8"></div>
               <p className="text-lg text-[#394140]/80 leading-relaxed uppercase">
-                Prêt à collaborer ? Contactez-nous pour discuter de vos projets de relations presse, 
-                communication et événements. Notre équipe est là pour vous accompagner.
+                <span className="block md:inline">Prêt à collaborer ? Contactez-nous pour discuter de vos projets.</span>
+                <span className="block md:inline">Notre équipe est là pour vous accompagner.</span>
               </p>
             </div>
           </div>

@@ -21,7 +21,7 @@ export default function HeroSlider() {
   }, [])
 
   return (
-    <div className="relative w-full h-[85vh] md:h-[95vh] lg:h-[110vh] -mt-16">
+    <div className="relative w-full h-[90vh] md:h-[100vh] lg:h-[110vh] -mt-16">
       <div className="absolute inset-0 overflow-hidden">
         {slides.map((src, idx) => (
           <div
