@@ -5,7 +5,7 @@ import {homepageQuery, referencesQuery} from '../lib/sanity/queries'
 import Navigation from '../components/Navigation'
 import HeroSlider from '../components/HeroSlider'
 import ActualitesSlider from '../components/ActualitesSlider'
-import Footer from '../components/Footer'
+import FooterNew from '../components/FooterNew'
 import { logos as allLogos } from '../data/logos'
 import { useEffect, useState } from 'react'
 
@@ -573,7 +573,7 @@ export default function Home({cms, refs}) {
                     
                     <button
                       type="submit"
-                      className="block w-[30%] mx-auto bg-[#FFB6C1] hover:bg-[#FFB6C1]/80 hover:text-[#394140] text-white font-semibold py-3 px-6 border border-[#394140] rounded-lg transition-all duration-200 uppercase"
+                      className="block w-[55%] mx-auto bg-[#FFB6C1] hover:bg-[#FFB6C1]/80 hover:text-[#394140] text-white font-semibold py-3 px-6 border border-[#394140] rounded-lg transition-all duration-200 uppercase whitespace-nowrap text-center"
                     >
                       Envoyer le message
                     </button>
@@ -625,7 +625,7 @@ export default function Home({cms, refs}) {
           </section>
           */}
 
-          <Footer />
+          <FooterNew />
 
 
 

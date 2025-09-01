@@ -1,9 +1,17 @@
 import Logo from './Logo'
 import Link from 'next/link'
+import { useState, useEffect } from 'react'
 
 export default function Footer() {
+  const [forceUpdate, setForceUpdate] = useState(0)
+  
+  useEffect(() => {
+    // Force un rechargement du composant
+    setForceUpdate(prev => prev + 1)
+  }, [])
+  
   return (
-    <footer className="bg-gradient-to-br from-white to-[#FFB6C1]/5 text-[#394140] border-t border-[#FFB6C1] menu-font">
+    <footer key={forceUpdate} className="bg-gradient-to-br from-white to-[#FFB6C1]/5 text-[#394140] border-t border-[#FFB6C1] menu-font">
       <div className="container mx-auto pt-2 pb-4 md:pb-6 ml-5 lg:ml-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ml-5">
           <div>
@@ -11,7 +19,8 @@ export default function Footer() {
               BLONDIE PARIS
               <div className="w-20 h-0.5 bg-[#FFB6C1] mt-2"></div>
             </h3>
-            <p className="text-sm normal-case">Bureau de relations presse, relations publiques, événements</p>
+            {/* Bureau description updated */}
+            <p className="text-sm normal-case">Bureau de relations presse, relations publiques, événements - MODIFIE</p>
             <p className="text-sm normal-case">Conseil en relations publiques<br />et communication</p>
           </div>
           <div>
@@ -31,7 +40,8 @@ export default function Footer() {
               </a>
             </div>
             <p className="text-sm normal-case">Website design by <a href="tel:+330608251223" className="hover:text-[#FFB6C1] transition-colors">JOSEPH-STUDIO.COM</a></p>
-            <p className="text-sm normal-case">© 2025 © BLONDIE.PARIS - Tous droits réservés</p>
+            {/* Copyright updated */}
+            <p className="text-sm normal-case">© 2025 © BLONDIE.PARIS - Tous droits réservés - MODIFIE</p>
           </div>
         </div>
       </div>

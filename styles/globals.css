@@ -55,7 +55,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
-    text-transform: lowercase;
   }
   
   * {
@@ -69,8 +68,17 @@
     font-weight: 700;
   }
   
-  /* Paragraphes et texte en minuscules */
-  p, span, div, a, li, label, input, textarea, select, button {
+  /* Paragraphes et texte en minuscules - EXCLUANT le footer et certains éléments */
+  p:not(footer p):not(.uppercase):not(.normal-case), 
+  span:not(footer span):not(.uppercase):not(.normal-case), 
+  div:not(footer div):not(.uppercase):not(.normal-case), 
+  a:not(footer a):not(.uppercase):not(.normal-case), 
+  li:not(footer li):not(.uppercase):not(.normal-case), 
+  label:not(footer label):not(.uppercase):not(.normal-case), 
+  input:not(footer input):not(.uppercase):not(.normal-case), 
+  textarea:not(footer textarea):not(.uppercase):not(.normal-case), 
+  select:not(footer select):not(.uppercase):not(.normal-case), 
+  button:not(footer button):not(.uppercase):not(.normal-case) {
     text-transform: lowercase;
   }
   
