@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Head from 'next/head'
 import Navigation from '../components/Navigation'
 import FooterNew from '../components/FooterNew'
+import Breadcrumbs from '../components/Breadcrumbs'
 
 // Données des images Presse Grand Public avec noms descriptifs
 const presseGrandPublicImages = [
@@ -151,6 +152,14 @@ export default function PresseGrandPublic() {
           <Navigation />
 
           <div className="container mx-auto px-4">
+            {/* Breadcrumbs */}
+            <Breadcrumbs 
+              items={[
+                { name: 'Accueil', href: '/' },
+                { name: 'Presse grand public', href: '/presse-grand-public' }
+              ]} 
+            />
+            
             <div className="mb-6 text-center">
               <h1 className="text-4xl font-bold text-black">Presse grand public</h1>
               <div className="w-20 h-1 bg-[#FFB6C1] mt-2 mx-auto"></div>
