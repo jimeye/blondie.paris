@@ -160,7 +160,7 @@ export default function Events() {
                   onClick={() => setOpenIdx(((page - 1) * pageSize) + i)}
                   className={`group bg-transparent overflow-hidden transition ${
                     ev.title === 'D. Coste – Nord Pinus' ? 'col-span-2' : 
-                    i === 4 ? 'md:col-span-4' : ''
+                    i === 4 ? 'col-span-2 md:col-span-4' : ''
                   }`}
                   aria-label={`Ouvrir la galerie ${ev.title}`}
                 >
