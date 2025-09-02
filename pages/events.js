@@ -143,7 +143,7 @@ export default function Events() {
       </Head>
 
       <main>
-        <section className="relative bg-white pt-20 md:pt-24 pb-12 md:pb-16">
+        <section className="relative bg-white py-20">
           <Navigation />
 
           <div className="container mx-auto px-4">

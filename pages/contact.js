@@ -152,7 +152,7 @@ export default function Contact() {
         <Navigation />
         
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-white to-[#FFB6C1]/5 pt-24 pb-6">
+        <section className="bg-gradient-to-br from-white to-[#FFB6C1]/5 py-20">
           <div className="px-4 ml-5 lg:ml-0">
             <div className="mb-6 text-center">
               <h1 className="text-4xl font-bold text-black mb-4">Contact</h1>

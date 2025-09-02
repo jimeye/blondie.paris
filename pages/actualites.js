@@ -61,7 +61,7 @@ export default function Actualites() {
 
       <main>
         {/* Hero Slider */}
-        <section className="relative bg-white pt-20 md:pt-24 pb-8 md:pb-20">
+        <section className="relative bg-white py-20">
           <Navigation />
           
           {/* Titre de la page */}
