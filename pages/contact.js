@@ -155,7 +155,7 @@ export default function Contact() {
         <section className="bg-gradient-to-br from-white to-[#FFB6C1]/5 pt-24 pb-6">
           <div className="px-4 ml-5 lg:ml-0">
             <div className="mb-6 text-center">
-              <h1 className="text-4xl font-bold text-black mb-4">CONTACT</h1>
+              <h1 className="text-4xl font-bold text-black mb-4">Contact</h1>
               <div className="w-20 h-1 bg-[#FFB6C1] mt-2 mx-auto"></div>
             </div>
           </div>
