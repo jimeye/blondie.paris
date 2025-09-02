@@ -152,8 +152,8 @@ export default function Events() {
               <div className="w-20 h-1 bg-[#FFB6C1] mt-2 mx-auto"></div>
             </div>
 
-            {/* Grille des events: 2 colonnes mobile et desktop */}
-            <div className="grid grid-cols-2 gap-3 md:gap-5">
+            {/* Grille des events: 2 colonnes mobile, 4 colonnes desktop */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
               {paginated.map((ev, i) => (
                 <button
                   key={i}
