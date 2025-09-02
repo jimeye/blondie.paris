@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Navigation from '../components/Navigation'
 import FooterNew from '../components/FooterNew'
+import Breadcrumbs from '../components/Breadcrumbs'
 import { useState } from 'react'
 
 export default function Contact() {
@@ -154,6 +155,14 @@ export default function Contact() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-white to-[#FFB6C1]/5 py-20">
           <div className="px-4 ml-5 lg:ml-0">
+            {/* Breadcrumbs */}
+            <Breadcrumbs 
+              items={[
+                { name: 'Accueil', href: '/' },
+                { name: 'Contact', href: '/contact' }
+              ]} 
+            />
+            
             <div className="mb-6 text-center">
               <h1 className="text-4xl font-bold text-black mb-4">Contact</h1>
               <div className="w-20 h-1 bg-[#FFB6C1] mt-2 mx-auto"></div>
