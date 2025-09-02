@@ -166,7 +166,7 @@ export default function Events() {
                 >
                   <div className={`relative w-full ${
                     ev.title === 'D. Coste – Nord Pinus' ? 'pt-[66.5%]' : 
-                    i === 4 ? 'pt-[40%]' : 'pt-[133%]'
+                    i === 4 ? 'pt-[66.5%]' : 'pt-[133%]'
                   } bg-transparent`}>
                     <img
                       src={ev.cover}
