@@ -19,12 +19,45 @@ export default function Home({cms, refs}) {
   const [selectedEvent, setSelectedEvent] = useState(null)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   
+  // États pour le formulaire de contact
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState('')
+  
   // Reset l'index d'image quand on change d'event
   useEffect(() => {
     if (selectedEvent) {
       setCurrentImageIndex(0)
     }
   }, [selectedEvent])
+  
+  // Gestion du formulaire de contact
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus('')
+    
+    try {
+      const formData = new FormData(e.target)
+      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      
+      if (response.ok) {
+        setSubmitStatus('success')
+        e.target.reset()
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
   
   // Données des events
   const allEvents = [
@@ -642,7 +675,20 @@ export default function Home({cms, refs}) {
                     Envoyez-nous un message
                   </h3>
                   
-                  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" className="space-y-4">
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    {/* Messages de statut */}
+                    {submitStatus === 'success' && (
+                      <div className="mb-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+                        <p className="text-green-800 uppercase">Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.</p>
+                      </div>
+                    )}
+                    
+                    {submitStatus === 'error' && (
+                      <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+                        <p className="text-red-800 uppercase">Une erreur est survenue. Veuillez réessayer ou nous contacter directement.</p>
+                      </div>
+                    )}
+                    
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <label htmlFor="nom" className="block text-sm font-medium text-[#394140] mb-2 uppercase">
@@ -730,9 +776,10 @@ export default function Home({cms, refs}) {
                     
                     <button
                       type="submit"
-                      className="block w-[55%] mx-auto bg-[#FFB6C1] hover:bg-[#FFB6C1]/80 hover:text-[#394140] text-white font-semibold py-3 px-6 border border-[#394140] rounded-lg transition-all duration-200 uppercase whitespace-nowrap text-center"
+                      disabled={isSubmitting}
+                      className="block w-[55%] mx-auto bg-[#FFB6C1] hover:bg-[#FFB6C1]/80 hover:text-[#394140] text-white font-semibold py-3 px-6 border border-[#394140] rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed uppercase whitespace-nowrap text-center"
                     >
-                      Envoyer le message
+                      {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
                     </button>
                   </form>
                 </div>
