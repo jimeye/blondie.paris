@@ -129,6 +129,7 @@ export default function APropos() {
                 <img
                   src="/nathalie-roland-blondie-paris-a-propos.webp"
                   alt="À propos"
+                  loading="lazy"
                   className="w-full h-auto"
                 />
               </div>

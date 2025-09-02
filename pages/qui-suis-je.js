@@ -40,6 +40,7 @@ export default function QuiSuisJe() {
                 <img
                   src="/nathalie-roland-blondie-paris-qui-suis-je.webp"
                   alt="Qui suis-je"
+                  loading="lazy"
                   className="w-full h-auto"
                 />
               </div>
