@@ -162,6 +162,7 @@ export default function Events() {
                     ev.title === 'D. Coste – Nord Pinus' ? 'col-span-2' : 
                     i === 4 ? 'col-span-2 md:col-span-4' : ''
                   }`}
+                  style={i === 4 ? { gridColumn: 'span 4 / span 4' } : {}}
                   aria-label={`Ouvrir la galerie ${ev.title}`}
                 >
                   <div className={`relative w-full ${
