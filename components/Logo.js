@@ -6,7 +6,7 @@ export default function Logo() {
     <Link href="/">
       <div className="relative w-48 h-16">
         <Image
-          src="/logo.png"
+          src="/logo.webp"
           alt="Blondie"
           fill
           className="object-contain"
