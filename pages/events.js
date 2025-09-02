@@ -164,7 +164,10 @@ export default function Events() {
                   }`}
                   aria-label={`Ouvrir la galerie ${ev.title}`}
                 >
-                  <div className={`relative w-full ${ev.title === 'D. Coste – Nord Pinus' ? 'pt-[66.5%]' : 'pt-[133%]'} bg-transparent`}>
+                  <div className={`relative w-full ${
+                    ev.title === 'D. Coste – Nord Pinus' ? 'pt-[66.5%]' : 
+                    i === 4 ? 'pt-[66.5%]' : 'pt-[133%]'
+                  } bg-transparent`}>
                     <img
                       src={ev.cover}
                       alt={ev.title}
