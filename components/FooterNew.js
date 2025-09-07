@@ -11,7 +11,7 @@ export default function FooterNew() {
   }, [])
   
   return (
-    <footer key={forceUpdate} className="bg-gradient-to-br from-white to-[#FFB6C1]/5 text-[#394140] border-t border-[#FFB6C1] menu-font">
+    <footer key={forceUpdate} className="bg-white text-[#394140] border-t border-[#FFB6C1] menu-font">
       <div className="container mx-auto pt-2 pb-4 md:pb-6 ml-5 lg:ml-0">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 ml-5">
           <div>

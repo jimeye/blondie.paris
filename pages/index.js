@@ -656,7 +656,7 @@ export default function Home({cms, refs}) {
           </section>
 
           {/* Section Contact complète */}
-          <section className="bg-gradient-to-br from-white to-[#FFB6C1]/5 py-8">
+          <section className="bg-white py-8">
             <div className="ml-5 lg:ml-0">
               <div className="text-center mb-6">
                 <h2 className="text-4xl font-bold text-[#394140] mb-4">

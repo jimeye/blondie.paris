@@ -70,7 +70,7 @@ export default function References() {
       </Head>
 
       <main>
-        <section className="bg-gradient-to-br from-white via-gray-50 to-pink-50 py-20">
+        <section className="bg-white py-20">
           <Navigation />
           <div className="container mx-auto px-4">
             
@@ -95,13 +95,25 @@ export default function References() {
                         src={logo.src} 
                         alt={logo.alt} 
                         loading="lazy"
-                        className={`coin-face coin-front object-contain w-full h-full ${logo.name === "Été Indien(s) Arles" ? "max-w-[350px] max-h-[200px] sm:max-w-[385px] sm:max-h-[220px]" : "max-w-[280px] max-h-[160px] sm:max-w-[308px] sm:max-h-[176px]"}`}
+                        className={`coin-face coin-front object-contain w-full h-full ${
+                          logo.name === "Été Indien(s) Arles" ? "max-w-[350px] max-h-[200px] sm:max-w-[385px] sm:max-h-[220px]" : 
+                          logo.name === "Altavia Disko" ? "max-w-[370px] max-h-[212px] sm:max-w-[407px] sm:max-h-[232px]" :
+                          logo.name === "Aprile Productions" ? "max-w-[336px] max-h-[192px] sm:max-w-[370px] sm:max-h-[211px]" :
+                          logo.name === "Ubi Bene" ? "max-w-[420px] max-h-[240px] sm:max-w-[462px] sm:max-h-[264px]" :
+                          "max-w-[280px] max-h-[160px] sm:max-w-[308px] sm:max-h-[176px]"
+                        }`}
                       />
                       <img 
                         src={logo.src} 
                         alt={logo.alt} 
                         loading="lazy"
-                        className={`coin-face coin-back object-contain w-full h-full ${logo.name === "Été Indien(s) Arles" ? "max-w-[350px] max-h-[200px] sm:max-w-[385px] sm:max-h-[220px]" : "max-w-[280px] max-h-[160px] sm:max-w-[308px] sm:max-h-[176px]"}`}
+                        className={`coin-face coin-back object-contain w-full h-full ${
+                          logo.name === "Été Indien(s) Arles" ? "max-w-[350px] max-h-[200px] sm:max-w-[385px] sm:max-h-[220px]" : 
+                          logo.name === "Altavia Disko" ? "max-w-[370px] max-h-[212px] sm:max-w-[407px] sm:max-h-[232px]" :
+                          logo.name === "Aprile Productions" ? "max-w-[336px] max-h-[192px] sm:max-w-[370px] sm:max-h-[211px]" :
+                          logo.name === "Ubi Bene" ? "max-w-[420px] max-h-[240px] sm:max-w-[462px] sm:max-h-[264px]" :
+                          "max-w-[280px] max-h-[160px] sm:max-w-[308px] sm:max-h-[176px]"
+                        }`}
                       />
                     </div>
                   </a>

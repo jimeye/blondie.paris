@@ -6,6 +6,8 @@ import Logo from './Logo'
 export default function Navigation({ hideLogo = false, centerMenu = false, transparent = false, hideHome = false, closeModal = null, hideOnModal = false }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isPresseOpen, setIsPresseOpen] = useState(false)
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
   const router = useRouter()
 
   const [isLogoVisible, setIsLogoVisible] = useState(true)
@@ -24,12 +26,35 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
     return () => window.removeEventListener('scroll', handleScroll)
   }, [router.pathname])
 
+  // Gestion de la visibilité du header au scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      
+      if (currentScrollY < 10) {
+        // Toujours visible en haut de page
+        setIsHeaderVisible(true)
+      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scroll vers le bas - masquer le header
+        setIsHeaderVisible(false)
+      } else if (currentScrollY < lastScrollY) {
+        // Scroll vers le haut - afficher le header
+        setIsHeaderVisible(true)
+      }
+      
+      setLastScrollY(currentScrollY)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [lastScrollY])
+
   const navBg = transparent
     ? 'bg-transparent md:bg-white/40 backdrop-blur-0 md:backdrop-blur-md shadow-none'
-    : 'bg-white/80 backdrop-blur-sm shadow-sm'
+    : 'bg-white/80 border-b border-[#FFB6C1]'
 
   return (
-    <nav className={`fixed top-0 w-full z-[9998] ${navBg} ${centerMenu ? 'py-4' : 'py-0.25'} ${hideOnModal ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'} transition-opacity duration-300`}>
+    <nav className={`fixed top-0 w-full z-[9998] ${navBg} ${centerMenu ? 'py-4' : 'py-0.25'} ${hideOnModal ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'} ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'} transition-all duration-300 ease-in-out`}>
       <div className="container mx-auto px-4">
         <div className={`flex items-center ${centerMenu ? 'justify-center' : 'justify-between'}`}>
           {!hideLogo && (
