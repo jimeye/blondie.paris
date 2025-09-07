@@ -6,6 +6,7 @@ import Logo from './Logo'
 export default function Navigation({ hideLogo = false, centerMenu = false, transparent = false, hideHome = false, closeModal = null, hideOnModal = false }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isPresseOpen, setIsPresseOpen] = useState(false)
+  const [isPresseMobileOpen, setIsPresseMobileOpen] = useState(false)
   const [isHeaderVisible, setIsHeaderVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
   const router = useRouter()
@@ -218,13 +219,29 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
                   EVENTS
                 </Link>
               )}
+
+              {router.pathname !== '/contact' && (
+                <Link 
+                  href="/contact" 
+                  className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  CONTACT
+                </Link>
+              )}
               
               {/* Sous-menu Presse mobile simple */}
               <div className="relative group">
-                <div className="text-[#878787] hover:text-[#FFB6C1] transition-colors w-full text-right cursor-pointer font-semibold uppercase">
+                <div 
+                  className="text-[#878787] hover:text-[#FFB6C1] transition-colors w-full text-right cursor-pointer font-semibold uppercase flex items-center justify-end"
+                  onClick={() => setIsPresseMobileOpen(!isPresseMobileOpen)}
+                >
                   REVUE DE PRESSE
+                  <svg className={`w-3 h-3 ml-1 transition-transform duration-200 ${isPresseMobileOpen ? 'rotate-90' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </div>
-                <div className="pr-4 mt-2 space-y-2 text-right opacity-100 visible transition-all duration-200">
+                <div className={`pr-4 mt-2 space-y-2 text-right transition-all duration-200 ${isPresseMobileOpen ? 'opacity-100 visible max-h-96' : 'opacity-0 invisible max-h-0 overflow-hidden'}`}>
                   <Link 
                     href="/presse-btob" 
                     className="block text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
@@ -255,16 +272,6 @@ export default function Navigation({ hideLogo = false, centerMenu = false, trans
                   </Link>
                 </div>
               </div>
-
-              {router.pathname !== '/contact' && (
-                <Link 
-                  href="/contact" 
-                  className="text-[#878787] hover:text-[#FFB6C1] transition-colors font-semibold uppercase"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  CONTACT
-                </Link>
-              )}
             </div>
           </div>
         )}
