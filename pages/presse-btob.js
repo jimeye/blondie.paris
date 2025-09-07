@@ -2,7 +2,6 @@ import { useState } from 'react'
 import Head from 'next/head'
 import Navigation from '../components/Navigation'
 import FooterNew from '../components/FooterNew'
-import Breadcrumbs from '../components/Breadcrumbs'
 
 // Données des images Presse BtoB avec noms descriptifs
 const presseBtoBImages = [
@@ -232,13 +231,6 @@ export default function PresseBtoB() {
           <Navigation />
 
           <div className="container mx-auto px-4">
-            {/* Breadcrumbs */}
-            <Breadcrumbs 
-              items={[
-                { name: 'Accueil', href: '/' },
-                { name: 'Presse BtoB', href: '/presse-btob' }
-              ]} 
-            />
             
             <div className="mb-6 text-center">
                               <h1 className="text-4xl font-bold text-black">Presse BtoB</h1>

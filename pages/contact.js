@@ -153,16 +153,8 @@ export default function Contact() {
         <Navigation />
         
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-white to-[#FFB6C1]/5 py-20">
+        <section className="py-20">
           <div className="px-4 ml-5 lg:ml-0">
-            {/* Breadcrumbs */}
-            <Breadcrumbs 
-              items={[
-                { name: 'Accueil', href: '/' },
-                { name: 'Contact', href: '/contact' }
-              ]} 
-            />
-            
             <div className="mb-6 text-center">
               <h1 className="text-4xl font-bold text-black mb-4">Contact</h1>
               <div className="w-20 h-1 bg-[#FFB6C1] mt-2 mx-auto"></div>
@@ -171,7 +163,7 @@ export default function Contact() {
         </section>
 
         {/* Contact Content */}
-        <section className="py-16 bg-white">
+        <section className="-mt-24 pt-0 pb-16 bg-white">
           <div className="px-4 ml-5 lg:ml-0">
             <div>
               

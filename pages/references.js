@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Navigation from '../components/Navigation'
 import FooterNew from '../components/FooterNew'
-import Breadcrumbs from '../components/Breadcrumbs'
 import { useState } from 'react'
 
 export default function References() {
@@ -74,13 +73,6 @@ export default function References() {
         <section className="bg-gradient-to-br from-white via-gray-50 to-pink-50 py-20">
           <Navigation />
           <div className="container mx-auto px-4">
-            {/* Breadcrumbs */}
-            <Breadcrumbs 
-              items={[
-                { name: 'Accueil', href: '/' },
-                { name: 'References', href: '/references' }
-              ]} 
-            />
             
             {/* Titre de la page */}
             <div className="mb-6 text-center">
