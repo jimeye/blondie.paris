@@ -76,7 +76,7 @@ export default function References() {
             
             {/* Titre de la page */}
             <div className="mb-6 text-center">
-              <h1 className="text-4xl font-bold text-black mb-4">References</h1>
+              <h1 className="text-4xl font-bold text-[#394140] mb-4">References</h1>
               <div className="w-20 h-1 bg-[#FFB6C1] mt-2 mx-auto"></div>
             </div>
 

@@ -11,7 +11,7 @@ export default function GalleryModal({ isOpen, onClose, event, zIndex = 999999 }
     >
       <div className="w-full max-w-6xl mx-auto bg-white rounded-none p-2 md:p-3 my-4 overflow-x-hidden" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center justify-between px-1 md:px-2 py-2 sticky top-0 bg-white z-[999999]">
-          <h2 className="text-lg md:text-xl font-semibold text-black">
+          <h2 className="text-lg md:text-xl font-semibold text-[#394140]">
             {event?.modalTitle ? (
               <>
                 <span className="block md:inline">Le Club des Directeurs Artistiques</span>

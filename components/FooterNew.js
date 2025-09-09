@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="container mx-auto pt-4 pb-4 md:pb-6 ml-5 lg:ml-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ml-5">
           <div className="text-left md:text-center">
-            <h3 className="text-lg font-semibold mb-2">
+            <h3 className="text-lg font-semibold mb-2 text-[#394140]">
               BLONDIE PARIS
               <div className="w-20 h-0.5 bg-[#FFB6C1] mt-2 md:mx-auto"></div>
             </h3>
@@ -23,7 +23,7 @@ export default function Footer() {
             <p className="text-base normal-case">Événements</p>
             </div>
             <div className="text-left md:text-center">
-              <h3 className="text-lg font-semibold mb-2">
+              <h3 className="text-lg font-semibold mb-2 text-[#394140]">
                 Contact
                 <div className="w-20 h-0.5 bg-[#FFB6C1] mt-2 md:mx-auto"></div>
               </h3>
