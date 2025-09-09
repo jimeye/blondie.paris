@@ -1,7 +1,9 @@
-import { useMemo, useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Navigation from '../components/Navigation'
 import FooterNew from '../components/FooterNew'
+import GalleryModal from '../components/GalleryModal'
+import EventsGrid from '../components/EventsGrid'
 
 // Données locales (5 visuels fournis dans /public/events)
 const allEvents = [
@@ -100,28 +102,8 @@ const allEvents = [
   },
 ]
 
-const PAGE_SIZE_DESKTOP = 8 // >4 par page (desktop)
-const PAGE_SIZE_MOBILE = 10 // Tous les événements sur une page mobile
-
 export default function Events() {
-  const [page, setPage] = useState(1)
   const [openIdx, setOpenIdx] = useState(null) // index événement ouvert (galerie)
-
-  // Détermine une taille de page différente selon la largeur (simple heuristique côté client)
-  const [isMobile, setIsMobile] = useState(false)
-  useEffect(() => {
-    const onResize = () => setIsMobile(window.innerWidth < 768)
-    onResize()
-    window.addEventListener('resize', onResize)
-    return () => window.removeEventListener('resize', onResize)
-  }, [])
-
-  const pageSize = isMobile ? PAGE_SIZE_MOBILE : PAGE_SIZE_DESKTOP
-  const totalPages = Math.max(1, Math.ceil(allEvents.length / pageSize))
-  const paginated = useMemo(() => {
-    const start = (page - 1) * pageSize
-    return allEvents.slice(start, start + pageSize)
-  }, [page, pageSize])
 
   useEffect(() => {
     const onKey = (e) => {
@@ -153,60 +135,12 @@ export default function Events() {
               <div className="w-20 h-1 bg-[#FFB6C1] mt-2 mx-auto"></div>
             </div>
 
-            {/* Grille des events: 2 colonnes mobile, 4 colonnes desktop */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
-              {paginated.map((ev, i) => (
-                <button
-                  key={i}
-                  onClick={() => setOpenIdx(((page - 1) * pageSize) + i)}
-                  className={`group bg-transparent overflow-hidden transition ${
-                    ev.title === 'D. Coste – Nord Pinus' ? 'col-span-2' : 
-                    i === 4 ? 'col-span-2 md:col-span-4' : ''
-                  }`}
-                  style={i === 4 ? { gridColumn: 'span 4 / span 4' } : {}}
-                  aria-label={`Ouvrir la galerie ${ev.title}`}
-                >
-                  <div className={`relative w-full ${
-                    ev.title === 'D. Coste – Nord Pinus' ? 'pt-[66.5%]' : 
-                    i === 4 ? 'pt-[66.5%]' : 'pt-[133%]'
-                  } bg-transparent`}>
-                    <img
-                      src={ev.cover}
-                      alt={ev.title}
-                      className="absolute inset-0 w-full h-full object-cover"
-                      loading="lazy"
-                      onError={(e) => {
-                        console.error(`Erreur de chargement pour ${ev.title}:`, ev.cover)
-                      }}
-                    />
-                  </div>
-                  <div className={`${ev.title === 'D. Coste – Nord Pinus' ? 'p-2' : 'p-2'} text-left`}>
-                    <p className="text-sm text-[#394140] normal-case">{ev.title}</p>
-                  </div>
-                </button>
-              ))}
-            </div>
-
-            {/* Pagination simple */}
-            {totalPages > 1 && (
-              <div className="flex items-center justify-center gap-3 mt-8">
-                <button
-                  className="px-3 py-1 border border-[#FFB6C1] text-sm text-[#394140] rounded-lg disabled:opacity-40 hover:bg-[#FFB6C1]/10 transition-colors"
-                  onClick={() => setPage((p) => Math.max(1, p - 1))}
-                  disabled={page === 1}
-                >
-                  Précédent
-                </button>
-                <span className="text-sm text-[#394140] normal-case">Page {page} / {totalPages}</span>
-                <button
-                  className="px-3 py-1 border border-[#FFB6C1] text-sm text-[#394140] rounded-lg disabled:opacity-40 hover:bg-[#FFB6C1]/10 transition-colors"
-                  onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
-                  disabled={page === totalPages}
-                >
-                  Suivant
-                </button>
-              </div>
-            )}
+            {/* Grille des événements */}
+            <EventsGrid
+              events={allEvents}
+              onOpenModal={(index) => setOpenIdx(index)}
+              showPagination={false}
+            />
           </div>
         </section>
 
@@ -214,47 +148,11 @@ export default function Events() {
       </main>
 
       {/* Modal Galerie */}
-      {openIdx !== null && openIdx >= 0 && (
-        <div
-          className="fixed inset-0 bg-black/70 z-[999999] flex items-start justify-center overflow-y-auto p-4"
-          onClick={() => setOpenIdx(null)}
-          style={{ zIndex: 999999 }}
-        >
-          <div className="w-full max-w-6xl mx-auto bg-white rounded-none p-2 md:p-3 my-4 overflow-x-hidden" onClick={(e) => e.stopPropagation()}>
-            <div className="flex items-center justify-between px-1 md:px-2 py-2 sticky top-0 bg-white z-[999999]">
-              <h2 className="text-lg md:text-xl font-semibold text-black">
-                {allEvents[openIdx]?.modalTitle ? (
-                  <>
-                    <span className="block md:inline">Le Club des Directeurs Artistiques</span>
-                    <span className="block md:inline">Galerie du Club, place Patrat</span>
-                  </>
-                ) : (
-                  allEvents[openIdx]?.title
-                )}
-              </h2>
-              <button className="text-[#394140] hover:text-[#FFB6C1]" aria-label="Fermer" onClick={() => setOpenIdx(null)}>
-                ✕
-              </button>
-            </div>
-            {/* Grille 2 colonnes mobile et desktop */}
-            <div className="grid grid-cols-2 gap-2 md:gap-3 px-1 md:px-2 pb-2">
-              {allEvents[openIdx]?.gallery?.map((src, gi) => (
-                <div key={gi} className={`${(gi === 0 || gi === 1 || gi === 2 || gi === 3 || gi === 6 || gi === 7 ? 'col-span-2' : '')}`}>
-                  <img 
-                    src={src} 
-                    alt={`${allEvents[openIdx]?.title} - visuel ${gi + 1}`} 
-                    className={`w-full h-auto object-contain bg-white ${gi === 0 ? 'mx-auto' : ''}`} 
-                    loading="lazy"
-                    onError={(e) => {
-                      console.error(`Erreur de chargement pour l'image ${gi + 1}:`, src)
-                    }}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
+      <GalleryModal 
+        isOpen={openIdx !== null && openIdx >= 0}
+        onClose={() => setOpenIdx(null)}
+        event={openIdx !== null ? allEvents[openIdx] : null}
+      />
     </div>
   )
 }
