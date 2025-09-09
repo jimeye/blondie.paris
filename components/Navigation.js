@@ -156,7 +156,7 @@ export default function Header({
 
         {/* Menu mobile overlay */}
         {isMenuOpen && (
-          <div className="lg:hidden fixed top-0 left-0 w-80 h-screen bg-black/90 backdrop-blur-sm shadow-lg z-[9999] animate-slide-in-left mobile-overlay">
+          <div className="lg:hidden fixed top-0 left-0 w-80 bg-black/90 backdrop-blur-sm shadow-lg z-[9999] animate-slide-in-left mobile-overlay" style={{ height: 'calc(95vh - 4rem)' }}>
             <div className="flex flex-col space-y-4 p-4 menu-font text-right text-sm">
               <div className="flex justify-end mb-4">
                 <button 

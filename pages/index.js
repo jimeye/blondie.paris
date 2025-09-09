@@ -3,9 +3,11 @@ import Link from 'next/link'
 import {sanityClient} from '../lib/sanity/client'
 import {homepageQuery, referencesQuery} from '../lib/sanity/queries'
 import Navigation from '../components/Navigation'
-import HeroSlider from '../components/HeroSlider'
+import Hero from '../components/Hero'
 import ActualitesSlider from '../components/ActualitesSlider'
 import FooterNew from '../components/FooterNew'
+import EventsGrid from '../components/EventsGrid'
+import GalleryModal from '../components/GalleryModal'
 import { logos as allLogos } from '../data/logos'
 import { useEffect, useState } from 'react'
 
@@ -15,20 +17,13 @@ export default function Home({cms, refs}) {
   const [touchStart, setTouchStart] = useState(null)
   const [touchEnd, setTouchEnd] = useState(null)
   
-  // États pour les modales des events
-  const [selectedEvent, setSelectedEvent] = useState(null)
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  // État pour la modale des events
+  const [openIdx, setOpenIdx] = useState(null)
   
   // États pour le formulaire de contact
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState('')
   
-  // Reset l'index d'image quand on change d'event
-  useEffect(() => {
-    if (selectedEvent) {
-      setCurrentImageIndex(0)
-    }
-  }, [selectedEvent])
   
   // Gestion du formulaire de contact
   const handleSubmit = async (e) => {
@@ -361,8 +356,8 @@ export default function Home({cms, refs}) {
 
       <main>
         <section className="relative bg-white">
-          <Navigation transparent={true} hideHome={true} hideOnModal={!!selectedEvent} />
-          <HeroSlider />
+          <Navigation transparent={true} hideHome={true} hideOnModal={openIdx !== null && openIdx >= 0} />
+          <Hero />
           
           {/* Section À propos complète */}
           <section className="bg-white py-8">
@@ -479,123 +474,11 @@ export default function Home({cms, refs}) {
                 <div className="w-20 h-1 bg-[#FFB6C1] mx-auto" />
               </div>
               
-              {/* Grille des events: 2 colonnes mobile, 4 colonnes desktop + 5ème sur toute la largeur */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
-                <div 
-                  className="group bg-transparent overflow-hidden transition cursor-pointer"
-                  onClick={() => {
-                    setSelectedEvent(allEvents[0])
-                    setCurrentImageIndex(0)
-                  }}
-                >
-                  <div className="relative w-full pt-[133%] bg-transparent">
-                    <img
-                      src={allEvents[0].cover}
-                      alt={allEvents[0].title}
-                      className="absolute inset-0 w-full h-full object-cover"
-                      loading="lazy"
-                      onError={(e) => {
-                        console.error(`Erreur de chargement pour ${allEvents[0].title}:`, allEvents[0].cover)
-                      }}
-                    />
-                  </div>
-                  <div className="p-1 text-left">
-                    <p className="text-xs text-[#394140] normal-case">{allEvents[0].title}</p>
-                  </div>
-                </div>
-                
-                <div 
-                  className="group bg-transparent overflow-hidden transition cursor-pointer"
-                  onClick={() => {
-                    setSelectedEvent(allEvents[1])
-                    setCurrentImageIndex(0)
-                  }}
-                >
-                  <div className="relative w-full pt-[133%] bg-transparent">
-                    <img
-                      src={allEvents[1].cover}
-                      alt={allEvents[1].title}
-                      className="absolute inset-0 w-full h-full object-cover"
-                      loading="lazy"
-                      onError={(e) => {
-                        console.error(`Erreur de chargement pour ${allEvents[1].title}:`, allEvents[1].cover)
-                      }}
-                    />
-                  </div>
-                  <div className="p-1 text-left">
-                    <p className="text-xs text-[#394140] normal-case">{allEvents[1].title}</p>
-                  </div>
-                </div>
-                
-                <div 
-                  className="group bg-transparent overflow-hidden transition cursor-pointer"
-                  onClick={() => {
-                    setSelectedEvent(allEvents[2])
-                    setCurrentImageIndex(0)
-                  }}
-                >
-                  <div className="relative w-full pt-[133%] bg-transparent">
-                    <img
-                      src={allEvents[2].cover}
-                      alt={allEvents[2].title}
-                      className="absolute inset-0 w-full h-full object-cover"
-                      loading="lazy"
-                      onError={(e) => {
-                        console.error(`Erreur de chargement pour ${allEvents[2].title}:`, allEvents[2].title)
-                      }}
-                    />
-                  </div>
-                  <div className="p-1 text-left">
-                    <p className="text-xs text-[#394140] normal-case">{allEvents[2].title}</p>
-                  </div>
-                </div>
-                
-                <div 
-                  className="group bg-transparent overflow-hidden transition cursor-pointer"
-                  onClick={() => {
-                    setSelectedEvent(allEvents[3])
-                    setCurrentImageIndex(0)
-                  }}
-                >
-                  <div className="relative w-full pt-[133%] bg-transparent">
-                    <img
-                      src={allEvents[3].cover}
-                      alt={allEvents[3].title}
-                      className="absolute inset-0 w-full h-full object-cover"
-                      loading="lazy"
-                      onError={(e) => {
-                        console.error(`Erreur de chargement pour ${allEvents[3].title}:`, allEvents[3].cover)
-                      }}
-                    />
-                  </div>
-                  <div className="p-1 text-left">
-                    <p className="text-xs text-[#394140] normal-case">{allEvents[3].title}</p>
-                  </div>
-                </div>
-                
-                <div 
-                  className="group bg-transparent overflow-hidden transition col-span-2 md:col-span-4 cursor-pointer"
-                  onClick={() => {
-                    setSelectedEvent(allEvents[4])
-                    setCurrentImageIndex(0)
-                  }}
-                >
-                  <div className="relative w-full pt-[66.5%] bg-transparent">
-                    <img
-                      src={allEvents[4].cover}
-                      alt={allEvents[4].title}
-                      className="absolute inset-0 w-full h-full object-cover"
-                      loading="lazy"
-                      onError={(e) => {
-                        console.error(`Erreur de chargement pour ${allEvents[4].title}:`, allEvents[4].cover)
-                      }}
-                    />
-                  </div>
-                  <div className="p-1 text-left">
-                    <p className="text-xs text-[#394140] normal-case">{allEvents[4].title}</p>
-                  </div>
-                </div>
-              </div>
+              <EventsGrid
+                events={allEvents}
+                onOpenModal={(index) => setOpenIdx(index)}
+                showPagination={false}
+              />
             </div>
           </section>
 
@@ -830,89 +713,11 @@ export default function Home({cms, refs}) {
           */}
 
           {/* Modale des events */}
-          {selectedEvent && (
-            <div className="fixed inset-0 bg-black bg-opacity-90 z-[999999] flex items-center justify-center p-4" style={{ zIndex: 999999 }}>
-              <div className="relative max-w-6xl w-full max-h-full overflow-x-hidden">
-                {/* Bouton fermer */}
-                <button
-                  onClick={() => {
-                    setSelectedEvent(null)
-                    setCurrentImageIndex(0)
-                  }}
-                  className="fixed top-8 right-8 z-[999999] text-white hover:text-[#FFB6C1] transition-colors bg-black bg-opacity-80 rounded-full p-3 cursor-pointer"
-                  style={{ zIndex: 999999 }}
-                  aria-label="Fermer la galerie"
-                >
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-                
-                {/* Titre */}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                    {selectedEvent.modalTitle || selectedEvent.title}
-                  </h3>
-                  <div className="w-20 h-1 bg-[#FFB6C1] mx-auto" />
-                </div>
-                
-                {/* Image principale */}
-                <div className="relative mb-4">
-                  <img
-                    src={selectedEvent.gallery[currentImageIndex]}
-                    alt={`${selectedEvent.title} - Image ${currentImageIndex + 1}`}
-                    className="w-full h-auto max-h-[70vh] object-contain mx-auto pointer-events-none"
-                  />
-                </div>
-                
-                {/* Navigation */}
-                <div className="flex justify-center items-center space-x-4 mb-4">
-                  <button
-                    onClick={() => setCurrentImageIndex(prev => prev > 0 ? prev - 1 : selectedEvent.gallery.length - 1)}
-                    className="bg-transparent hover:bg-[#FFB6C1]/20 text-[#FFB6C1] p-2 rounded-full transition-colors"
-                    aria-label="Image précédente"
-                  >
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                  </button>
-                  
-                  <span className="text-white text-sm">
-                    {currentImageIndex + 1} / {selectedEvent.gallery.length}
-                  </span>
-                  
-                  <button
-                    onClick={() => setCurrentImageIndex(prev => prev < selectedEvent.gallery.length - 1 ? prev + 1 : 0)}
-                    className="bg-transparent hover:bg-[#FFB6C1]/20 text-[#FFB6C1] p-2 rounded-full transition-colors"
-                    aria-label="Image suivante"
-                  >
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </button>
-                </div>
-                
-                {/* Miniatures */}
-                <div className="flex justify-center space-x-2 overflow-x-auto pb-4">
-                  {selectedEvent.gallery.map((image, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentImageIndex(index)}
-                      className={`flex-shrink-0 w-16 h-16 border-2 transition-colors ${
-                        index === currentImageIndex ? 'border-[#FFB6C1]' : 'border-gray-400'
-                      }`}
-                    >
-                      <img
-                        src={image}
-                        alt={`Miniature ${index + 1}`}
-                        className="w-full h-full object-cover"
-                      />
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-          )}
+          <GalleryModal
+            isOpen={openIdx !== null && openIdx >= 0}
+            onClose={() => setOpenIdx(null)}
+            event={openIdx !== null ? allEvents[openIdx] : null}
+          />
 
           <FooterNew />
 
