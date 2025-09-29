@@ -74,45 +74,45 @@ export default function Header({
           {/* Menu desktop */}
           <div className={`hidden lg:flex menu-font text-sm sm:text-sm lg:text-base justify-center ${centerMenu ? 'space-x-1 sm:space-x-2 lg:space-x-4' : 'space-x-1 sm:space-x-2 lg:space-x-4'}`}>
             {!hideHome && router.pathname !== '/' && (
-              <Link href="/" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase">
+              <Link href="/" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase relative relative">
                 HOME
               </Link>
             )}
             {router.pathname !== '/a-propos' && (
-              <Link href="/a-propos" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase">
+              <Link href="/a-propos" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase relative relative">
                 À PROPOS
               </Link>
             )}
             {router.pathname !== '/qui-suis-je' && (
-              <Link href="/qui-suis-je" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase">
+              <Link href="/qui-suis-je" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase relative">
                 QUI SUIS-JE ?
               </Link>
             )}
             {router.pathname !== '/actualites' && (
-              <Link href="/actualites" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase">
+              <Link href="/actualites" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase relative">
                 ACTUALITÉS
               </Link>
             )}
             {router.pathname !== '/references' && (
-              <Link href="/references" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase">
+              <Link href="/references" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase relative">
                 REFERENCES
               </Link>
             )}
             {router.pathname !== '/events' && (
-              <Link href="/events" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase" onClick={closeModal}>
+              <Link href="/events" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase relative" onClick={closeModal}>
                 EVENTS
               </Link>
             )}
 
             {router.pathname !== '/contact' && (
-              <Link href="/contact" className="disco-link text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase text-sm sm:text-sm lg:text-base ">
+              <Link href="/contact" className="disco-link text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase relative text-sm sm:text-sm lg:text-base ">
                 CONTACT
               </Link>
             )}
             
             {/* Menu Presse avec sous-menu */}
             <div className="relative group">
-              <div className="disco-link text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase text-sm sm:text-sm lg:text-base cursor-pointer ">
+              <div className="disco-link text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase relative text-sm sm:text-sm lg:text-base cursor-pointer ">
                 <span className="inline-flex items-center uppercase">
                   REVUE DE PRESSE
                   <svg className="w-3 h-3 ml-1 transition-transform duration-200 group-hover:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -302,20 +302,20 @@ export default function Header({
           display: inline-block;
         }
         
-        .nav-link::after {
+        .nav-link::before {
           content: '';
           position: absolute;
-          bottom: 2px;
+          bottom: 0;
           left: -100%;
           width: 100%;
           height: 2px;
-          background: linear-gradient(90deg, transparent 0%, #FFB6C1 20%, #FFB6C1 80%, transparent 100%);
-          transition: left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-          z-index: 1;
+          background: #FFB6C1;
+          transition: left 0.6s ease;
+          z-index: 10;
         }
         
-        .nav-link:hover::after {
-          left: 100%;
+        .nav-link:hover::before {
+          left: 0;
         }
         
         /* Animation de fermeture plus lente pour l'overlay */
