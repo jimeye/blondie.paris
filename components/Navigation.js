@@ -74,45 +74,45 @@ export default function Header({
           {/* Menu desktop */}
           <div className={`hidden lg:flex menu-font text-sm sm:text-sm lg:text-base justify-center ${centerMenu ? 'space-x-1 sm:space-x-2 lg:space-x-4' : 'space-x-1 sm:space-x-2 lg:space-x-4'}`}>
             {!hideHome && router.pathname !== '/' && (
-              <Link href="/" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase relative relative">
+              <Link href="/" className="text-gray-900 hover:text-[#FFB6C1] hover:underline decoration-2 underline-offset-4 decoration-[#FFB6C1] transition-all duration-300 uppercase relative relative">
                 HOME
               </Link>
             )}
             {router.pathname !== '/a-propos' && (
-              <Link href="/a-propos" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase relative relative">
+              <Link href="/a-propos" className="text-gray-900 hover:text-[#FFB6C1] hover:underline decoration-2 underline-offset-4 decoration-[#FFB6C1] transition-all duration-300 uppercase relative relative">
                 À PROPOS
               </Link>
             )}
             {router.pathname !== '/qui-suis-je' && (
-              <Link href="/qui-suis-je" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase relative">
+              <Link href="/qui-suis-je" className="text-gray-900 hover:text-[#FFB6C1] hover:underline decoration-2 underline-offset-4 decoration-[#FFB6C1] transition-all duration-300 uppercase relative">
                 QUI SUIS-JE ?
               </Link>
             )}
             {router.pathname !== '/actualites' && (
-              <Link href="/actualites" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase relative">
+              <Link href="/actualites" className="text-gray-900 hover:text-[#FFB6C1] hover:underline decoration-2 underline-offset-4 decoration-[#FFB6C1] transition-all duration-300 uppercase relative">
                 ACTUALITÉS
               </Link>
             )}
             {router.pathname !== '/references' && (
-              <Link href="/references" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase relative">
+              <Link href="/references" className="text-gray-900 hover:text-[#FFB6C1] hover:underline decoration-2 underline-offset-4 decoration-[#FFB6C1] transition-all duration-300 uppercase relative">
                 REFERENCES
               </Link>
             )}
             {router.pathname !== '/events' && (
-              <Link href="/events" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase relative" onClick={closeModal}>
+              <Link href="/events" className="text-gray-900 hover:text-[#FFB6C1] hover:underline decoration-2 underline-offset-4 decoration-[#FFB6C1] transition-all duration-300 uppercase relative" onClick={closeModal}>
                 EVENTS
               </Link>
             )}
 
             {router.pathname !== '/contact' && (
-              <Link href="/contact" className="disco-link text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase relative text-sm sm:text-sm lg:text-base ">
+              <Link href="/contact" className="disco-link text-gray-900 hover:text-[#FFB6C1] hover:underline decoration-2 underline-offset-4 decoration-[#FFB6C1] transition-all duration-300 uppercase relative text-sm sm:text-sm lg:text-base ">
                 CONTACT
               </Link>
             )}
             
             {/* Menu Presse avec sous-menu */}
             <div className="relative group">
-              <div className="disco-link text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase relative text-sm sm:text-sm lg:text-base cursor-pointer ">
+              <div className="disco-link text-gray-900 hover:text-[#FFB6C1] hover:underline decoration-2 underline-offset-4 decoration-[#FFB6C1] transition-all duration-300 uppercase relative text-sm sm:text-sm lg:text-base cursor-pointer ">
                 <span className="inline-flex items-center uppercase">
                   REVUE DE PRESSE
                   <svg className="w-3 h-3 ml-1 transition-transform duration-200 group-hover:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
