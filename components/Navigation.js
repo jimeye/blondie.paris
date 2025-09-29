@@ -295,31 +295,43 @@ export default function Header({
           text-shadow: none;
         }
         
-        /* Effet étoile filante pour le soulignement */
-        .nav-link, .nav-link.disco-link {
-          position: relative;
-          overflow: hidden;
-          display: inline-block;
+        /* Effet étoile filante pour le soulignement - version renforcée */
+        .nav-link {
+          position: relative !important;
+          overflow: hidden !important;
+          display: inline-block !important;
         }
         
-        .nav-link::before, .nav-link.disco-link::before {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: -100%;
-          width: 100%;
-          height: 1px;
-          background: linear-gradient(90deg, transparent, #FFB6C1, transparent);
-          transition: left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-          z-index: 10;
+        .nav-link::before {
+          content: '' !important;
+          position: absolute !important;
+          bottom: 0 !important;
+          left: -100% !important;
+          width: 100% !important;
+          height: 1px !important;
+          background: linear-gradient(90deg, transparent, #FFB6C1, transparent) !important;
+          transition: left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+          z-index: 1000 !important;
         }
         
-        .nav-link:hover::before, .nav-link.disco-link:hover::before {
-          left: 100%;
+        .nav-link:hover::before {
+          left: 100% !important;
         }
         
-        /* S'assurer que l'effet fonctionne même avec disco-link */
-        .nav-link.disco-link:hover::before {
+        /* Forcer l'effet même avec disco-link */
+        .disco-link.nav-link::before {
+          content: '' !important;
+          position: absolute !important;
+          bottom: 0 !important;
+          left: -100% !important;
+          width: 100% !important;
+          height: 1px !important;
+          background: linear-gradient(90deg, transparent, #FFB6C1, transparent) !important;
+          transition: left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+          z-index: 1000 !important;
+        }
+        
+        .disco-link.nav-link:hover::before {
           left: 100% !important;
         }
         
