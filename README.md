@@ -252,7 +252,7 @@ components/
 ### **Équipe**
 - **Direction** : Nathalie Roland
 - **Développement** : JOSEPH STUDIO CREATIVE
-- **Design** : BLONDIE Paris
+- **Design** : JOSEPH STUDIO CREATIVE
 
 ### **Informations**
 - **Email** : nathalie@blondie.paris
