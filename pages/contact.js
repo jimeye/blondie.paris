@@ -280,9 +280,14 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="block w-[55%] mx-auto bg-[#FFB6C1] hover:bg-[#FFB6C1]/80 hover:text-[#394140] text-white font-semibold py-3 px-6 border border-[#394140] rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed uppercase whitespace-nowrap text-center"
+                    className="block w-[55%] mx-auto bg-[#FFB6C1] hover:bg-[#FFB6C1]/80 hover:text-[#394140] text-white font-semibold py-3 px-6 border border-[#394140] rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed uppercase whitespace-nowrap text-center text-lg"
                   >
-                    {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
+                    <span className="block sm:hidden">
+                      {isSubmitting ? 'Envoi...' : 'ENVOYER'}
+                    </span>
+                    <span className="hidden sm:block">
+                      {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
+                    </span>
                   </button>
                 </form>
               </div>
