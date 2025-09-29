@@ -296,13 +296,13 @@ export default function Header({
         }
         
         /* Effet étoile filante pour le soulignement */
-        .nav-link {
+        .nav-link, .nav-link.disco-link {
           position: relative;
           overflow: hidden;
           display: inline-block;
         }
         
-        .nav-link::before {
+        .nav-link::before, .nav-link.disco-link::before {
           content: '';
           position: absolute;
           bottom: 0;
@@ -314,8 +314,13 @@ export default function Header({
           z-index: 10;
         }
         
-        .nav-link:hover::before {
+        .nav-link:hover::before, .nav-link.disco-link:hover::before {
           left: 0;
+        }
+        
+        /* S'assurer que l'effet fonctionne même avec disco-link */
+        .nav-link.disco-link:hover::before {
+          left: 0 !important;
         }
         
         /* Animation de fermeture plus lente pour l'overlay */
