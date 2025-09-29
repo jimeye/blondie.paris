@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import Head from 'next/head'
 
 function MyApp({ Component, pageProps }) {
-  const siteUrl = 'https://blondie-paris.vercel.app'
+  const siteUrl = 'https://blondie.paris'
   const organizationLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',

@@ -268,7 +268,7 @@ export default function Home({cms, refs}) {
         <meta property="og:title" content={cms?.seo?.title || 'Blondie Paris — Relations presse, communication & événements'} />
         <meta property="og:description" content={cms?.seo?.description || "BLONDIE Paris accompagne agences, médias et marques: relations presse, relations publiques, production d'événements. Expertise sur‑mesure, réseau, confidentialité."} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://blondie-paris.com/" />
+        <meta property="og:url" content="https://blondie.paris/" />
         <meta property="og:site_name" content="BLONDIE Paris" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:image" content="https://blondie-paris.com/logo.png" />
@@ -284,7 +284,7 @@ export default function Home({cms, refs}) {
         <meta name="twitter:image:alt" content="BLONDIE Paris - Bureau de relations presse" />
         
         {/* Canonical */}
-        <link rel="canonical" href="https://blondie-paris.com/" />
+        <link rel="canonical" href="https://blondie.paris/" />
         
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
@@ -307,9 +307,9 @@ export default function Home({cms, refs}) {
               "name": "BLONDIE Paris",
               "alternateName": "BLONDIE",
               "description": "Bureau de relations presse et communication spécialisé dans les relations publiques, événements et conseil en communication",
-              "url": "https://blondie-paris.com",
-              "logo": "https://blondie-paris.com/logo.png",
-              "image": "https://blondie-paris.com/logo.png",
+              "url": "https://blondie.paris",
+              "logo": "https://blondie.paris/logo.png",
+              "image": "https://blondie.paris/logo.png",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "11 RUE DU SAUVAGE",
