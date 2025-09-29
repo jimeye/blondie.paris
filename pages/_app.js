@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import Head from 'next/head'
+import CookieBanner from '../components/CookieBanner'
 
 function MyApp({ Component, pageProps }) {
   const siteUrl = 'https://blondie.paris'
@@ -25,6 +26,7 @@ function MyApp({ Component, pageProps }) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }} />
       </Head>
       <Component {...pageProps} />
+      <CookieBanner />
     </>
   )
 }
