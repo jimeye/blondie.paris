@@ -79,27 +79,27 @@ export default function Header({
               </Link>
             )}
             {router.pathname !== '/a-propos' && (
-              <Link href="/a-propos" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link  uppercase">
+              <Link href="/a-propos" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase">
                 À PROPOS
               </Link>
             )}
             {router.pathname !== '/qui-suis-je' && (
-              <Link href="/qui-suis-je" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link  uppercase">
+              <Link href="/qui-suis-je" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase">
                 QUI SUIS-JE ?
               </Link>
             )}
             {router.pathname !== '/actualites' && (
-              <Link href="/actualites" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link  uppercase">
+              <Link href="/actualites" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase">
                 ACTUALITÉS
               </Link>
             )}
             {router.pathname !== '/references' && (
-              <Link href="/references" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link  uppercase">
+              <Link href="/references" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase">
                 REFERENCES
               </Link>
             )}
             {router.pathname !== '/events' && (
-              <Link href="/events" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link  uppercase" onClick={closeModal}>
+              <Link href="/events" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase" onClick={closeModal}>
                 EVENTS
               </Link>
             )}
@@ -299,20 +299,22 @@ export default function Header({
         .nav-link {
           position: relative;
           overflow: hidden;
+          display: inline-block;
         }
         
-        .nav-link::before {
+        .nav-link::after {
           content: '';
           position: absolute;
-          bottom: 0;
+          bottom: 2px;
           left: -100%;
           width: 100%;
-          height: 1px;
-          background: linear-gradient(90deg, transparent, #FFB6C1, transparent);
-          transition: left 0.6s ease-out;
+          height: 2px;
+          background: linear-gradient(90deg, transparent 0%, #FFB6C1 20%, #FFB6C1 80%, transparent 100%);
+          transition: left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          z-index: 1;
         }
         
-        .nav-link:hover::before {
+        .nav-link:hover::after {
           left: 100%;
         }
         
