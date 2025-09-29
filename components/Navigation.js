@@ -74,45 +74,45 @@ export default function Header({
           {/* Menu desktop */}
           <div className={`hidden lg:flex menu-font text-sm sm:text-sm lg:text-base justify-center ${centerMenu ? 'space-x-1 sm:space-x-2 lg:space-x-4' : 'space-x-1 sm:space-x-2 lg:space-x-4'}`}>
             {!hideHome && router.pathname !== '/' && (
-              <Link href="/" className="text-gray-900 hover:text-[#FFB6C1] hover:underline decoration-1 underline-offset-4 transition-all duration-200 uppercase">
+              <Link href="/" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase">
                 HOME
               </Link>
             )}
             {router.pathname !== '/a-propos' && (
-              <Link href="/a-propos" className="text-gray-900 hover:text-[#FFB6C1] hover:underline decoration-1 underline-offset-4 transition-all duration-200  uppercase">
+              <Link href="/a-propos" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link  uppercase">
                 À PROPOS
               </Link>
             )}
             {router.pathname !== '/qui-suis-je' && (
-              <Link href="/qui-suis-je" className="text-gray-900 hover:text-[#FFB6C1] hover:underline decoration-1 underline-offset-4 transition-all duration-200  uppercase">
+              <Link href="/qui-suis-je" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link  uppercase">
                 QUI SUIS-JE ?
               </Link>
             )}
             {router.pathname !== '/actualites' && (
-              <Link href="/actualites" className="text-gray-900 hover:text-[#FFB6C1] hover:underline decoration-1 underline-offset-4 transition-all duration-200  uppercase">
+              <Link href="/actualites" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link  uppercase">
                 ACTUALITÉS
               </Link>
             )}
             {router.pathname !== '/references' && (
-              <Link href="/references" className="text-gray-900 hover:text-[#FFB6C1] hover:underline decoration-1 underline-offset-4 transition-all duration-200  uppercase">
+              <Link href="/references" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link  uppercase">
                 REFERENCES
               </Link>
             )}
             {router.pathname !== '/events' && (
-              <Link href="/events" className="text-gray-900 hover:text-[#FFB6C1] hover:underline decoration-1 underline-offset-4 transition-all duration-200  uppercase" onClick={closeModal}>
+              <Link href="/events" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link  uppercase" onClick={closeModal}>
                 EVENTS
               </Link>
             )}
 
             {router.pathname !== '/contact' && (
-              <Link href="/contact" className="disco-link text-gray-900 hover:text-[#FFB6C1] hover:underline decoration-1 underline-offset-4 transition-all duration-200 uppercase text-sm sm:text-sm lg:text-base ">
+              <Link href="/contact" className="disco-link text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase text-sm sm:text-sm lg:text-base ">
                 CONTACT
               </Link>
             )}
             
             {/* Menu Presse avec sous-menu */}
             <div className="relative group">
-              <div className="disco-link text-gray-900 hover:text-[#FFB6C1] hover:underline decoration-1 underline-offset-4 transition-all duration-200 uppercase text-sm sm:text-sm lg:text-base cursor-pointer ">
+              <div className="disco-link text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase text-sm sm:text-sm lg:text-base cursor-pointer ">
                 <span className="inline-flex items-center uppercase">
                   REVUE DE PRESSE
                   <svg className="w-3 h-3 ml-1 transition-transform duration-200 group-hover:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -172,7 +172,7 @@ export default function Header({
               {!hideHome && router.pathname !== '/' && (
                 <Link 
                   href="/" 
-                  className="text-[#878787] hover:text-[#FFB6C1] hover:underline decoration-1 underline-offset-4 transition-all duration-200  uppercase"
+                  className="text-[#878787] hover:text-[#FFB6C1] transition-colors nav-link  uppercase"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   HOME
@@ -181,7 +181,7 @@ export default function Header({
               {router.pathname !== '/a-propos' && (
                 <Link 
                   href="/a-propos" 
-                  className="text-[#878787] hover:text-[#FFB6C1] hover:underline decoration-1 underline-offset-4 transition-all duration-200  uppercase"
+                  className="text-[#878787] hover:text-[#FFB6C1] transition-colors nav-link  uppercase"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   À PROPOS
@@ -190,7 +190,7 @@ export default function Header({
               {router.pathname !== '/qui-suis-je' && (
                 <Link 
                   href="/qui-suis-je" 
-                  className="text-[#878787] hover:text-[#FFB6C1] hover:underline decoration-1 underline-offset-4 transition-all duration-200  uppercase"
+                  className="text-[#878787] hover:text-[#FFB6C1] transition-colors nav-link  uppercase"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   QUI SUIS-JE ?
@@ -199,7 +199,7 @@ export default function Header({
               {router.pathname !== '/actualites' && (
                 <Link 
                   href="/actualites" 
-                  className="text-[#878787] hover:text-[#FFB6C1] hover:underline decoration-1 underline-offset-4 transition-all duration-200  uppercase"
+                  className="text-[#878787] hover:text-[#FFB6C1] transition-colors nav-link  uppercase"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   ACTUALITÉS
@@ -208,7 +208,7 @@ export default function Header({
               {router.pathname !== '/references' && (
                 <Link 
                   href="/references" 
-                  className="text-[#878787] hover:text-[#FFB6C1] hover:underline decoration-1 underline-offset-4 transition-all duration-200  uppercase"
+                  className="text-[#878787] hover:text-[#FFB6C1] transition-colors nav-link  uppercase"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   REFERENCES
@@ -217,7 +217,7 @@ export default function Header({
               {router.pathname !== '/events' && (
                 <Link 
                   href="/events" 
-                  className="text-[#878787] hover:text-[#FFB6C1] hover:underline decoration-1 underline-offset-4 transition-all duration-200  uppercase"
+                  className="text-[#878787] hover:text-[#FFB6C1] transition-colors nav-link  uppercase"
                   onClick={() => {
                     setIsMenuOpen(false)
                     if (closeModal) closeModal()
@@ -230,7 +230,7 @@ export default function Header({
               {router.pathname !== '/contact' && (
                 <Link 
                   href="/contact" 
-                  className="text-[#878787] hover:text-[#FFB6C1] hover:underline decoration-1 underline-offset-4 transition-all duration-200  uppercase"
+                  className="text-[#878787] hover:text-[#FFB6C1] transition-colors nav-link  uppercase"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   CONTACT
@@ -240,7 +240,7 @@ export default function Header({
               {/* Sous-menu Presse mobile simple */}
               <div className="relative group">
                 <div 
-                  className="text-[#878787] hover:text-[#FFB6C1] hover:underline decoration-1 underline-offset-4 transition-all duration-200 w-full text-right cursor-pointer  uppercase flex items-center justify-end"
+                  className="text-[#878787] hover:text-[#FFB6C1] transition-colors nav-link w-full text-right cursor-pointer  uppercase flex items-center justify-end"
                   onClick={() => setIsPresseMobileOpen(!isPresseMobileOpen)}
                 >
                   REVUE DE PRESSE
@@ -251,28 +251,28 @@ export default function Header({
                 <div className={`pr-4 mt-2 space-y-2 text-right transition-all duration-200 ${isPresseMobileOpen ? 'opacity-100 visible max-h-96' : 'opacity-0 invisible max-h-0 overflow-hidden'}`}>
                   <Link 
                     href="/presse-btob" 
-                    className="block text-[#878787] hover:text-[#FFB6C1] hover:underline decoration-1 underline-offset-4 transition-all duration-200  uppercase"
+                    className="block text-[#878787] hover:text-[#FFB6C1] transition-colors nav-link  uppercase"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     PRESSE BTOB
                   </Link>
                   <Link 
                     href="/presse-grand-public" 
-                    className="block text-[#878787] hover:text-[#FFB6C1] hover:underline decoration-1 underline-offset-4 transition-all duration-200  uppercase"
+                    className="block text-[#878787] hover:text-[#FFB6C1] transition-colors nav-link  uppercase"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     PRESSE GRAND PUBLIC
                   </Link>
                   <Link 
                     href="/tv" 
-                    className="block text-[#878787] hover:text-[#FFB6C1] hover:underline decoration-1 underline-offset-4 transition-all duration-200  uppercase"
+                    className="block text-[#878787] hover:text-[#FFB6C1] transition-colors nav-link  uppercase"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     TV
                   </Link>
                   <Link 
                     href="/presse-internationale" 
-                    className="block text-[#878787] hover:text-[#FFB6C1] hover:underline decoration-1 underline-offset-4 transition-all duration-200  uppercase"
+                    className="block text-[#878787] hover:text-[#FFB6C1] transition-colors nav-link  uppercase"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     PRESSE INTERNATIONALE
@@ -294,12 +294,26 @@ export default function Header({
           animation: none;
           text-shadow: none;
         }
-        @keyframes shimmer {
-          0% { background-position: 0% 50%, 0 0; }
-          100% { background-position: 200% 50%, 8px 8px; }
+        
+        /* Effet étoile filante pour le soulignement */
+        .nav-link {
+          position: relative;
+          overflow: hidden;
         }
-        @media (prefers-reduced-motion: reduce) {
-          .disco-link:hover { animation: none; }
+        
+        .nav-link::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: -100%;
+          width: 100%;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, #FFB6C1, transparent);
+          transition: left 0.6s ease-out;
+        }
+        
+        .nav-link:hover::before {
+          left: 100%;
         }
         
         /* Animation de fermeture plus lente pour l'overlay */
