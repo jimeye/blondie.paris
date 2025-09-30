@@ -429,7 +429,7 @@ export default function Home({cms, refs}) {
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 {/* Image à gauche - Rideau depuis la droite */}
                 <div className="w-full mt-4 overflow-hidden">
-                  <div className="curtain-right-scroll" id="curtain-right-photo">
+                  <div className="curtain-right">
                     <Image
                       src="/nathalie-roland-blondie-paris-qui-suis-je.webp"
                       alt="Qui suis-je"
