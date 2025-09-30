@@ -64,7 +64,7 @@ export default function Header({
   return (
     <nav className={`fixed top-0 w-full z-[9998] ${navBg} ${centerMenu ? 'py-4' : 'py-0.25'} ${hideOnModal ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'} ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'} transition-all duration-300 ease-in-out`}>
       <div className="container mx-auto px-4">
-        <div className={`flex items-center ${centerMenu ? 'justify-center' : 'justify-between'}`}>
+        <div className="flex items-center justify-between">
           {!hideLogo && (
             <div className={router.pathname === '/' ? 'invisible' : ''}>
               <Logo />
@@ -72,7 +72,7 @@ export default function Header({
           )}
           
           {/* Menu desktop */}
-          <div className={`hidden lg:flex menu-font text-sm sm:text-sm lg:text-base justify-center ${centerMenu ? 'space-x-1 sm:space-x-2 lg:space-x-4' : 'space-x-1 sm:space-x-2 lg:space-x-4'}`}>
+          <div className="hidden lg:flex menu-font text-sm sm:text-sm lg:text-base justify-center space-x-1 sm:space-x-2 lg:space-x-4 flex-1">
             {!hideHome && router.pathname !== '/' && (
               <Link href="/" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase relative relative">
                 HOME
@@ -137,6 +137,11 @@ export default function Header({
                 </Link>
               </div>
             </div>
+          </div>
+
+          {/* Élément équilibrant pour centrer le menu */}
+          <div className="hidden lg:block w-48">
+            {/* Espace vide pour équilibrer le logo à gauche */}
           </div>
 
           {/* Bouton menu mobile */}
