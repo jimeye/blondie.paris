@@ -72,7 +72,7 @@ export default function Header({
           )}
           
           {/* Menu desktop */}
-          <div className="hidden lg:flex menu-font text-sm sm:text-sm lg:text-base justify-center space-x-1 sm:space-x-2 lg:space-x-4 flex-1">
+          <div className="hidden lg:flex menu-font text-sm sm:text-sm lg:text-base justify-center items-center space-x-1 sm:space-x-2 lg:space-x-4 flex-1">
             {!hideHome && router.pathname !== '/' && (
               <Link href="/" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase relative relative">
                 HOME
@@ -140,7 +140,7 @@ export default function Header({
           </div>
 
           {/* Élément équilibrant pour centrer le menu */}
-          <div className="hidden lg:block w-48">
+          <div className="hidden lg:flex w-48 items-center">
             {/* Espace vide pour équilibrer le logo à gauche */}
           </div>
 
