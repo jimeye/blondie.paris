@@ -271,7 +271,7 @@ export default function Home({cms, refs}) {
         <meta property="og:url" content="https://blondie.paris/" />
         <meta property="og:site_name" content="BLONDIE Paris" />
         <meta property="og:locale" content="fr_FR" />
-        <meta property="og:image" content="https://blondie-paris.com/logo.png" />
+        <meta property="og:image" content="https://blondie.paris/logo.webp" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="BLONDIE Paris - Bureau de relations presse" />
@@ -280,7 +280,7 @@ export default function Home({cms, refs}) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={cms?.seo?.title || 'Blondie Paris — Relations presse, communication & événements'} />
         <meta name="twitter:description" content={cms?.seo?.description || "BLONDIE Paris accompagne agences, médias et marques: relations presse, relations publiques, production d'événements."} />
-        <meta name="twitter:image" content="https://blondie-paris.com/logo.png" />
+        <meta name="twitter:image" content="https://blondie.paris/logo.webp" />
         <meta name="twitter:image:alt" content="BLONDIE Paris - Bureau de relations presse" />
         
         {/* Canonical */}

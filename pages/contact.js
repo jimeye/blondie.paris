@@ -61,10 +61,10 @@ export default function Contact() {
         <meta property="og:title" content="Contact - Blondie Paris | Relations presse & communication" />
         <meta property="og:description" content="Contactez BLONDIE Paris pour vos projets de relations presse, communication et événements. Bureau de relations presse à Arles." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://blondie-paris.com/contact" />
+        <meta property="og:url" content="https://blondie.paris/contact" />
         <meta property="og:site_name" content="BLONDIE Paris" />
         <meta property="og:locale" content="fr_FR" />
-        <meta property="og:image" content="https://blondie-paris.com/logo.png" />
+        <meta property="og:image" content="https://blondie.paris/logo.webp" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Contact BLONDIE Paris - Bureau de relations presse" />
@@ -73,11 +73,11 @@ export default function Contact() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Contact - Blondie Paris | Relations presse & communication" />
         <meta name="twitter:description" content="Contactez BLONDIE Paris pour vos projets de relations presse, communication et événements." />
-        <meta name="twitter:image" content="https://blondie-paris.com/logo.png" />
+        <meta name="twitter:image" content="https://blondie.paris/logo.webp" />
         <meta name="twitter:image:alt" content="Contact BLONDIE Paris - Bureau de relations presse" />
         
         {/* Canonical */}
-        <link rel="canonical" href="https://blondie-paris.com/contact" />
+        <link rel="canonical" href="https://blondie.paris/contact" />
         
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
@@ -99,12 +99,12 @@ export default function Contact() {
               "@type": "ContactPage",
               "name": "Contact Blondie Paris",
               "description": "Page de contact pour BLONDIE Paris - Bureau de relations presse et communication",
-              "url": "https://blondie-paris.com/contact",
+              "url": "https://blondie.paris/contact",
               "mainEntity": {
                 "@type": "Organization",
                 "name": "BLONDIE Paris",
                 "description": "Bureau de relations presse et communication",
-                "url": "https://blondie-paris.com",
+                "url": "https://blondie.paris",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "11 RUE DU SAUVAGE",
@@ -134,13 +134,13 @@ export default function Contact() {
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Accueil",
-                    "item": "https://blondie-paris.com/"
+                    "item": "https://blondie.paris/"
                   },
                   {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Contact",
-                    "item": "https://blondie-paris.com/contact"
+                    "item": "https://blondie.paris/contact"
                   }
                 ]
               }
