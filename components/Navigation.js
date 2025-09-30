@@ -72,7 +72,7 @@ export default function Header({
           )}
           
           {/* Menu desktop */}
-          <div className="hidden lg:flex menu-font text-sm sm:text-sm lg:text-base justify-center items-center space-x-1 sm:space-x-2 lg:space-x-4 flex-1">
+          <div className="hidden lg:flex menu-font text-sm sm:text-sm lg:text-base justify-center items-center space-x-1 sm:space-x-2 lg:space-x-4">
             {!hideHome && router.pathname !== '/' && (
               <Link href="/" className="text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase relative relative">
                 HOME
@@ -122,7 +122,7 @@ export default function Header({
               </div>
               
               {/* Sous-menu Presse */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-6 w-80 bg-black/90 backdrop-blur-sm shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[9999] py-2" style={{ marginLeft: '50px' }}>
+              <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-6 w-80 bg-black/90 backdrop-blur-sm shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[9999] py-2">
                 <Link href="/presse-btob" className="disco-link nav-link block w-full px-4 py-0.5 text-[#878787] hover:text-[#FFB6C1]  uppercase text-xs">
                   PRESSE BTOB
                 </Link>
