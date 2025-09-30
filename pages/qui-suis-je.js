@@ -15,12 +15,12 @@ export default function QuiSuisJe() {
         <meta property="og:title" content="Qui suis-je - Blondie Paris" />
         <meta property="og:description" content="Découvrez Blondie Paris, bureau de relations presse fondé par Nathalie Roland. Expertise en communication et événements." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://blondie-paris.com/qui-suis-je" />
-        <meta property="og:image" content="/qui-suis-je.jpeg" />
+        <meta property="og:url" content="https://blondie.paris/qui-suis-je" />
+        <meta property="og:image" content="https://blondie.paris/logo.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Qui suis-je - Blondie Paris" />
         <meta name="twitter:description" content="Bureau de relations presse et communication sur mesure" />
-        <link rel="canonical" href="https://blondie-paris.com/qui-suis-je" />
+        <link rel="canonical" href="https://blondie.paris/qui-suis-je" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

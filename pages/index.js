@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import {sanityClient} from '../lib/sanity/client'
 import {homepageQuery, referencesQuery} from '../lib/sanity/queries'
 import Navigation from '../components/Navigation'
@@ -377,10 +378,13 @@ export default function Home({cms, refs}) {
                 {/* Image à gauche - Rideau depuis la gauche */}
                 <div className="w-full mt-4 overflow-hidden">
                   <div className="curtain-left">
-                    <img
+                    <Image
                       src="/nathalie-roland-blondie-paris-a-propos.webp"
                       alt="À propos"
+                      width={600}
+                      height={400}
                       className="w-full h-auto"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -426,10 +430,13 @@ export default function Home({cms, refs}) {
                 {/* Image à gauche - Rideau depuis la droite */}
                 <div className="w-full mt-4 overflow-hidden">
                   <div className="curtain-right-scroll" id="curtain-right-photo">
-                    <img
+                    <Image
                       src="/nathalie-roland-blondie-paris-qui-suis-je.webp"
                       alt="Qui suis-je"
+                      width={600}
+                      height={400}
                       className="w-full h-auto"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -506,10 +513,13 @@ export default function Home({cms, refs}) {
                     aria-label={logo.name}
                     className="bg-white rounded-lg border border-gray-200 p-4 flex items-center justify-center hover:border-[#FFB6C1] transition-colors"
                   >
-                    <img 
+                    <Image 
                       src={logo.src} 
                       alt={logo.alt} 
+                      width={120}
+                      height={80}
                       className={`w-full object-contain ${logo.name === "Ubi Bene" ? "h-25" : "h-20"}`}
+                      loading="lazy"
                     />
                   </a>
                 ))}

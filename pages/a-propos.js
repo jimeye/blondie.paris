@@ -22,10 +22,10 @@ export default function APropos() {
         <meta property="og:title" content="À propos - Blondie Paris | Bureau de relations presse" />
         <meta property="og:description" content="Découvrez BLONDIE Paris, bureau de relations presse fondé par Nathalie Roland. Expertise en communication et événements." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://blondie-paris.com/a-propos" />
+        <meta property="og:url" content="https://blondie.paris/a-propos" />
         <meta property="og:site_name" content="BLONDIE Paris" />
         <meta property="og:locale" content="fr_FR" />
-        <meta property="og:image" content="https://blondie-paris.com/logo.png" />
+        <meta property="og:image" content="https://blondie.paris/logo.webp" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="À propos BLONDIE Paris - Bureau de relations presse" />
@@ -34,11 +34,11 @@ export default function APropos() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="À propos - Blondie Paris | Bureau de relations presse" />
         <meta name="twitter:description" content="Découvrez BLONDIE Paris, bureau de relations presse fondé par Nathalie Roland." />
-        <meta name="twitter:image" content="https://blondie-paris.com/logo.png" />
+        <meta name="twitter:image" content="https://blondie.paris/logo.webp" />
         <meta name="twitter:image:alt" content="À propos BLONDIE Paris - Bureau de relations presse" />
         
         {/* Canonical */}
-        <link rel="canonical" href="https://blondie-paris.com/a-propos" />
+        <link rel="canonical" href="https://blondie.paris/a-propos" />
         
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
@@ -60,12 +60,12 @@ export default function APropos() {
               "@type": "AboutPage",
                               "name": "À propos - Blondie Paris",
               "description": "Page à propos de BLONDIE Paris - Bureau de relations presse et communication",
-              "url": "https://blondie-paris.com/a-propos",
+              "url": "https://blondie.paris/a-propos",
               "mainEntity": {
                 "@type": "Organization",
                 "name": "Blondie Paris",
                 "description": "Bureau de relations presse et communication fondé par Nathalie Roland",
-                "url": "https://blondie-paris.com",
+                "url": "https://blondie.paris",
                 "founder": {
                   "@type": "Person",
                   "name": "Nathalie Roland",
@@ -98,13 +98,13 @@ export default function APropos() {
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Accueil",
-                    "item": "https://blondie-paris.com/"
+                    "item": "https://blondie.paris/"
                   },
                   {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "À propos",
-                    "item": "https://blondie-paris.com/a-propos"
+                    "item": "https://blondie.paris/a-propos"
                   }
                 ]
               }

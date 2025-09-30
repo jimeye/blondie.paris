@@ -50,12 +50,12 @@ export default function Actualites() {
         <meta property="og:title" content="Actualités - Blondie Paris" />
         <meta property="og:description" content="Découvrez les dernières actualités et réalisations de Blondie Paris. Relations presse et événements." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://blondie-paris.com/actualites" />
+        <meta property="og:url" content="https://blondie.paris/actualites" />
         <meta property="og:image" content="/nathalie-roland-blondie-paris-hero-actualites-1.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Actualités - Blondie Paris" />
         <meta name="twitter:description" content="Dernières actualités et réalisations" />
-        <link rel="canonical" href="https://blondie-paris.com/actualites" />
+        <link rel="canonical" href="https://blondie.paris/actualites" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
