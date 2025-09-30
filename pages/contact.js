@@ -2,9 +2,11 @@ import Head from 'next/head'
 import Navigation from '../components/Navigation'
 import FooterNew from '../components/FooterNew'
 import Breadcrumbs from '../components/Breadcrumbs'
+import { useNotifications } from '../components/NotificationSystem'
 import { useState } from 'react'
 
 export default function Contact() {
+  const { success, error } = useNotifications()
   const [formData, setFormData] = useState({
     nom: '',
     societe: '',
@@ -15,7 +17,6 @@ export default function Contact() {
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState(null)
 
   const handleChange = (e) => {
     setFormData({
@@ -28,19 +29,36 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Simulation d'envoi (à remplacer par votre logique d'envoi)
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setSubmitStatus('success')
-      setFormData({
-        nom: '',
-        societe: '',
-        email: '',
-        telephone: '',
-        sujet: '',
-        message: ''
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       })
-    }, 2000)
+
+      const result = await response.json()
+
+      if (response.ok) {
+        success('Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.')
+        setFormData({
+          nom: '',
+          societe: '',
+          email: '',
+          telephone: '',
+          sujet: '',
+          message: ''
+        })
+      } else {
+        error(result.message || 'Une erreur est survenue lors de l\'envoi du message.')
+      }
+    } catch (err) {
+      console.error('Erreur:', err)
+      error('Une erreur de connexion est survenue. Veuillez réessayer.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -173,11 +191,6 @@ export default function Contact() {
                   Envoyez-nous un message
                 </h2>
                 
-                {submitStatus === 'success' && (
-                  <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                    <p className="text-green-800 uppercase">Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.</p>
-                  </div>
-                )}
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

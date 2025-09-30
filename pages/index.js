@@ -8,10 +8,12 @@ import ActualitesSlider from '../components/ActualitesSlider'
 import FooterNew from '../components/FooterNew'
 import EventsGrid from '../components/EventsGrid'
 import GalleryModal from '../components/GalleryModal'
+import { useNotifications } from '../components/NotificationSystem'
 import { logos as allLogos } from '../data/logos'
 import { useEffect, useState } from 'react'
 
 export default function Home({cms, refs}) {
+  const { success, error } = useNotifications()
   const logos = (refs?.length ? refs : allLogos).sort((a, b) => (a.name || '').localeCompare(b.name || '', 'fr', { sensitivity: 'base' }))
   const [showBackToTop, setShowBackToTop] = useState(false)
   const [touchStart, setTouchStart] = useState(null)
@@ -22,33 +24,36 @@ export default function Home({cms, refs}) {
   
   // États pour le formulaire de contact
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState('')
   
   
   // Gestion du formulaire de contact
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
-    setSubmitStatus('')
     
     try {
       const formData = new FormData(e.target)
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      })
+      const data = Object.fromEntries(formData.entries())
       
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+
+      const result = await response.json()
+
       if (response.ok) {
-        setSubmitStatus('success')
+        success('Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.')
         e.target.reset()
       } else {
-        setSubmitStatus('error')
+        error(result.message || 'Une erreur est survenue lors de l\'envoi du message.')
       }
-    } catch (error) {
-      setSubmitStatus('error')
+    } catch (err) {
+      console.error('Erreur:', err)
+      error('Une erreur de connexion est survenue. Veuillez réessayer.')
     } finally {
       setIsSubmitting(false)
     }
@@ -559,18 +564,6 @@ export default function Home({cms, refs}) {
                   </h3>
                   
                   <form onSubmit={handleSubmit} className="space-y-4">
-                    {/* Messages de statut */}
-                    {submitStatus === 'success' && (
-                      <div className="mb-4 p-4 bg-green-50 border border-green-200 rounded-lg">
-                        <p className="text-green-800 uppercase">Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.</p>
-                      </div>
-                    )}
-                    
-                    {submitStatus === 'error' && (
-                      <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-lg">
-                        <p className="text-red-800 uppercase">Une erreur est survenue. Veuillez réessayer ou nous contacter directement.</p>
-                      </div>
-                    )}
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
