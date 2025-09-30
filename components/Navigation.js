@@ -123,16 +123,16 @@ export default function Header({
               
               {/* Sous-menu Presse */}
               <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-6 w-80 bg-black/90 backdrop-blur-sm shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[9999] py-2">
-                <Link href="/presse-btob" className="disco-link nav-link block px-4 py-2 text-[#878787] hover:text-[#FFB6C1]  uppercase text-xs">
+                <Link href="/presse-btob" className="disco-link nav-link block px-4 py-3 text-[#878787] hover:text-[#FFB6C1]  uppercase text-xs">
                   PRESSE BTOB
                 </Link>
-                <Link href="/presse-grand-public" className="disco-link nav-link block px-4 py-2 text-[#878787] hover:text-[#FFB6C1]  uppercase text-xs">
+                <Link href="/presse-grand-public" className="disco-link nav-link block px-4 py-3 text-[#878787] hover:text-[#FFB6C1]  uppercase text-xs">
                   PRESSE GRAND PUBLIC
                 </Link>
-                <Link href="/presse-internationale" className="disco-link nav-link block px-4 py-2 text-[#878787] hover:text-[#FFB6C1]  uppercase text-xs">
+                <Link href="/presse-internationale" className="disco-link nav-link block px-4 py-3 text-[#878787] hover:text-[#FFB6C1]  uppercase text-xs">
                   PRESSE INTERNATIONALE
                 </Link>
-                <Link href="/tv" className="disco-link nav-link block px-4 py-2 text-[#878787] hover:text-[#FFB6C1]  uppercase text-xs">
+                <Link href="/tv" className="disco-link nav-link block px-4 py-3 text-[#878787] hover:text-[#FFB6C1]  uppercase text-xs">
                   TV
                 </Link>
               </div>
