@@ -129,11 +129,11 @@ export default function Header({
                 <Link href="/presse-grand-public" className="disco-link nav-link block px-4 py-2 text-[#878787] hover:text-[#FFB6C1]  uppercase text-xs">
                   PRESSE GRAND PUBLIC
                 </Link>
-                <Link href="/tv" className="disco-link nav-link block px-4 py-2 text-[#878787] hover:text-[#FFB6C1]  uppercase text-xs">
-                  TV
-                </Link>
                 <Link href="/presse-internationale" className="disco-link nav-link block px-4 py-2 text-[#878787] hover:text-[#FFB6C1]  uppercase text-xs">
                   PRESSE INTERNATIONALE
+                </Link>
+                <Link href="/tv" className="disco-link nav-link block px-4 py-2 text-[#878787] hover:text-[#FFB6C1]  uppercase text-xs">
+                  TV
                 </Link>
               </div>
             </div>
