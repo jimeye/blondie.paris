@@ -112,13 +112,13 @@ export default function Header({
             
             {/* Menu Presse avec sous-menu */}
             <div className="relative group">
-              <div className="disco-link text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase relative text-sm sm:text-sm lg:text-base cursor-pointer ">
-                <span className="inline-flex items-center uppercase">
+              <div className="disco-link text-gray-900 hover:text-[#FFB6C1] transition-colors nav-link uppercase relative text-sm sm:text-sm lg:text-base cursor-pointer flex items-center">
+                <span className="uppercase">
                   REVUE DE PRESSE
-                  <svg className="w-3 h-3 ml-1 transition-transform duration-200 group-hover:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
                 </span>
+                <svg className="w-3 h-3 ml-1 transition-transform duration-200 group-hover:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </div>
               
               {/* Sous-menu Presse */}
