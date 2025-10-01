@@ -42,10 +42,6 @@ export default function Footer() {
               </div>
             </div>
             <div className="text-left">
-              <h3 className="text-lg font-semibold mb-2 text-[#394140] select-text text-left">
-                Copyright
-                <div className="w-20 h-0.5 bg-[#FFB6C1] mt-2"></div>
-              </h3>
               <p className="text-base normal-case select-text mb-2">© 2025 BLONDIE.PARIS</p>
               <p className="text-base normal-case select-text mb-2">Website design by <a href="tel:+33608251223" className="text-xs uppercase text-[#878787] hover:text-[#FFB6C1] transition-colors select-text">JOSEPH STUDIO CREATIVE</a></p>
               <p className="text-base normal-case select-text">Tous droits réservés</p>
