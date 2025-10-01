@@ -259,9 +259,9 @@ export default function Home({cms, refs}) {
       style={{ touchAction: 'pan-y', userSelect: 'none' }}
     >
       <Head>
-        <title>{cms?.seo?.title || 'Blondie Paris — Relations presse, communication & événements'}</title>
-        <meta name="description" content={cms?.seo?.description || "BLONDIE Paris accompagne agences, médias et marques: relations presse, relations publiques, production d'événements. Expertise sur‑mesure, réseau, confidentialité."} />
-        <meta name="keywords" content="relations presse, communication, événements, agence, médias, marques, Paris, Arles, Nathalie Roland, bureau relations presse, conseil communication, production événements" />
+        <title>{cms?.seo?.title || 'Blondie Paris - Bureau Relations Presse Nathalie Roland | Communication & Événements'}</title>
+        <meta name="description" content={cms?.seo?.description || "Blondie Paris - Bureau de relations presse fondé par Nathalie Roland. Spécialiste relations presse, communication et événements à Paris. Accompagnement agences, médias et marques."} />
+        <meta name="keywords" content="blondie paris, nathalie roland, bureau relations presse paris, relations presse, communication paris, événements paris, agence communication, relations publiques, production événements, médias paris, marques paris, agences publicité" />
         <meta name="author" content="BLONDIE Paris - Nathalie Roland" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="language" content="fr" />
