@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import Head from 'next/head'
-import CookieBanner from '../components/CookieBanner'
+import CookiePopup from '../components/CookiePopup'
 import { NotificationProvider } from '../components/NotificationSystem'
 
 function MyApp({ Component, pageProps }) {
@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }} />
       </Head>
       <Component {...pageProps} />
-      <CookieBanner />
+      <CookiePopup />
     </NotificationProvider>
   )
 }
