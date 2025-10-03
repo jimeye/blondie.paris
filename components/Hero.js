@@ -19,7 +19,7 @@ export default function Hero({
   autoAdvance = true,
   autoAdvanceInterval = 8000,
   showNavigation = false,
-  height = 'h-[95vh] md:h-[105vh] lg:h-[110vh]',
+  height = 'h-[95vh] h-[100dvh] md:h-[105vh] lg:h-[110vh]',
   marginTop = '-mt-16',
   alt = 'Blondie Paris'
 }) {
@@ -40,7 +40,7 @@ export default function Hero({
   }, [autoAdvance, autoAdvanceInterval, slides.length])
 
   return (
-    <div className={`relative w-full ${height} ${marginTop}`}>
+    <div className={`relative w-full ${height} ${marginTop} hero-container`}>
       <div className="absolute inset-0 overflow-hidden">
         {slides.map((src, idx) => (
           <div

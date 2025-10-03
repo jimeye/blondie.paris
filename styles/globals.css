@@ -302,6 +302,27 @@ img {
   transform: scaleX(1) !important; 
 }
 
+/* Fix pour Firefox mobile - Hero full height */
+@-moz-document url-prefix() {
+  @media (max-width: 768px) {
+    .hero-container {
+      height: 100vh !important;
+      min-height: 100vh !important;
+    }
+  }
+}
+
+/* Fix spécifique pour Firefox mobile */
+@supports (-moz-appearance: none) {
+  @media (max-width: 768px) {
+    .hero-container {
+      height: 100vh !important;
+      min-height: 100vh !important;
+      height: 100dvh !important; /* Dynamic viewport height for mobile */
+    }
+  }
+}
+
 /* Styles pour le popup de cookies */
 .cookie-popup-overlay {
   backdrop-filter: blur(4px);
