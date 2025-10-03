@@ -555,7 +555,7 @@ export default function Home({cms, refs}) {
 
           {/* Section Contact complète */}
           <section className="bg-white py-8">
-            <div className="ml-5 lg:ml-0">
+            <div className="container mx-auto px-4">
               <div className="text-center mb-6">
                 <h2 className="text-4xl font-bold text-[#394140] mb-4">
                   Contact
@@ -566,7 +566,7 @@ export default function Home({cms, refs}) {
                 </p>
               </div>
               
-              <div>
+              <div className="max-w-4xl mx-auto">
                 {/* Formulaire de contact */}
                 <div className="bg-white rounded-lg p-6">
                   <h3 className="text-2xl font-bold text-[#394140] mb-4 uppercase">
