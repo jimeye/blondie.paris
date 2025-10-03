@@ -172,7 +172,7 @@ export default function Contact() {
         
         {/* Hero Section */}
         <section className="py-20">
-          <div className="px-4 ml-5 lg:ml-0">
+          <div className="container mx-auto px-4">
             <div className="mb-6 text-center">
               <h1 className="text-4xl font-bold text-[#394140] mb-4">Contact</h1>
               <div className="w-20 h-1 bg-[#FFB6C1] mt-2 mx-auto"></div>
@@ -182,8 +182,8 @@ export default function Contact() {
 
         {/* Contact Content */}
         <section className="-mt-24 pt-0 pb-16 bg-white">
-          <div className="px-4 ml-5 lg:ml-0">
-            <div>
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
               
               {/* Formulaire de contact */}
               <div className="bg-white rounded-lg p-8">
