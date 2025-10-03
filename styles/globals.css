@@ -308,18 +308,27 @@ img {
     .hero-container {
       height: 100vh !important;
       min-height: 100vh !important;
+      max-height: 100vh !important;
     }
   }
 }
 
-/* Fix spécifique pour Firefox mobile */
+/* Fix spécifique pour Firefox mobile - méthode alternative */
 @supports (-moz-appearance: none) {
   @media (max-width: 768px) {
     .hero-container {
-      height: 100vh !important;
-      min-height: 100vh !important;
-      height: 100dvh !important; /* Dynamic viewport height for mobile */
+      height: calc(100vh - 0px) !important;
+      min-height: calc(100vh - 0px) !important;
     }
+  }
+}
+
+/* Fix Firefox mobile avec JavaScript fallback */
+@media (max-width: 768px) {
+  .hero-container.firefox-mobile {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    position: relative !important;
   }
 }
 

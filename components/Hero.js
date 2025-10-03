@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
 export default function Hero({
   slides = [
@@ -24,9 +24,34 @@ export default function Hero({
   alt = 'Blondie Paris'
 }) {
   const [current, setCurrent] = useState(0)
+  const heroRef = useRef(null)
 
   const next = () => setCurrent((p) => (p + 1) % slides.length)
   const prev = () => setCurrent((p) => (p - 1 + slides.length) % slides.length)
+
+  // Fix Firefox mobile height
+  useEffect(() => {
+    const isFirefox = navigator.userAgent.toLowerCase().includes('firefox')
+    const isMobile = window.innerWidth <= 768
+    
+    if (isFirefox && isMobile && heroRef.current) {
+      const setFirefoxHeight = () => {
+        const vh = window.innerHeight
+        heroRef.current.style.height = `${vh}px`
+        heroRef.current.style.minHeight = `${vh}px`
+        heroRef.current.classList.add('firefox-mobile')
+      }
+      
+      setFirefoxHeight()
+      window.addEventListener('resize', setFirefoxHeight)
+      window.addEventListener('orientationchange', setFirefoxHeight)
+      
+      return () => {
+        window.removeEventListener('resize', setFirefoxHeight)
+        window.removeEventListener('orientationchange', setFirefoxHeight)
+      }
+    }
+  }, [])
 
   // Auto-advance si activé
   useEffect(() => {
@@ -40,7 +65,7 @@ export default function Hero({
   }, [autoAdvance, autoAdvanceInterval, slides.length])
 
   return (
-    <div className={`relative w-full ${height} ${marginTop} hero-container`}>
+    <div ref={heroRef} className={`relative w-full ${height} ${marginTop} hero-container`}>
       <div className="absolute inset-0 overflow-hidden">
         {slides.map((src, idx) => (
           <div
