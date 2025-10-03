@@ -43,7 +43,7 @@ export default function Footer() {
             </div>
             <div className="text-left">
               <p className="text-base normal-case select-text mb-2">© 2025 BLONDIE.PARIS</p>
-              <p className="text-base normal-case select-text mb-2">Website design by <a href="tel:+33608251223" className="text-xs uppercase text-[#878787] hover:text-[#FFB6C1] transition-colors select-text">JOSEPH STUDIO CREATIVE</a></p>
+              <p className="text-base normal-case select-text mb-2">Website design by <a href="https://josephstudiocreative.com/" target="_blank" rel="noopener noreferrer" className="text-xs uppercase text-[#878787] hover:text-[#FFB6C1] transition-colors select-text">JOSEPH STUDIO CREATIVE</a></p>
               <p className="text-base normal-case select-text">Tous droits réservés</p>
             </div>
         </div>
